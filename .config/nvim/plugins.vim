@@ -1,3 +1,4 @@
+Plug 'vim-scripts/JDL-syntax-file'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 Plug 'jmcantrell/vim-virtualenv'
