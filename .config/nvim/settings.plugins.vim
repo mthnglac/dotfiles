@@ -1,3 +1,8 @@
+" tab confs
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
+
 " Coc-highlight confs ----------------------------------------------
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
