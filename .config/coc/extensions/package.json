@@ -18,7 +18,6 @@
     "coc-react-refactor": ">=0.3.0",
     "coc-snippets": ">=2.2.0",
     "coc-sql": ">=0.3.3",
-    "coc-stylelintplus": ">=1.2.0",
     "coc-tabnine": ">=1.2.2",
     "coc-tslint-plugin": ">=1.1.1",
     "coc-tsserver": ">=1.5.7",
