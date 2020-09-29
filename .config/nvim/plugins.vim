@@ -4,6 +4,8 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'tjdevries/nlua.nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
 
+" CoC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'mthnglac/vim-snippets'
