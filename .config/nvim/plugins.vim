@@ -1,4 +1,10 @@
-Plug 'vim-scripts/JDL-syntax-file'
+" Neovim lsp Plugins
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'tjdevries/nlua.nvim'
+Plug 'tjdevries/lsp_extensions.nvim'
+
+Plug 'tweekmonstre/gofmt.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 Plug 'jmcantrell/vim-virtualenv'
@@ -9,7 +15,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tweekmonster/gofmt.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
@@ -24,10 +29,13 @@ Plug 'ryanoasis/vim-devicons'
 
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
+Plug 'colepeters/spacemacs-theme.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
 Plug 'ThePrimeagen/vim-be-good', {'do': '.\install.sh'}
+Plug 'ThePrimeagen/vim-apm'

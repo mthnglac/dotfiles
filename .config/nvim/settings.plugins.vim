@@ -3,35 +3,6 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
-" Coc-highlight confs ----------------------------------------------
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-
-" Coc-Snippets confs -----------------------------------------------
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-" for jump with tab
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-let g:coc_snippet_next = '<tab>'
-
-
 " airline_theme confs ----------------------------------------------
 let g:airline_theme='luna' " <theme> is a valid theme name
 let g:airline_powerline_fonts = 1
@@ -93,6 +64,8 @@ let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_auto_sameids = 1
 
+let g:vim_be_good_log_file = 1
+
 colorscheme gruvbox
 set background=dark
 
@@ -106,41 +79,69 @@ let mapleader = " "
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
+let g:netrw_localrmdir='rm -r'
 
 " FzF confs
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let $FZF_DEFAULT_COMMAND='ag -g ""'
-"let g:fzf_checkout_track_key = 'ctrl-t'
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab-split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
+let g:fzf_branch_actions = {
+      \ 'rebase': {
+      \   'prompt': 'Rebase> ',
+      \   'execute': 'echo system("{git} rebase {branch}")',
+      \   'multiple': v:false,
+      \   'keymap': 'ctrl-r',
+      \   'required': ['branch'],
+      \   'confirm': v:false,
+      \ },
+      \ 'track': {
+      \   'promp': 'Track> ',
+      \   'execute': 'echo system("{git} checkout --track {branch}")',
+      \   'multiple': v:false,
+      \   'keymap': 'ctrl-t',
+      \   'required': ['branch'],
+      \   'confirm': v:false,
+      \ },
+      \}
 
-nnoremap <leader>gc :GCheckout<CR>
+" Git
+nnoremap <leader>gc :GBranches<CR>
+nnoremap <leader>ga :Git fetch --all<CR>
+nnoremap <leader>grum :Git rebase upstream/master<CR>
+nnoremap <leader>grom :Git rebase origin/master<CR>
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
+" searching
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>bs /<C-R>=escape(expand("<cWORD"), "/")<CR><CR>
+nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-p> :GFiles<CR>
+nnoremap <Leader>pf :Files<CR>
+" moving through windows
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
+" file manager
 nnoremap <leader>pv :NERDTree<CR>
+"terminal
 nnoremap <leader>\t :terminal<CR>
-nnoremap <Leader>ps :Rg<SPACE>
-nnoremap <C-p> :GFiles<CR>
-nnoremap <Leader>pf :Files<CR>
+" source %
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+" sizing window
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+" moving multiple lines
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap X "_d
+
+" greatest remap ever
+vnoremap <leader>p "_dP
 
 " vim TODO
 nmap <Leader>tu <Plug>BujoChecknormal
@@ -154,19 +155,14 @@ nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray
 inoremap <C-c> <esc>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-inoremap <silent><expr> <C-space> coc#refresh()
 
-" GoTo code navigation.
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rr <Plug>(coc-rename)
-nmap <leader>g[ <Plug>(coc-diagnostic-prev)
-nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
-nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
+" neovim LSP confs
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+lua require'nvim_lsp'.tsserver.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.clangd.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.jdtls.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.gopls.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
 
 " Sweet Sweet FuGITive
 nmap <leader>gh :diffget //3<CR>
@@ -191,7 +187,6 @@ autocmd BufWritePre * :call TrimWhitespace()
 
 " Buffer configuration
 nnoremap <Leader>b :buffers<CR>:buffer<Space>
-
 
 " terminal confs
 " turn terminal to normal mode with escape
