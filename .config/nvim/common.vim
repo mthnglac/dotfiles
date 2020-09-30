@@ -5,6 +5,7 @@ set guicursor=
 set relativenumber
 set nohlsearch
 set hidden
+"set noshowmatch
 set noerrorbells
 set tabstop=2 softtabstop=2
 set shiftwidth=2
@@ -21,9 +22,7 @@ set incsearch
 set termguicolors
 set scrolloff=8
 set noshowmode
-set completeopt=menuone,noinsert,noselect
 set hlsearch
-"
 " for terminal
 set splitright
 set splitbelow
