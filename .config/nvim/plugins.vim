@@ -1,13 +1,6 @@
-" Neovim lsp Plugins
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'tjdevries/nlua.nvim'
-Plug 'tjdevries/lsp_extensions.nvim'
-
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Snippets
-Plug 'SirVer/ultisnips'
 Plug 'mthnglac/vim-snippets'
 " A Vim plugin that runs 'gofmt' when you save
 Plug 'tweekmonster/gofmt.vim'
