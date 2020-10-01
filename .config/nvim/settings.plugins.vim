@@ -154,6 +154,7 @@ nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kk
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+" what in the hell ?????  (╯°□°）╯︵ ┻━┻
 vnoremap X "_d
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
