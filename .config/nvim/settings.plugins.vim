@@ -93,6 +93,8 @@ let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_auto_sameids = 1
 
+let g:vim_be_good_log_file = 1
+
 colorscheme gruvbox
 set background=dark
 
@@ -106,26 +108,38 @@ let mapleader = " "
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
+let g:netrw_localrmdir = 'r -r'
 
 " FzF confs
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let $FZF_DEFAULT_COMMAND='ag -g ""'
-"let g:fzf_checkout_track_key = 'ctrl-t'
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab-split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
+let g:fzf_branch_actions = {
+      \ 'rebase': {
+      \   'prompt': 'Rebase> ',
+      \   'execute': 'echo system("{git} rebase {branch}")',
+      \   'multiple': v:false,
+      \   'keymap': 'ctrl-r',
+      \   'required': ['branch'],
+      \   'confirm': v:false,
+      \ },
+      \ 'track': {
+      \   'prompt': 'Track> ',
+      \   'execute': 'echo system("{git} checkout --track {branch}")',
+      \   'multiple': v:false,
+      \   'keymap': 'ctrl-t',
+      \   'required': ['branch'],
+      \   'confirm': v:false,
+      \ },
+      \}
 
-nnoremap <leader>gc :GCheckout<CR>
+nnoremap <leader>gc :GBranches<CR>
+nnoremap <leader>ga :Git feth --all<CR>
+nnoremap <leader>grum :Git rebase upstream/master<CR>
+nnoremap <leader>grom :Git rebase origin/master<CR>
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :NERDTree<CR>
 nnoremap <leader>\t :terminal<CR>
@@ -141,6 +155,10 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap X "_d
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
 " vim TODO
 nmap <Leader>tu <Plug>BujoChecknormal
