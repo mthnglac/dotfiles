@@ -4,6 +4,7 @@
   "coc.preferences.bracketEnterImprove": true,
   "jest.watchman": true,
   "eslint.autoFixOnSave": true,
+  "python.jediEnabled": false,
   "go.goplsOptions": {
     "usePlaceholders": true,
     "completionDocumentation": true,

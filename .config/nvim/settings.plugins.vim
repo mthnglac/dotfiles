@@ -3,6 +3,20 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
+" coc.nvim confs
+" Add (Neo)Vim's native statusline support.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " Coc-highlight confs ----------------------------------------------
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
@@ -20,10 +34,12 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 " for jump with tab
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+"" for choose with tab through autocomplete menu
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -39,8 +55,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
-" for choose with tab through autocomplete menu
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " nerdtree confs ---------------------------------------------------
 " show hidden files
@@ -172,7 +186,11 @@ nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray
 
 inoremap <C-c> <esc>
 
+" coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vmap <leader>py  <Plug>(coc-format-selected)
+nmap <leader>py  <Plug>(coc-format-selected)
+
 inoremap <silent><expr> <C-space> coc#refresh()
 
 " GoTo code navigation.
