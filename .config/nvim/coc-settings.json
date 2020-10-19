@@ -9,6 +9,6 @@
     "usePlaceholders": true,
     "completionDocumentation": true,
     "completeUnimported": true,
-    "fuzzyMatching": true
+    "matcher": "Fuzzy"
   }
 }
