@@ -7,7 +7,7 @@
     "coc-go": ">=0.12.0",
     "coc-highlight": ">=1.2.6",
     "coc-html": ">=1.2.4",
-    "coc-java": ">=1.4.12",
+    "coc-java": ">=1.5.0",
     "coc-java-debug": ">=0.1.5",
     "coc-jest": ">=1.1.1",
     "coc-json": ">=1.3.2",

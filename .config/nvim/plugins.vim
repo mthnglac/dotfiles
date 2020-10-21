@@ -41,6 +41,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'ryanoasis/vim-devicons'
 " Prettier plugin
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Dart plugins
+Plug 'dart-lang/dart-vim-plugin'
 
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
