@@ -132,7 +132,7 @@ let g:netrw_localrmdir = 'r -r'
 " FzF confs
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
-let $FZF_DEFAULT_COMMAND='ag -g ""'
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
 let g:fzf_branch_actions = {
       \ 'rebase': {
       \   'prompt': 'Rebase> ',
@@ -159,10 +159,11 @@ nnoremap <leader>grom :Git rebase origin/master<CR>
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :NERDTree<CR>
+nnoremap <leader>px :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>\t :terminal<CR>
-nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
