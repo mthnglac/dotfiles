@@ -14,7 +14,7 @@
     "coc-lua": ">=0.2.1",
     "coc-marketplace": ">=1.7.0",
     "coc-prettier": ">=1.1.18",
-    "coc-python": ">=1.2.12",
+    "coc-python": ">=1.2.13",
     "coc-snippets": ">=2.2.3",
     "coc-solargraph": ">=1.1.8",
     "coc-sql": ">=0.3.3",
