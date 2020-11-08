@@ -157,21 +157,26 @@ nnoremap <leader>gc :GBranches<CR>
 nnoremap <leader>ga :Git feth --all<CR>
 nnoremap <leader>grum :Git rebase upstream/master<CR>
 nnoremap <leader>grom :Git rebase origin/master<CR>
+" open help for selected word
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
+" search selected word with CoC
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap <Leader>ps :Rg<SPACE>
+" buffer list window
+nnoremap <leader>b :buffers<CR>:buffer<Space>
+" search entered word within project
+nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :NERDTree<CR>
 nnoremap <leader>px :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>\t :terminal<CR>
 nnoremap <C-p> :GFiles<CR>
-nnoremap <Leader>pf :Files<CR>
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
-nnoremap <Leader>+ :vertical resize +5<CR>
-nnoremap <Leader>- :vertical resize -5<CR>
-nnoremap <Leader>rp :resize 100<CR>
-nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
+nnoremap <leader>pf :Files<CR>
+nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <leader>+ :vertical resize +5<CR>
+nnoremap <leader>- :vertical resize -5<CR>
+nnoremap <leader>rp :resize 100<CR>
+nnoremap <leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -183,9 +188,10 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " vim TODO
-nmap <Leader>tu <Plug>BujoChecknormal
-nmap <Leader>th <Plug>BujoAddnormal
+nmap <leader>tu <Plug>BujoChecknormal
+nmap <leader>th <Plug>BujoAddnormal
 let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
+let g:bujo#window_width = get(g:, "bujo#window_width", 70)
 
 " Vim with me
 nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>
@@ -232,10 +238,6 @@ augroup highlight_yank
 augroup END
 
 autocmd BufWritePre * :call TrimWhitespace()
-
-" Buffer configuration
-nnoremap <Leader>b :buffers<CR>:buffer<Space>
-
 
 " terminal confs
 " turn terminal to normal mode with escape
