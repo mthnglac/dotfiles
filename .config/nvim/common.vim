@@ -22,6 +22,7 @@ set incsearch
 set termguicolors
 set scrolloff=8
 set noshowmode
+" for highlight during searching word
 set hlsearch
 " for terminal
 set splitright

@@ -113,6 +113,7 @@ let g:go_highlight_variable_declarations = 1
 let g:go_auto_sameids = 1
 
 let g:vim_be_good_log_file = 1
+let g:vim_apm_lig = 1
 
 colorscheme gruvbox
 set background=dark
