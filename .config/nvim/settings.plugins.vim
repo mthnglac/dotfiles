@@ -4,6 +4,8 @@ autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
 " coc.nvim confs
+" node path
+let g:coc_node_path = '~/.nvm/versions/node/v12.18.4/bin/node'
 " Add (Neo)Vim's native statusline support.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Use <c-space> to trigger completion.
