@@ -43,7 +43,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Dart plugins
 Plug 'dart-lang/dart-vim-plugin'
-
+" distraction-free writing plugin
+Plug 'junegunn/goyo.vim'
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
 Plug 'colepeters/spacemacs-theme.vim'
