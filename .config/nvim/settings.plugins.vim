@@ -90,7 +90,7 @@ let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1
 
-
+" gruvbox confs
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -155,39 +155,51 @@ let g:fzf_branch_actions = {
       \ },
       \}
 
+" git actions
 nnoremap <leader>gc :GBranches<CR>
 nnoremap <leader>ga :Git feth --all<CR>
 nnoremap <leader>grum :Git rebase upstream/master<CR>
 nnoremap <leader>grom :Git rebase origin/master<CR>
 " open help for selected word
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
-" search selected word with CoC
+" search by selected word with CoC
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" search by selected word
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 " buffer list window
 nnoremap <leader>b :buffers<CR>:buffer<Space>
 " search entered word within project
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>u :UndotreeShow<CR>
+" file manager
 nnoremap <leader>pv :NERDTree<CR>
 nnoremap <leader>px :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+" terminal
 nnoremap <leader>\t :terminal<CR>
+" search by filename in git files
 nnoremap <C-p> :GFiles<CR>
+" search by filename in all project files
 nnoremap <leader>pf :Files<CR>
+" source %
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
+" resize window
 nnoremap <leader>+ :vertical resize +5<CR>
 nnoremap <leader>- :vertical resize -5<CR>
 nnoremap <leader>rp :resize 100<CR>
-nnoremap <leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+" move selected line to up/down
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 " what in the hell ?????  (╯°□°）╯︵ ┻━┻
+" delete without registering word
 vnoremap X "_d
+" navigation between windows
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+
+nnoremap <leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " vim TODO
 nmap <leader>tu <Plug>BujoChecknormal
