@@ -68,7 +68,10 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,5 +146,24 @@ export PATH="$PATH:/usr/lib/dart/bin"
 
 # the FUCK!
 eval $(thefuck --alias)
+
+# Parasut Corp. Confs
+export EMBER_DOORKEEPER_APPLICATION_ID=1
+export PHOENIX_DOORKEEPER_APPLICATION_ID=1
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# edit line in vim with <c-e>
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
 
 #set +x
