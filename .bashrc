@@ -47,8 +47,4 @@ export PATH="$PATH:/usr/lib/dart/bin"
 # the FUCK!
 eval $(thefuck --alias)
 
-# Parasut Corp. Confs
-export EMBER_DOORKEEPER_APPLICATION_ID=1
-export PHOENIX_DOORKEEPER_APPLICATION_ID=1
-
 #set +x
