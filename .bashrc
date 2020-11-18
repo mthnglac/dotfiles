@@ -18,16 +18,15 @@ function color_my_prompt {
 }
 color_my_prompt
 
-# Android confs
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Flutter confs
-export FLUTTER_HOME=$HOME/Flutter
-export PATH=$PATH:$FLUTTER_HOME/bin
+# Node confs
+# Node version manager
+# 1
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# 2
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -40,6 +39,17 @@ export YVM_DIR=/home/saruman/.yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
 export PATH=$PATH:$HOME/.yarn/bin
 #export PATH="$PATH:$(yarn global bin)"
+
+# Android confs
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Flutter confs
+export FLUTTER_HOME=$HOME/Flutter
+export PATH=$PATH:$FLUTTER_HOME/bin
 
 # Dart confs
 export PATH="$PATH:/usr/lib/dart/bin"
