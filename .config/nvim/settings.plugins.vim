@@ -157,7 +157,7 @@ let g:fzf_branch_actions = {
 
 " git actions
 nnoremap <leader>gc :GBranches<CR>
-nnoremap <leader>ga :Git feth --all<CR>
+nnoremap <leader>ga :Git fetch --all<CR>
 nnoremap <leader>grum :Git rebase upstream/master<CR>
 nnoremap <leader>grom :Git rebase origin/master<CR>
 " open help for selected word
@@ -192,6 +192,13 @@ vnoremap K :m '<-2<CR>gv=gv
 " what in the hell ?????  (╯°□°）╯︵ ┻━┻
 " delete without registering word
 vnoremap X "_d
+" delete&local-paste without registering
+vnoremap <leader>p "_dP
+" yank it to global register
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+" yank all the content of file to global register
+nnoremap <leader>Y gg"+yG
 " navigation between windows
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
