@@ -1,3 +1,25 @@
+" firenvim confs -------------------------------------------------------------
+let g:firenvim_config = {
+    \ 'globalSettings': {
+        \ 'alt': 'all',
+    \  },
+    \ 'localSettings': {
+        \ '.*': {
+            \ 'cmdline': 'neovim',
+            \ 'priority': 0,
+            \ 'selector': 'textarea',
+            \ 'takeover': 'always',
+        \ },
+    \ }
+\ }
+let fc = g:firenvim_config['localSettings']
+let fc['https://studio.youtube.com.*'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https?://instagram.com.*'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https?://twitter.com.*'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https://.*gmail.com.*'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https?://.*twitch.tv.*'] = { 'takeover': 'never', 'priority': 1 }
+
+
 " tab confs ------------------------------------------------------------------
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
@@ -188,7 +210,7 @@ nnoremap <leader>b :buffers<CR>:buffer<Space>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>u :UndotreeShow<CR>
 " file manager
-nnoremap <leader>pv :NERDTree<CR>
+nnoremap <leader>pv :NERDTreeToggle<CR>
 nnoremap <leader>px :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 " terminal
 nnoremap <leader>\t :terminal<CR>
@@ -222,8 +244,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 " hit twice the spacebar if you want highlight to gone!
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-" what the hell is this?
-nnoremap <leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
 " vim TODO
 nmap <leader>tu <Plug>BujoChecknormal
 nmap <leader>th <Plug>BujoAddnormal
@@ -254,7 +274,7 @@ nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
 
-" <waiting_for_comment> ------------------------------------------------------
+" clear all registers --------------------------------------------------------
 fun! EmptyRegisters()
     let regs=split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"', '\zs')
     for r in regs
@@ -263,7 +283,7 @@ fun! EmptyRegisters()
 endfun
 
 
-" <waiting_for_comment> ------------------------------------------------------
+" removes any extraneous whitespace at the end of the lines ------------------
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
@@ -286,6 +306,10 @@ augroup END
 augroup MTHNGLAC
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
+
+    " Fire Neovim
+    au BufEnter github.com_*.txt set filetype=markdown
+    au BufEnter txti.es_*.txt set filetype=typescript
 augroup END
 
 
@@ -299,4 +323,5 @@ function! OpenTerminal()
   split term://bash
   resize 10
 endfunction
+" open neovim terminal
 nnoremap <c-n> :call OpenTerminal()<CR>

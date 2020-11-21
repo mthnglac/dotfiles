@@ -70,6 +70,7 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-flow
   zsh-syntax-highlighting
 )
 
@@ -107,6 +108,8 @@ source $ZSH/oh-my-zsh.sh
 alias bashconfig="nvim ~/.bashrc"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+#git
+alias conflict="git diff --name-only --diff-filter=U"
 
 # Node confs
 # Node version manager
