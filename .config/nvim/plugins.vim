@@ -13,12 +13,12 @@ Plug 'jmcantrell/vim-virtualenv'
 " .gitignore plugin
 Plug 'gisphm/vim-gitignore'
 " file browser
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " for showing git sign: inserted, modified, deleted vs..
 Plug 'airblade/vim-gitgutter'
 " commenter
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 " Insert or delete brackets, parens, quotes in pair.
 Plug 'jiangmiao/auto-pairs'
 " Git plugin for vim. Bestest of bests!!!
@@ -45,6 +45,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'dart-lang/dart-vim-plugin'
 " distraction-free writing plugin
 Plug 'junegunn/goyo.vim'
+" firenvim
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
 Plug 'colepeters/spacemacs-theme.vim'
