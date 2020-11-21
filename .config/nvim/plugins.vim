@@ -57,6 +57,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " a vim game . thanks to ThePrimeagen!
 Plug 'ThePrimeagen/vim-be-good', {'do': '.\install.sh'}
