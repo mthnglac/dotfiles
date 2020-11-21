@@ -1,15 +1,15 @@
 {
+  "coc.preferences.bracketEnterImprove": true,
   "http.proxyStrictSSL": false,
   "eslint.enable": false,
-  "tsserver.maxTsServerMemory": 8192,
-  "coc.preferences.bracketEnterImprove": true,
-  "jest.watchman": true,
   "eslint.autoFixOnSave": true,
   "python.jediEnabled": false,
+  "tsserver.maxTsServerMemory": 8192,
   "go.goplsOptions": {
     "usePlaceholders": true,
     "completionDocumentation": true,
     "completeUnimported": true,
     "matcher": "Fuzzy"
-  }
+  },
+  "jest.watchman": true
 }

@@ -1,9 +1,10 @@
-" tab confs
+" tab confs ------------------------------------------------------------------
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
-" coc.nvim confs
+
+" CoC.nvim confs -------------------------------------------------------------
 " node path
 let g:coc_node_path = '~/.nvm/versions/node/v12.18.4/bin/node'
 " Add (Neo)Vim's native statusline support.
@@ -19,11 +20,12 @@ endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" Coc-highlight confs ----------------------------------------------
+
+" CoC-highlight confs --------------------------------------------------------
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
-" Coc-Snippets confs -----------------------------------------------
+" CoC-Snippets confs ---------------------------------------------------------
 " for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 " for select text for visual placeholder of snippet.
@@ -42,7 +44,6 @@ inoremap <silent><expr> <TAB>
 "" for choose with tab through autocomplete menu
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 "inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -50,20 +51,20 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 
-" airline_theme confs ----------------------------------------------
+" airline_theme confs --------------------------------------------------------
 let g:airline_theme='luna' " <theme> is a valid theme name
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
-" Dart confs
+" Dart confs -----------------------------------------------------------------
 let dart_html_in_string = v:true
 let g:dart_style_guide = 2
 let g:dart_format_on_save = 1
 
 
-" nerdtree confs ---------------------------------------------------
+" NerdTREE confs -------------------------------------------------------------
 " show hidden files
 let NERDTreeShowHidden=1
 " the ignore patterns are regular expression strings and seprated by comma
@@ -81,7 +82,7 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 
 
-" neoformat --------------------------------------------------------
+" neoformat ------------------------------------------------------------------
 let g:neoformat_enabled_python = ['black']
 " Enable alignment
 let g:neoformat_basic_format_align = 1
@@ -90,15 +91,30 @@ let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1
 
-" gruvbox confs
-let g:gruvbox_contrast_dark = 'hard'
-if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-let g:gruvbox_invert_selection='0'
 
-" --- vim go (polyglot) settings.
+" gruvbox confs --------------------------------------------------------------
+fun! ColorMyPencils()
+    let g:gruvbox_contrast_dark = 'hard'
+    if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    endif
+    let g:gruvbox_invert_selection='0'
+    colorscheme gruvbox
+    set background=dark
+
+    "highlight ColorColumn ctermbg=0 guibg=#4f4f4f
+    "highlight Normal guibg=none
+    "highlight LineNr guifg=#ff8659
+    "highlight LineNr guifg=#aed75f
+    "highlight LineNr guifg=#5eacd3
+    "highlight netrwDir guifg=#5eacd3
+    "highlight qfFileName guifg=#aed75f
+endfun
+call ColorMyPencils()
+
+
+" vim go (polyglot) settings. ------------------------------------------------
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
@@ -117,9 +133,6 @@ let g:go_auto_sameids = 1
 let g:vim_be_good_log_file = 1
 let g:vim_apm_lig = 1
 
-colorscheme gruvbox
-set background=dark
-
 if executable('rg')
     let g:rg_derive_root='true'
 endif
@@ -132,7 +145,8 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 let g:netrw_localrmdir = 'r -r'
 
-" FzF confs
+
+" FzF confs ------------------------------------------------------------------
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
@@ -155,6 +169,8 @@ let g:fzf_branch_actions = {
       \ },
       \}
 
+
+" VIM shortcut confs ---------------------------------------------------------
 " git actions
 nnoremap <leader>gc :GBranches<CR>
 nnoremap <leader>ga :Git fetch --all<CR>
@@ -204,29 +220,23 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-
-nnoremap <leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
+" hit twice the spacebar if you want highlight to gone!
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
+" what the hell is this?
+nnoremap <leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
 " vim TODO
 nmap <leader>tu <Plug>BujoChecknormal
 nmap <leader>th <Plug>BujoAddnormal
 let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
 let g:bujo#window_width = get(g:, "bujo#window_width", 70)
-
-" Vim with me
-nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>
-nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray
-
+" Vim with me!! (customize theme with shortcut)
+nnoremap <leader>vwm :call ColorMyPencils()<CR>
+" ctrl-c
 inoremap <C-c> <esc>
-
-" coc-prettier
+" CoC-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>py  <Plug>(coc-format-selected)
-nmap <leader>py  <Plug>(coc-format-selected)
-
-inoremap <silent><expr> <C-space> coc#refresh()
-
+vmap <leader>py <Plug>(coc-format-selected)
+nmap <leader>py <Plug>(coc-format-selected)
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
@@ -238,29 +248,48 @@ nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart
-
 " Sweet Sweet FuGITive
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
+
+" <waiting_for_comment> ------------------------------------------------------
+fun! EmptyRegisters()
+    let regs=split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"', '\zs')
+    for r in regs
+        call setreg(r, [])
+    endfor
+endfun
+
+
+" <waiting_for_comment> ------------------------------------------------------
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
 
-" YES
+
+" YES ------------------------------------------------------------------------
 com! W w
 
+
+" highlight on yank!!! -------------------------------------------------------
 augroup highlight_yank
     autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
 augroup END
 
-autocmd BufWritePre * :call TrimWhitespace()
 
-" terminal confs
+" its PROPERTY!!! ------------------------------------------------------------
+augroup MTHNGLAC
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+augroup END
+
+
+" Terminal confs -------------------------------------------------------------
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
 " start terminal in insert mode

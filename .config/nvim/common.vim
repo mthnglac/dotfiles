@@ -1,6 +1,7 @@
 syntax on
 
 set encoding=UTF-8
+set exrc
 set guicursor=
 set relativenumber
 set nohlsearch
@@ -15,7 +16,6 @@ set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set nowritebackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
@@ -48,4 +48,3 @@ else
 endif
 
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
