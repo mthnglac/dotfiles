@@ -1,10 +1,12 @@
 {
   "coc.preferences.bracketEnterImprove": true,
   "http.proxyStrictSSL": false,
-  "eslint.enable": false,
-  "eslint.autoFixOnSave": true,
   "python.jediEnabled": false,
   "tsserver.maxTsServerMemory": 8192,
+  "tsserver.disableAutomaticTypeAcquisition": false,
+  "eslint.enable": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
   "go.goplsOptions": {
     "usePlaceholders": true,
     "completionDocumentation": true,
