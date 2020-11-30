@@ -18,7 +18,9 @@ let fc['https://studio.youtube.com.*'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https?://instagram.com.*'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https?://twitter.com.*'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://.*gmail.com.*'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https://.*google.com.*'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https?://.*twitch.tv.*'] = { 'takeover': 'never', 'priority': 1 }
+let fc['*localhost*'] = { 'takeover': 'never', 'priority': 1 }
 
 
 " tab confs ------------------------------------------------------------------
