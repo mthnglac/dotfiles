@@ -316,6 +316,23 @@ augroup MTHNGLAC
 augroup END
 
 
+" vim startify confs
+" fix for goyo new tab problem
+autocmd BufEnter *
+       \ if !exists('t:startify_new_tab') && empty(expand('%')) && !exists('t:goyo_master') |
+       \   let t:startify_new_tab = 1 |
+       \   Startify |
+       \ endif
+
+
+" quick-scope confs
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" Trigger a highlight only when pressing f and F.
+let g:qs_highlight_on_keys = ['f', 'F']
+
+
 " Terminal confs -------------------------------------------------------------
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>

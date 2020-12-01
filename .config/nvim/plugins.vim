@@ -47,6 +47,13 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'junegunn/goyo.vim'
 " firenvim
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
+" vim welcome screen
+Plug 'mhinz/vim-startify'
+" vim wiki
+Plug 'vimwiki/vimwiki'
+" An always-on highlight for a unique character in every word on a line to help
+" you use f, F and family.
+Plug 'unblevable/quick-scope'
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
 Plug 'colepeters/spacemacs-theme.vim'
