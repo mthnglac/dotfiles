@@ -48,3 +48,6 @@ else
 endif
 
 set colorcolumn=80
+
+set nocompatible
+filetype plugin on
