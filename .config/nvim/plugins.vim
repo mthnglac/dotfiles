@@ -56,6 +56,8 @@ Plug 'mhinz/vim-startify'
 Plug 'unblevable/quick-scope'
 " repeat key for '.' key
 Plug 'tpope/vim-repeat'
+" better whitespace
+Plug 'ntpeters/vim-better-whitespace'
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
 Plug 'colepeters/spacemacs-theme.vim'
