@@ -325,10 +325,38 @@ autocmd BufEnter *
        \ endif
 
 
+" Goyo confs
+function! s:goyo_enter()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  endif
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
 " quick-scope confs
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-
 " Trigger a highlight only when pressing f and F.
 let g:qs_highlight_on_keys = ['f', 'F']
 

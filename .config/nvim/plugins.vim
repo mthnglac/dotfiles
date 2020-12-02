@@ -43,17 +43,19 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Dart plugins
 Plug 'dart-lang/dart-vim-plugin'
-" distraction-free writing plugin
+" Presentation
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'vimwiki/vimwiki'
 " firenvim
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
 " vim welcome screen
 Plug 'mhinz/vim-startify'
-" vim wiki
-Plug 'vimwiki/vimwiki'
 " An always-on highlight for a unique character in every word on a line to help
 " you use f, F and family.
 Plug 'unblevable/quick-scope'
+" repeat key for '.' key
+Plug 'tpope/vim-repeat'
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
 Plug 'colepeters/spacemacs-theme.vim'
