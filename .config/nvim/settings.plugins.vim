@@ -20,7 +20,7 @@ let fc['https?://twitter.com.*'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://.*gmail.com.*'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https://.*google.com.*'] = { 'takeover': 'never', 'priority': 1 }
 let fc['https?://.*twitch.tv.*'] = { 'takeover': 'never', 'priority': 1 }
-let fc['*localhost*'] = { 'takeover': 'never', 'priority': 1 }
+"let fc['*localhost*'] = { 'takeover': 'never', 'priority': 1 }
 
 
 " tab confs ------------------------------------------------------------------
@@ -357,8 +357,10 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " quick-scope confs
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" Trigger a highlight only when pressing f and F.
-let g:qs_highlight_on_keys = ['f', 'F']
+
+
+" close-buffers confs
+nnoremap <silent> <C-q> :Bdelete menu<CR>
 
 
 " Terminal confs -------------------------------------------------------------
