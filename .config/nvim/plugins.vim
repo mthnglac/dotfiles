@@ -60,6 +60,10 @@ Plug 'tpope/vim-repeat'
 Plug 'ntpeters/vim-better-whitespace'
 " buffer closer
 Plug 'Asheq/close-buffers.vim'
+" matchup with closing match
+Plug 'andymass/vim-matchup'
+" popup terminal
+Plug 'voldikss/vim-floaterm'
 " colorschemes
 Plug 'colepeters/spacemacs-theme.vim'
 Plug 'gruvbox-community/gruvbox'
