@@ -363,6 +363,14 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 nnoremap <silent> <C-q> :Bdelete menu<CR>
 
 
+" floaterm confs
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
+hi FloatermBorder guibg=black guifg=orange
+
+
 " Terminal confs -------------------------------------------------------------
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
