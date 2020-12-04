@@ -58,8 +58,9 @@ Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-repeat'
 " better whitespace
 Plug 'ntpeters/vim-better-whitespace'
-"  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
-"  TOOOOOOOOOOOOO
+" buffer closer
+Plug 'Asheq/close-buffers.vim'
+" colorschemes
 Plug 'colepeters/spacemacs-theme.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
