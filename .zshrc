@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 alias bashconfig="nvim ~/.bashrc"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias tmuxconfig="nvim ~/.tmux.conf.local"
 #git
 alias conflict="git diff --name-only --diff-filter=U"
 
@@ -150,10 +151,6 @@ export PATH="$PATH:/usr/lib/dart/bin"
 # the FUCK!
 eval $(thefuck --alias)
 
-# Parasut Corp. Confs
-export EMBER_DOORKEEPER_APPLICATION_ID=1
-export PHOENIX_DOORKEEPER_APPLICATION_ID=1
-
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -168,5 +165,8 @@ export KEYTIMEOUT=1
 # edit line in vim with <c-e>
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+
+# default editor
+export EDITOR='nvim'
 
 #set +x
