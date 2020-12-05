@@ -256,10 +256,9 @@ let g:bujo#window_width = get(g:, "bujo#window_width", 70)
 nnoremap <leader>vwm :call ColorMyPencils()<CR>
 " ctrl-c
 inoremap <C-c> <esc>
-" CoC-prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>py <Plug>(coc-format-selected)
-nmap <leader>py <Plug>(coc-format-selected)
+" Prettier confs
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
@@ -301,7 +300,7 @@ com! W w
 " highlight on yank!!! -------------------------------------------------------
 augroup highlight_yank
     autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 400})
 augroup END
 
 
