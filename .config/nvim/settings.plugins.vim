@@ -251,7 +251,7 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 nmap <leader>tu <Plug>BujoChecknormal
 nmap <leader>th <Plug>BujoAddnormal
 let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
-let g:bujo#window_width = get(g:, "bujo#window_width", 70)
+let g:bujo#window_width = get(g:, "bujo#window_width", 100)
 " Vim with me!! (customize theme with shortcut)
 nnoremap <leader>vwm :call ColorMyPencils()<CR>
 " ctrl-c
