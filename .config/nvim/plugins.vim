@@ -1,3 +1,4 @@
+Plug 'tweekmonster/startuptime.vim'
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Snippets
