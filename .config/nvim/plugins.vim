@@ -50,8 +50,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'vimwiki/vimwiki'
 " firenvim
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
-" vim welcome screen
-Plug 'mhinz/vim-startify'
 " An always-on highlight for a unique character in every word on a line to help
 " you use f, F and family.
 Plug 'unblevable/quick-scope'

@@ -316,15 +316,6 @@ augroup MTHNGLAC
 augroup END
 
 
-" vim startify confs
-" fix for goyo new tab problem
-autocmd BufEnter *
-       \ if !exists('t:startify_new_tab') && empty(expand('%')) && !exists('t:goyo_master') |
-       \   let t:startify_new_tab = 1 |
-       \   Startify |
-       \ endif
-
-
 " Goyo confs
 function! s:goyo_enter()
   if executable('tmux') && strlen($TMUX)
