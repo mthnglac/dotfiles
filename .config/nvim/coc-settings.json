@@ -13,5 +13,12 @@
     "completeUnimported": true,
     "matcher": "Fuzzy"
   },
-  "jest.watchman": true
+  "jest.watchman": true,
+  "languageserver": {
+    "godot": {
+      "host": "127.0.0.1",
+      "filetypes": ["gd", "gdscript3"],
+      "port": 6008
+    }
+  }
 }
