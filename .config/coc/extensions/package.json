@@ -17,7 +17,7 @@
     "coc-snippets": ">=2.3.1",
     "coc-solargraph": ">=1.1.8",
     "coc-sql": ">=0.4.0",
-    "coc-tsserver": ">=1.6.3",
+    "coc-tsserver": ">=1.6.4",
     "coc-vetur": ">=1.2.3",
     "coc-vimlsp": ">=0.11.0",
     "coc-xml": ">=1.14.0"
