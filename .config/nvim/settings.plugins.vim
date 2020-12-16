@@ -209,7 +209,7 @@ nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 " search by selected word
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 " buffer list window
-nnoremap <leader>b :buffers<CR>:buffer<Space>
+nnoremap <leader>b :Buffers<CR>
 " search entered word within project
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>u :UndotreeShow<CR>
