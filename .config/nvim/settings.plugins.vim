@@ -374,6 +374,10 @@ function! s:CombineSelection(line1, line2, cp)
 endfunction
 
 
+" Godot Game Engine confs
+let g:godot_executable = '$HOME/.steam/steam/steamapps/common/Godot\ Engine/godot.x11.opt.tools.64'
+
+
 " Terminal confs -------------------------------------------------------------
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>

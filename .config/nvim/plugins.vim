@@ -1,3 +1,6 @@
+" Godot vim plugin
+Plug 'habamax/vim-godot'
+" check vim startup time
 Plug 'tweekmonster/startuptime.vim'
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
