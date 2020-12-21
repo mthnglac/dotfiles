@@ -9,7 +9,7 @@
     "coc-highlight": ">=1.2.7",
     "coc-html": ">=1.3.2",
     "coc-java": ">=1.5.3",
-    "coc-java-debug": ">=0.1.5",
+    "coc-java-debug": ">=0.1.6",
     "coc-jest": ">=1.1.3",
     "coc-json": ">=1.3.2",
     "coc-marketplace": ">=1.8.0",
@@ -17,7 +17,7 @@
     "coc-snippets": ">=2.3.1",
     "coc-solargraph": ">=1.1.8",
     "coc-sql": ">=0.4.0",
-    "coc-tsserver": ">=1.6.4",
+    "coc-tsserver": ">=1.6.6",
     "coc-vetur": ">=1.2.3",
     "coc-vimlsp": ">=0.11.0",
     "coc-xml": ">=1.14.0"
