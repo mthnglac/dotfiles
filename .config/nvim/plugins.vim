@@ -1,3 +1,5 @@
+" Debugger
+Plug 'puremourning/vimspector'
 " Godot vim plugin
 Plug 'habamax/vim-godot'
 " check vim startup time
@@ -33,6 +35,8 @@ Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 " A collection of language packs.
 Plug 'sheerun/vim-polyglot'
+" Vlang
+Plug 'ollykel/v-vim'
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

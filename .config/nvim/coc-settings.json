@@ -4,6 +4,7 @@
   "python.jediEnabled": false,
   "tsserver.maxTsServerMemory": 8192,
   "tsserver.disableAutomaticTypeAcquisition": false,
+  "tsserver.implicitProjectConfig.experimentalDecorators": true,
   "eslint.enable": false,
   "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
@@ -20,5 +21,6 @@
       "filetypes": ["gd", "gdscript3"],
       "port": 6008
     }
-  }
+  },
+  "clangd.path": "$HOME/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
