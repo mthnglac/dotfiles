@@ -5,7 +5,6 @@
   "tsserver.maxTsServerMemory": 8192,
   "tsserver.disableAutomaticTypeAcquisition": false,
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
-  "eslint.enable": false,
   "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "go.goplsOptions": {
