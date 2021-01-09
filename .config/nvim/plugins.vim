@@ -1,3 +1,6 @@
+" cheat.sh with popup plugin
+Plug 'RishabhRD/popfix'
+Plug 'RishabhRD/nvim-cheat.sh'
 " Debugger
 Plug 'puremourning/vimspector'
 " Godot vim plugin
