@@ -373,6 +373,9 @@ function! s:CombineSelection(line1, line2, cp)
   execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]/&'.char.'/ge'
 endfunction
 
+" Blamer confs
+let g:blamer_template = '<author>, <author-time> • <summary>'
+
 
 " Godot Game Engine confs
 let g:godot_executable = '$HOME/.steam/steam/steamapps/common/Godot\ Engine/godot.x11.opt.tools.64'

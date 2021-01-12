@@ -19,11 +19,13 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 " manage virtualenv
 Plug 'jmcantrell/vim-virtualenv'
-" .gitignore plugin
-Plug 'gisphm/vim-gitignore'
 " file browser
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+" git blamer
+Plug 'APZelos/blamer.nvim'
+" .gitignore plugin
+Plug 'gisphm/vim-gitignore'
 " for showing git sign: inserted, modified, deleted vs..
 Plug 'airblade/vim-gitgutter'
 " commenter
