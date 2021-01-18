@@ -1,3 +1,7 @@
+" emberjs
+Plug 'joukevandermaas/vim-ember-hbs'
+" show commit of current line
+Plug 'rhysd/git-messenger.vim'
 " cheat.sh with popup plugin
 Plug 'RishabhRD/popfix'
 Plug 'RishabhRD/nvim-cheat.sh'
