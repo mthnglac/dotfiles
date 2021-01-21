@@ -47,6 +47,8 @@ else
   set signcolumn=yes
 endif
 
+set isfname+=@-@
+
 set colorcolumn=80
 
 set nocompatible
