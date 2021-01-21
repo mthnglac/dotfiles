@@ -1,6 +1,6 @@
 source ~/.config/nvim/common.vim
 
-source ~/.config/nvim/install.vimplug.vim
+"source ~/.config/nvim/install.vimplug.vim
 
 call plug#begin('~/.vim/plugged')
 source ~/.config/nvim/plugins.vim
