@@ -1,3 +1,5 @@
+" selection increaser/decreaser
+Plug 'terryma/vim-expand-region'
 " emberjs
 Plug 'joukevandermaas/vim-ember-hbs'
 " show commit of current line
