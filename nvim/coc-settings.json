@@ -1,0 +1,26 @@
+{
+  "coc.preferences.bracketEnterImprove": true,
+  "http.proxyStrictSSL": false,
+  "eslint.enable": false,
+  "python.jediEnabled": false,
+  "tsserver.maxTsServerMemory": 8192,
+  "tsserver.disableAutomaticTypeAcquisition": false,
+  "tsserver.implicitProjectConfig.experimentalDecorators": true,
+  "tsserver.log": "verbose",
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "go.goplsOptions": {
+    "usePlaceholders": true,
+    "completionDocumentation": true,
+    "completeUnimported": true,
+    "matcher": "Fuzzy"
+  },
+  "jest.watchman": true,
+  "languageserver": {
+    "godot": {
+      "host": "127.0.0.1",
+      "filetypes": ["gd", "gdscript3"],
+      "port": 6008
+    }
+  }
+}
