@@ -72,6 +72,7 @@ plugins=(
   git
   git-flow
   zsh-syntax-highlighting
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,6 +112,9 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.tmux.conf.local"
 #git
 alias conflict="git diff --name-only --diff-filter=U"
+cht() {
+  curl cht.sh/$1/$2
+}
 
 # Node confs
 # Node version manager
@@ -133,6 +137,10 @@ export YVM_DIR=/home/saruman/.yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
 export PATH=$PATH:$HOME/.yarn/bin
 #export PATH="$PATH:$(yarn global bin)"
+
+# Java confs
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+export PATH=$PATH:$JAVA_HOME
 
 # Android confs
 export ANDROID_HOME=$HOME/Android/Sdk
