@@ -5,6 +5,7 @@ let NERDTreeIgnore = ['\.pyc$', '^__pycache__$', '.git$[[dir]]', '.swp', 'dist',
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let NERDTreeWinSize=45
 " to open automaticly when file opens
 "augroup nerdtree_open
     "autocmd!
