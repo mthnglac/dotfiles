@@ -17,6 +17,9 @@ vnoremap <leader>p "_dP
 " yank it to global register
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+" ??????
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
 " yank all the content of file to global register
 nnoremap <leader>Y gg"+yG
 " navigation between windows
