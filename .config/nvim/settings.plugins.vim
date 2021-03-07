@@ -78,3 +78,16 @@ function! s:CombineSelection(line1, line2, cp)
   execute 'let char = "\u'.a:cp.'"'
   execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]/&'.char.'/ge'
 endfunction
+
+function! RunTest()
+  let lineNumber = line('.')
+
+  while lineNumber > 0
+    let test = matchlist(getline(lineNumber), '^test \(.*\), ->$')
+    if len(test) > 0
+      exe "!ember test --filter ".substitute(test[1], '"', '\\"', 'g')
+    else
+      let lineNumber -= 1
+    endif
+  endwhile
+endfunction

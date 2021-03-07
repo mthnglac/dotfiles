@@ -4,7 +4,7 @@
     "coc-css": ">=1.2.6",
     "coc-ember": ">=1.5.5",
     "coc-eslint": ">=1.4.5",
-    "coc-flutter-tools": ">=1.5.0",
+    "coc-flutter-tools": ">=1.5.1",
     "coc-go": ">=0.13.3",
     "coc-highlight": ">=1.2.7",
     "coc-html": ">=1.4.1",
@@ -21,6 +21,6 @@
     "coc-tsserver": ">=1.6.8",
     "coc-vetur": ">=1.2.3",
     "coc-vimlsp": ">=0.11.0",
-    "coc-xml": ">=1.14.0"
+    "coc-xml": ">=1.14.1"
   }
 }
