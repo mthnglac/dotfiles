@@ -22,5 +22,6 @@
       "filetypes": ["gd", "gdscript3"],
       "port": 6008
     }
-  }
+  },
+  "Lua.diagnostics.globals": ["vim"]
 }
