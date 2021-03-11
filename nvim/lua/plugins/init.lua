@@ -1,3 +1,4 @@
+require('plugins.packer.install')
 require('plugins.airline')
 require('plugins.blamer')
 require('plugins.bujo')

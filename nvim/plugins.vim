@@ -56,10 +56,6 @@ Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
 " Vlang
 Plug 'ollykel/v-vim'
-" fuzzy finder
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
-"Plug 'stsewd/fzf-checkout.vim'
 " Simple TODO plugin
 Plug 'vuciv/vim-bujo'
 " compiler plugin

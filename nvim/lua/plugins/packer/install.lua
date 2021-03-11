@@ -1,19 +1,15 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Only required if you have packer in your `opt` pack
---vim.cmd [[packadd packer.nvim]]
--- Only if your version of Neovim doesn't have https://github.com/neovim/neovim/pull/12632 merged
---vim._update_package_paths()
 
 return require('packer').startup(function(use)
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   -- Telescope
-  use '9mm/vim-closer'
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  use {'nvim-telescope/telescope.nvim', requires = {
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+  }}
   use 'nvim-telescope/telescope-fzy-native.nvim'
 
   -- ember-test-runner
@@ -45,7 +41,9 @@ return require('packer').startup(function(use)
   use 'tweekmonster/startuptime.vim'
 
   -- CoC
-  use {'neoclide/coc.nvim', branch = 'release'}
+  use {'neoclide/coc.nvim', branch = 'release', config = function ()
+    require('plugins.coc-nvim')
+  end}
 
   -- Snippets
   use 'mthnglac/vim-snippets'
