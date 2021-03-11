@@ -1,6 +1,7 @@
 require('plugins.airline')
 require('plugins.blamer')
 require('plugins.bujo')
+require('plugins.coc-nvim')
 require('plugins.close-buffers')
 require('plugins.floaterm')
 require('plugins.fugitive')
