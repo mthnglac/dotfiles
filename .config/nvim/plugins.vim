@@ -1,3 +1,10 @@
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+" ember-test-runner
+Plug 'toranb/vim-ember-cli-test-runner'
+" dispatcher
+Plug 'tpope/vim-dispatch'
 " selection increaser/decreaser
 Plug 'terryma/vim-expand-region'
 " emberjs
