@@ -1,121 +1,106 @@
 Keybind.g({
 	--[[
-	#------------------------------------------------------------------------------#
-	#                                    CONFIG                                    #
-	#------------------------------------------------------------------------------#
+	#-------------------------------------------------------------------------#
+	#                                    CONFIG                               #
+	#-------------------------------------------------------------------------#
 	--]]
     -- reload nvim configuration file
-    { 'n', ',r', ':luafile $MYVIMRC<cr>' },
-
-    -- edit nvim configuration file
-    { 'n', ',e', ':vsp $MYVIMRC<cr>' },
+    { 'n', '<Leader><CR>', ':so $MYVIMRC<CR>', { noremap = true } },
 
 
 	--[[
-	#------------------------------------------------------------------------------#
-	#                                  CURSOR MOVE                                 #
-	#------------------------------------------------------------------------------#
+	#-------------------------------------------------------------------------#
+	#                                  CURSOR MOVE                            #
+	#-------------------------------------------------------------------------#
 	--]]
-    -- [ ctrl + h ] move cursor to left window
-    { 'n', '<c-h>', '<c-w>h' },
+    -- [ space + h ] move cursor to left window
+    { 'n', '<Leader>h', '<Cmd>wincmd h<CR>', { noremap = true } },
 
-    -- [ ctrl + l ] move cursor to right window
-    { 'n', '<c-l>', '<c-w>l' },
+    -- [ space + l ] move cursor to bottom window
+    { 'n', '<Leader>j', '<Cmd>wincmd j<CR>', { noremap = true } },
 
-    -- [ ctrl + j ] move cursor to bottom window
-    { 'n', '<c-j>', '<c-w>j' },
+    -- [ space + j ] move cursor to top window
+    { 'n', '<Leader>k', '<Cmd>wincmd k<CR>', { noremap = true } },
 
-    -- [ ctrl + k ] move cursor to top window
-    { 'n', '<c-k>', '<c-w>k' },
+    -- [ space + k ] move cursor to right window
+    { 'n', '<Leader>l', '<Cmd>wincmd l<CR>', { noremap = true } },
 
 
 	--[[
-	#------------------------------------------------------------------------------#
-	#                               BUFFER READ WRITE                              #
-	#------------------------------------------------------------------------------#
+	#-------------------------------------------------------------------------#
+	#                                CUT COPY PASTE                           #
+	#-------------------------------------------------------------------------#
 	--]]
-    -- [ ctrl + s ] save the current buffer
-    { 'n', '<c-s>', ':w<cr>' },
+    -- what in the hell ?????  (╯°□°）╯︵ ┻━┻
+    -- delete without registering word
+    { 'v', 'X', '"_d', { noremap = true } },
 
-    -- [ ctrl + q ] quite the current buffer
-    { 'n', '<c-q>', ':q<cr>' },
+    -- delete&local-paste without registering
+    { 'v', '<Leader>p', '"_dP', { noremap = true } },
+
+    -- yank it to global register
+    { 'n', '<Leader>y', '"+y', { noremap = true } },
+    { 'v', '<Leader>y', '"+y', { noremap = true } },
+
+    -- ????????
+    { 'n', '<Leader>d', '"_d', { noremap = true } },
+    { 'v', '<Leader>d', '"_d', { noremap = true } },
+
+    -- yank all the content of file to global register ?? (╯°□°）╯︵ ┻━┻
+    { 'n', '<Leader>Y', 'gg"+yG', { noremap = true } },
 
 
 	--[[
-	#------------------------------------------------------------------------------#
-	#                                CUT COPY PASTE                                #
-	#------------------------------------------------------------------------------#
+	#-------------------------------------------------------------------------#
+	#                                RESIZE WINDOW                            #
+	#-------------------------------------------------------------------------#
 	--]]
-    -- [ Y ] copy until the end of the line
-    { 'n', 'Y', 'y$' },
 
-    -- [ ctrl + y ] copy current line and paste next line
-    { 'n', '<c-y>', 'yyp' },
+    -- resize window
+    { 'n', '<Leader>+', '<Cmd>vertical resize +5<CR>', { noremap = true } },
+    { 'n', '<Leader>-', '<Cmd>vertical resize -5<CR>', { noremap = true } },
+    { 'n', '<Leader>rp', '<Cmd>resize 100<CR>', { noremap = true } },
+
+
+	--[[
+	#-------------------------------------------------------------------------#
+	#                                MOVE LINE                                #
+	#-------------------------------------------------------------------------#
+	--]]
+
+    -- move selected line to up/down
+    { 'v', 'J', '<Cmd>m \'>+1<CR>gv=gv', { noremap = true } },
+    { 'v', 'K', '<Cmd>m \'<-2<CR>gv=gv', { noremap = true } },
 })
+
 
 Keybind.g({
 	--[[
-	#------------------------------------------------------------------------------#
-	#                                  CURSOR MOVE                                 #
-	#------------------------------------------------------------------------------#
+	#-------------------------------------------------------------------------#
+	#                                     TERMINAL                            #
+	#-------------------------------------------------------------------------#
 	--]]
-    -- [ ctrl + ; ] put a semicolon EOL and go to next line
-    { 'i', '<c-;>', '<esc>A;' },
-
-	-- [ ctrl + o ] add new line in insert mode
-    { 'i', '<c-o>', '<esc>o' },
-
-    -- [ ctrl + e ] go to end of the line
-    { 'i', '<c-e>', '<esc>A' },
-
-    -- [ ctrl + i ] go to beginning of the line
-    { 'i', '<c-i>', '<esc>I' },
-
-    -- [ ctrl + j ] hit down arrow key
-    { 'i', '<c-j>', '<down>' },
-
-    -- [ ctrl + k ] hit up arrow key
-    { 'i', '<c-k>', '<up>' },
-
-    -- [ ctrl + b ] hit left arrow key
-    { 'i', '<c-b>', '<left>' },
-
-    -- [ ctrl + l ] hit right arrow key
-    { 'i', '<c-l>', '<right>' },
-
-
-	--[[
-	#------------------------------------------------------------------------------#
-	#                                CUT COPY PASTE                                #
-	#------------------------------------------------------------------------------#
-	--]]
-    -- [ ctrl + y ] copy current line and paste next line
-    { 'i', '<c-y>', '<esc>yyp' },
-
-    -- [ ctrl + s ] save the current buffer
-    { 'i', '<c-s>', '<esc>:w<cr>a' },
-
-	--[[
-	#------------------------------------------------------------------------------#
-	#                                     OTHER                                    #
-	#------------------------------------------------------------------------------#
-	--]]
-    -- [ j + k ] to go to normal mode from insert
-    { 'i', 'jk', '<esc>' },
-
-	-- [ ctrl + d ] deletes a character in front of the cursor
-    { 'i', '<c-d>', '<delete>' },
-
-    -- [ <F6> ] to go enable spell checker
-    { '', '<F6>', ':setlocal spell! spelllang=en_us<CR>' },
+    -- open terminal
+    { 'n', '<Leader>\\t', '<Cmd>terminal<CR>', { noremap = true } },
+    -- turn terminal to normal mode with escape
+    { 't', '<Esc>', '<C-\\><C-n>', { noremap = true } },
+    -- open neovim terminal
+    { 'n', '<c-n>', '<Cmd>call OpenTerminal()<CR>', { noremap = true } },
 })
+
 
 Keybind.g({
 	--[[
-	#------------------------------------------------------------------------------#
-	#                                     OTHER                                    #
-	#------------------------------------------------------------------------------#
+	#-------------------------------------------------------------------------#
+	#                                     OTHER                               #
+	#-------------------------------------------------------------------------#
 	--]]
-    -- [ j + k ] to go to normal mode from terminal
-    { 't', 'jk', [[ <C-\><C-n> ]] },
+    -- hit twice the spacebar if you want highlight to gone!
+    { 'n', '<silent> <Space>', 'nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true } },
+    -- ctrl-c
+    { 'i', '<C-c>', '<esc>', { noremap = true } },
+    -- open help for selected word
+    { 'n', '<Leader>ghw', '<Cmd>h <C-R>=expand("<cword>")<CR><CR>', { noremap = true } },
+    -- Vim with me!! (customize theme with shortcut)
+    { 'n', '<Leader>vwm', '<Cmd>call ColorMyPencils()<CR>', { noremap = true } },
 })

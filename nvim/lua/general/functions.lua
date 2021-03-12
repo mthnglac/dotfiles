@@ -1,5 +1,6 @@
-" theme confs --------------------------------------------------------------
-
+-- theme confs
+vim.api.nvim_exec(
+[[
 fun! ColorMyPencils()
     let g:gruvbox_contrast_dark = 'hard'
     if exists('+termguicolors')
@@ -19,3 +20,13 @@ fun! ColorMyPencils()
     "highlight qfFileName guifg=#aed75f
 endfun
 call ColorMyPencils()
+]], true)
+
+-- open terminal on ctrl+n
+vim.api.nvim_exec(
+[[
+function! OpenTerminal()
+  split term://bash
+  resize 10
+endfunction
+]], true)

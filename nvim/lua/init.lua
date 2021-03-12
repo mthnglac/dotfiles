@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
 
---require('utils')
+require('utils')
 require('plugins')
---require('general')
+require('general')
