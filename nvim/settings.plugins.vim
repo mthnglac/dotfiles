@@ -4,26 +4,6 @@ autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
 
-" Dart confs -----------------------------------------------------------------
-let dart_html_in_string = v:true
-let g:dart_style_guide = 2
-let g:dart_format_on_save = 1
-
-
-" neoformat ------------------------------------------------------------------
-let g:neoformat_enabled_python = ['black']
-" Enable alignment
-let g:neoformat_basic_format_align = 1
-" Enable tab to spaces conversion
-let g:neoformat_basic_format_retab = 1
-" Enable trimmming of trailing whitespace
-let g:neoformat_basic_format_trim = 1
-
-
-let g:vim_be_good_log_file = 1
-let g:vim_apm_lig = 1
-
-
 if executable('rg')
     let g:rg_derive_root='true'
 endif
