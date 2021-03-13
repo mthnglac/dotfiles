@@ -96,7 +96,7 @@ Keybind.g({
 	#-------------------------------------------------------------------------#
 	--]]
     -- hit twice the spacebar if you want highlight to gone!
-    { 'n', '<silent> <Space>', 'nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader>', '<Cmd>nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true } },
     -- ctrl-c
     { 'i', '<C-c>', '<esc>', { noremap = true } },
     -- open help for selected word

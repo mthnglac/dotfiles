@@ -1,4 +1,9 @@
 Variable.g({
+	loaded_matchparen = 1,
+	mapleader = ' ',
+})
+
+Variable.g({
     -- neoformat ------------------------------------------------------------------
 	neoformat_enabled_python = {'black'},
     -- Enable alignment ------------------------------------------------------------------
