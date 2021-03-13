@@ -31,4 +31,3 @@ function _G.statusline()
         percentage_through_file
     )
 end
-
