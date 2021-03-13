@@ -1,4 +1,6 @@
-function! s:goyo_enter()
+vim.api.nvim_exec(
+[[
+fun! GoyoEnter()
   if executable('tmux') && strlen($TMUX)
     silent !tmux set status off
     silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
@@ -8,9 +10,12 @@ function! s:goyo_enter()
   set scrolloff=999
   Limelight
   " ...
-endfunction
+endfun
+]], true)
 
-function! s:goyo_leave()
+vim.api.nvim_exec(
+[[
+fun! GoyoLeave()
   if executable('tmux') && strlen($TMUX)
     silent !tmux set status on
     silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
@@ -20,7 +25,5 @@ function! s:goyo_leave()
   set scrolloff=5
   Limelight!
   " ...
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
+endfun
+]], true)
