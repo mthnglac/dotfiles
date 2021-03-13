@@ -21,6 +21,12 @@ Keybind.g({
 	{ 'n', '<Leader>prw', [[<Cmd>CocSearch <C-R>=expand("<cword>")<CR><CR>]], { noremap = true, silent = false } },
 })
 
+---- mappins for CocList
+Keybind.g({
+	-- show all diagnostics
+	{ 'n', '<Leader>a', [[<Cmd>CocList diagnostics<CR>]], { noremap = true, silent = true, nowait = true } },
+})
+
 ---- others
 Keybind.g({
 	-- for trigger snippet expand.
