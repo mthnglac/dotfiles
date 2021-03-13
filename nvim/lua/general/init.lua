@@ -1,5 +1,0 @@
---require('general.options')
-require('general.variables')
-require('general.functions')
-require('general.keybinds')
-require('general.commands')

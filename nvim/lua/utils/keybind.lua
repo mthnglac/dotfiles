@@ -1,7 +1,7 @@
 local Keybind = {}
 
 Keybind.add_global_keybinds = function (keybinds)
-  for index, keybind in pairs(keybinds) do
+  for _, keybind in pairs(keybinds) do
     if(keybind[4] == nil)  then
       keybind[4] = {}
     end
@@ -16,7 +16,7 @@ Keybind.add_global_keybinds = function (keybinds)
 end
 
 Keybind.add_buffer_keybinds = function (keybinds)
-  for index, keybind in pairs(keybinds) do
+  for _, keybind in pairs(keybinds) do
     if(keybind[5] == nil)  then
       keybind[5] = {}
     end

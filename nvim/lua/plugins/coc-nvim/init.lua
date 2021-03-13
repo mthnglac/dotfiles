@@ -1,2 +1,5 @@
+require('plugins.coc-nvim.options')
 require('plugins.coc-nvim.variables')
 require('plugins.coc-nvim.keybinds')
+require('plugins.coc-nvim.commands')
+require('plugins.coc-nvim.functions')
