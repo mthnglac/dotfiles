@@ -1,15 +1,11 @@
 -- generics
 require('utils')
 
--- vim initial settings
-require('general.options')
+-- vim core settings
+require('general')
 
 -- vim-plug settings & plugins
 require('install-plugins')
 
--- vim core & plugins settings
-require('general.variables')
-require('general.functions')
-require('general.commands')
-require('general.keybinds')
+-- vim plugins settings
 require('plugins')

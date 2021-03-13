@@ -24,6 +24,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-lua/plenary.nvim';
   'nvim-telescope/telescope.nvim';
   'nvim-telescope/telescope-fzy-native.nvim';
+  'nvim-telescope/telescope-symbols.nvim';
   'toranb/vim-ember-cli-test-runner';
   'tpope/vim-dispatch';
   'terryma/vim-expand-region';

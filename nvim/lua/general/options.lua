@@ -1,22 +1,17 @@
+-- Globals
 Option.g({
 	syntax = "on",
 	encoding = "UTF-8",
 	exrc = true,
 	guicursor = "",
-	relativenumber = true,
-	errorbells = false,
-	expandtab = true,
-	smartindent = true,
 	nu = true,
-	wrap = false,
-	swapfile = false,
 	undodir = tostring(os.getenv("HOME")) .. "/.vim/undodir",
 	undofile = true,
 	incsearch = true,
 	showmode = false,
 	cmdheight = 2,
 	compatible = false,
-	colorcolumn = "80",
+	errorbells = false,
 
 
 
@@ -25,20 +20,11 @@ Option.g({
 	#                                    EDITOR                               #
 	#-------------------------------------------------------------------------#
 	--]]
-	-- set the tab size to length of 4 spaces
-	-- shiftwidth set the indentation length
-	tabstop = 2,
-	softtabstop = 2,
-	shiftwidth = 2,
-
 	-- remove highlighting after search is done
 	hlsearch = true,
 
 	-- auto code folding when openeing new file at level 1
 	foldlevelstart = 1,
-
-	-- auto wrap after 80 characters in the line
-	textwidth = 80,
 
 	-- enable mouse in vim. 'a' for all modes (normal, visual, insert & command)
 	--mouse = 'a',
@@ -129,6 +115,8 @@ Option.w({
 	-- if buffer cannot display more than 200 lines, cursor will stay in center
 	-- and scroll the buffer
 	scrolloff = 8,
+	wrap = false,
+	colorcolumn = "80",
 })
 
 Option.b({
@@ -136,4 +124,16 @@ Option.b({
 	-- set the tab size to length of 4 spaces
 	-- shiftwidth set the indentation length
 	--shiftwidth = 4,
+	expandtab = true,
+	smartindent = true,
+	swapfile = false,
+
+	-- set the tab size to length of 4 spaces
+	-- shiftwidth set the indentation length
+	tabstop = 2,
+	softtabstop = 2,
+	shiftwidth = 2,
+
+	-- auto wrap after 80 characters in the line
+	textwidth = 80,
 })
