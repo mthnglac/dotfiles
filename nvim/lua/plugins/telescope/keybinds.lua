@@ -12,7 +12,7 @@ Keybind.g({
 	-- search by filename in all project files
 	{ 'n', '<Leader>pf', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], { noremap = true, silent = true } },
 	-- telescope through dotfiles
-	{ 'n', '<Leader>vrc', [[<Cmd>lua require('plugins.telescope').search_dotfiles()<CR>]], { noremap = true } },
+	{ 'n', '<Leader>prc', [[<Cmd>lua require('plugins.telescope.settings').search_dotfiles()<CR>]], { noremap = true } },
 })
 
 
