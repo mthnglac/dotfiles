@@ -14,6 +14,10 @@ Option.g({
 	errorbells = false,
 
 
+	tabstop = 2,
+	softtabstop = 2,
+	shiftwidth = 2,
+
 
 	--[[
 	#-------------------------------------------------------------------------#
@@ -120,20 +124,7 @@ Option.w({
 })
 
 Option.b({
-
-	-- set the tab size to length of 4 spaces
-	-- shiftwidth set the indentation length
-	--shiftwidth = 4,
 	expandtab = true,
 	smartindent = true,
 	swapfile = false,
-
-	-- set the tab size to length of 4 spaces
-	-- shiftwidth set the indentation length
-	tabstop = 2,
-	softtabstop = 2,
-	shiftwidth = 2,
-
-	-- auto wrap after 80 characters in the line
-	textwidth = 80,
 })
