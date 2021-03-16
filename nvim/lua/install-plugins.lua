@@ -20,54 +20,98 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
-  'nvim-lua/popup.nvim';
-  'nvim-lua/plenary.nvim';
+  -- Treesitter
+  'nvim-treesitter/nvim-treesitter';
+  -- Telescope
   'nvim-telescope/telescope.nvim';
+  'nvim-lua/plenary.nvim';
+  'nvim-lua/popup.nvim';
   'nvim-telescope/telescope-fzy-native.nvim';
   'nvim-telescope/telescope-symbols.nvim';
-  'toranb/vim-ember-cli-test-runner';
-  'tpope/vim-dispatch';
-  'terryma/vim-expand-region';
+  -- emberjs
   'joukevandermaas/vim-ember-hbs';
+  -- ember-test-runner
+  'toranb/vim-ember-cli-test-runner';
+  -- dispatcher
+  'tpope/vim-dispatch';
+  -- selection increaser/decreaser
+  'terryma/vim-expand-region';
+  -- Git - blamer
+  'APZelos/blamer.nvim';
+  -- Git - show commit of current line
   'rhysd/git-messenger.vim';
+  -- Git plugin for vim. Bestest of bests!!!
+  'tpope/vim-fugitive';
+  -- cheat.sh with popup plugin
   'RishabhRD/popfix';
   'RishabhRD/nvim-cheat.sh';
+  -- debugger
   'puremourning/vimspector';
+  -- Godot vim plugin
   'habamax/vim-godot';
+  -- check vim startup time
   'tweekmonster/startuptime.vim';
+  -- CoC
   {'neoclide/coc.nvim'; branch = 'release'};
+  -- Snippets
   'mthnglac/vim-snippets';
+  -- A Vim plugin that runs 'gofmt' when you save
   'tweekmonster/gofmt.vim';
+  -- displaying vertical lines
   'Yggdroot/indentLine';
+  -- surroundings": parentheses, brackets, quotes vs.
   'tpope/vim-surround';
+  -- manage virtualenv
   'jmcantrell/vim-virtualenv';
+  -- file browser
   'preservim/nerdtree';
   'Xuyuanp/nerdtree-git-plugin';
-  'APZelos/blamer.nvim';
+  -- .gitignore plugin
   'gisphm/vim-gitignore';
+  -- for showing git sign: inserted, modified, deleted vs..
   'airblade/vim-gitgutter';
+  -- commenter
   'preservim/nerdcommenter';
+  -- Insert or delete brackets, parens, quotes in pair.
   'jiangmiao/auto-pairs';
-  'tpope/vim-fugitive';
+  -- for viewing man pages in vim.
   'vim-utils/vim-man';
+  -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree';
+  -- A collection of language packs.
   'sheerun/vim-polyglot';
+  -- Vlang
   'ollykel/v-vim';
+  -- Simple TODO plugin
   'vuciv/vim-bujo';
+  -- compiler plugin
   'tpope/vim-dispatch';
+  -- icons pack
   'ryanoasis/vim-devicons';
+  -- Prettier plugin
   {'prettier/vim-prettier'; run = 'yarn install'};
+  -- Dart plugins
   'dart-lang/dart-vim-plugin';
+  -- Presentation
   'junegunn/goyo.vim';
   'junegunn/limelight.vim';
   'vimwiki/vimwiki';
+  -- firenvim
   {'glacambre/firenvim'; run = function() vim.fn['firenvim#install'](69) end};
+  -- An always-on highlight for a unique character in every word on a line to
+  -- help you use f, F and family.
   'unblevable/quick-scope';
+  -- repeat key for '.' key
   'tpope/vim-repeat';
+  -- better whitespace
   'ntpeters/vim-better-whitespace';
+  -- buffer closer
   'Asheq/close-buffers.vim';
+  -- matchup with closing match
   'andymass/vim-matchup';
+  -- popup terminal
   'voldikss/vim-floaterm';
+  -- colorschemes
   'colepeters/spacemacs-theme.vim';
   'gruvbox-community/gruvbox';
   'sainnhe/gruvbox-material';
@@ -77,6 +121,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'flazz/vim-colorschemes';
   'chriskempson/base16-vim';
   {'dracula/vim'; as = 'dracula'};
+  -- a vim game . thanks to ThePrimeagen!
   {'ThePrimeagen/vim-be-good'; run = '.\\install.sh'};
+  -- vim command tracking tool.
   'ThePrimeagen/vim-apm';
 })
