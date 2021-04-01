@@ -12,6 +12,7 @@ Variable.g({
         "coc-java-debug",
         "coc-jest",
         "coc-json",
+        "coc-kotlin",
         "coc-lua",
         "coc-marketplace",
         "coc-python",
