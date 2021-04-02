@@ -21,7 +21,7 @@ end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- Tetris game
-  'alec-gibson/nvim-tetris',
+  'alec-gibson/nvim-tetris';
   -- Treesitter
   'nvim-treesitter/nvim-treesitter';
   -- Telescope
@@ -39,7 +39,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- selection increaser/decreaser
   'terryma/vim-expand-region';
   -- Git - blamer
-  'APZelos/blamer.nvim';
+  --'APZelos/blamer.nvim';
+  'ttys3/nvim-blamer.lua';
   -- Git - show commit of current line
   'rhysd/git-messenger.vim';
   -- Git plugin for vim. Bestest of bests!!!
