@@ -31,10 +31,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-fzy-native.nvim',
   'nvim-telescope/telescope-symbols.nvim',
   'kyazdani42/nvim-web-devicons',
-  -- emberjs
-  'joukevandermaas/vim-ember-hbs',
-  -- ember-test-runner
-  'toranb/vim-ember-cli-test-runner',
   -- dispatcher
   'tpope/vim-dispatch',
   -- Git - blamer
