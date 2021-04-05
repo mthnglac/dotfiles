@@ -36,10 +36,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'toranb/vim-ember-cli-test-runner';
   -- dispatcher
   'tpope/vim-dispatch';
-  -- selection increaser/decreaser
-  'terryma/vim-expand-region';
   -- Git - blamer
-  --'APZelos/blamer.nvim';
   'ttys3/nvim-blamer.lua';
   -- Git - show commit of current line
   'rhysd/git-messenger.vim';
