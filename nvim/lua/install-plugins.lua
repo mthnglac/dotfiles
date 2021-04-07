@@ -24,6 +24,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'alec-gibson/nvim-tetris',
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', ['do'] = '<Cmd>TSUpdate'},
+  'windwp/nvim-ts-autotag',
   -- Telescope
   'nvim-telescope/telescope.nvim',
   'nvim-lua/plenary.nvim',
