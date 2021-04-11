@@ -1,6 +1,6 @@
 local actions = require('telescope.actions')
 
-require('telescope').setup{
+require('telescope').setup({
   defaults = {
     mappings = {
       i = {
@@ -60,7 +60,8 @@ require('telescope').setup{
       override_file_sorter = true,
     }
   }
-}
+})
+
 require('telescope').load_extension('fzy_native')
 
 local M = {}
