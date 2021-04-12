@@ -17,6 +17,7 @@ Variable.g({
         "coc-lua",
         "coc-marketplace",
         "coc-python",
+        "coc-rls",
         "coc-snippets",
         "coc-solargraph",
         "coc-sql",
