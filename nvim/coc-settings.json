@@ -1,7 +1,6 @@
 {
   "coc.preferences.bracketEnterImprove": true,
   "http.proxyStrictSSL": false,
-  "eslint.enable": false,
   "python.jediEnabled": false,
   "tsserver.maxTsServerMemory": 8192,
   "tsserver.disableAutomaticTypeAcquisition": false,
