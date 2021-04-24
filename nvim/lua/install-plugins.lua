@@ -79,8 +79,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'vim-utils/vim-man',
   -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree',
-  -- A collection of language packs.
-  'sheerun/vim-polyglot',
   -- Vlang
   'ollykel/v-vim',
   -- Simple TODO plugin
