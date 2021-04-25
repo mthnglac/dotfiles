@@ -39,8 +39,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- Git - blamer
   --'ttys3/nvim-blamer.lua',
   'f-person/git-blame.nvim',
-  -- Git - show commit of current line
-  'rhysd/git-messenger.vim',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
   -- cheat.sh with popup plugin
