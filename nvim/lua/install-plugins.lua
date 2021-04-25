@@ -54,8 +54,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'tweekmonster/startuptime.vim',
   -- CoC
   {'neoclide/coc.nvim', ['branch'] = 'release'},
-  -- Snippets
-  'mthnglac/vim-snippets',
   -- A Vim plugin that runs 'gofmt' when you save
   'tweekmonster/gofmt.vim',
   -- displaying vertical lines
@@ -79,6 +77,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'vim-utils/vim-man',
   -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree',
+  -- A collection of language packs.
+  'sheerun/vim-polyglot',
   -- Vlang
   'ollykel/v-vim',
   -- Simple TODO plugin
