@@ -23,6 +23,7 @@ Variable.g({
 })
 
 Variable.g({
+    coc_node_path = tostring(os.getenv("HOME")) .. "/.asdf/installs/nodejs/14.16.1/bin/node",
     -- for jump to next placeholder
     coc_snippet_next = '<c-j>',
     -- for jump to next placeholder
