@@ -23,8 +23,6 @@ Variable.g({
 })
 
 Variable.g({
-    -- node path
-    coc_node_path = tostring(os.getenv("HOME")) .. "/.nvm/versions/node/v16.0.0/bin/node",
     -- for jump to next placeholder
     coc_snippet_next = '<c-j>',
     -- for jump to next placeholder
