@@ -109,7 +109,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- matchup with closing match
   'andymass/vim-matchup',
   -- popup terminal
-  'voldikss/vim-floaterm',
+  'numtostr/FTerm.nvim',
   -- colorschemes
   'colepeters/spacemacs-theme.vim',
   'gruvbox-community/gruvbox',
