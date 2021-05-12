@@ -1,3 +1,5 @@
 [user]
 	email = metehanglc@protonmail.com
 	name = Metehan Gulac
+[core]
+	excludesFile = ~/.gitignore
