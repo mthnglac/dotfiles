@@ -1,3 +1,3 @@
 Variable.g({
-	vimspector_install_gadgets = {'debugpy', 'vscode-node-debug2', 'CodeLLDB'}
+	vimspector_install_gadgets = {'debugpy', 'CodeLLDB'}
 })

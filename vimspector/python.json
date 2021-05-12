@@ -19,14 +19,15 @@
         "request": "launch",
         "type": "python",
         "cwd": "${workspaceRoot}",
-        "program": "${file}",
+        "program": "${workspaceRoot}/<main-file>",
+        "args": ["*${CommandLineArgs}"],
         "stopOnEntry": true,
         "console": "integratedTerminal"
       },
       "breakpoints": {
         "exception": {
           "raised": "N",
-          "uncaught": ""
+          "uncaught": "Y"
         }
       }
     }
