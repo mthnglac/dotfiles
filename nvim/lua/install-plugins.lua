@@ -22,8 +22,6 @@ end
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- Smooth scroll
   'psliwka/vim-smoothie',
-  -- Tetris game
-  'alec-gibson/nvim-tetris',
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
