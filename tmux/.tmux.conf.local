@@ -15,6 +15,10 @@
 #set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
 
 
+# -- colors --------------------------------------------------------------------
+set -ga terminal-overrides ",xterm-256color*:Tc"
+
+
 # -- windows & pane creation ---------------------------------------------------
 
 # new window retains current path, possible values are:

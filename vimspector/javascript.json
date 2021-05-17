@@ -1,0 +1,50 @@
+{
+  "configurations": {
+    "run": {
+      "adapter": "vscode-node",
+      "configuration": {
+        "request": "launch",
+        "port": 3000,
+        "protocol": "auto",
+        "stopOnEntry": true,
+        "console": "integratedTerminal",
+        "program": "${file}",
+        "cwd": "${workspaceRoot}",
+        "breakpoints": {
+          "exception": {
+            "raised": "N",
+            "uncaught": "Y"
+          }
+        }
+      }
+    },
+    "launch": {
+      "adapter": "chrome",
+      "configuration": {
+        "request": "launch",
+        "url": "http://localhost:3000/",
+        "webRoot": "${workspaceRoot}/src",
+        "sourceMapPathOverrides": {
+          "webpack:///./src/*": "${workspaceRoot}/src/*"
+        },
+        "skipFiles": [
+          "${workspaceRoot}/**/*.svg",
+          "${workspaceRoot}/**/*.json",
+          "${workspaceRoot}/**/*.gitignore",
+          "${workspaceRoot}/**/*.css",
+          "${workspaceRoot}/**/*.md",
+          "${workspaceRoot}/**/*.lock",
+          "${workspaceRoot}/public/**",
+          "${workspaceRoot}/node_modules/**",
+          "<node_internals>/**"
+        ],
+        "breakpoints": {
+          "exception": {
+            "raised": "N",
+            "uncaught": "Y"
+          }
+        }
+      }
+    }
+  }
+}

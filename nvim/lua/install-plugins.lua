@@ -85,10 +85,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'ryanoasis/vim-devicons',
   -- Prettier plugin
   {'prettier/vim-prettier', ['do'] = 'yarn install'},
-  -- Kotlin plugin
-  'udalov/kotlin-vim',
-  -- Dart plugin
-  'dart-lang/dart-vim-plugin',
   -- Presentation
   'junegunn/goyo.vim',
   'junegunn/limelight.vim',
