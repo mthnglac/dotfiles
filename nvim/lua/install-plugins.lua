@@ -32,8 +32,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-fzy-native.nvim',
   'nvim-telescope/telescope-symbols.nvim',
   'kyazdani42/nvim-web-devicons',
-  -- dispatcher
-  'tpope/vim-dispatch',
   -- Git - blamer
   --'ttys3/nvim-blamer.lua',
   'f-person/git-blame.nvim',
@@ -50,8 +48,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'tweekmonster/startuptime.vim',
   -- CoC
   {'neoclide/coc.nvim', ['branch'] = 'release'},
-  -- A Vim plugin that runs 'gofmt' when you save
-  'tweekmonster/gofmt.vim',
   -- displaying vertical lines
   'Yggdroot/indentLine',
   -- surroundings": parentheses, brackets, quotes vs.
@@ -69,8 +65,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'preservim/nerdcommenter',
   -- Insert or delete brackets, parens, quotes in pair.
   'jiangmiao/auto-pairs',
-  -- for viewing man pages in vim.
-  'vim-utils/vim-man',
   -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree',
   -- A collection of language packs.
