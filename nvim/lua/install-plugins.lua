@@ -34,8 +34,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-github.nvim',
   'nvim-telescope/telescope-node-modules.nvim',
   'fannheyward/telescope-coc.nvim',
-  -- web devicons
-  'kyazdani42/nvim-web-devicons',
   -- Git - blamer
   --'ttys3/nvim-blamer.lua',
   'f-person/git-blame.nvim',
@@ -56,8 +54,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'Yggdroot/indentLine',
   -- surroundings": parentheses, brackets, quotes vs.
   'tpope/vim-surround',
-  -- manage virtualenv
-  'jmcantrell/vim-virtualenv',
   -- file browser
   'kyazdani42/nvim-tree.lua',
   -- .gitignore plugin
@@ -79,7 +75,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- compiler plugin
   'tpope/vim-dispatch',
   -- icons pack
-  'ryanoasis/vim-devicons',
+  'kyazdani42/nvim-web-devicons',
   -- Prettier plugin
   {'prettier/vim-prettier', ['do'] = 'yarn install'},
   -- Presentation
