@@ -101,13 +101,13 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'andymass/vim-matchup',
   -- popup terminal
   'numtostr/FTerm.nvim',
+  -- status bar
+  'hoob3rt/lualine.nvim',
   -- colorschemes
   'colepeters/spacemacs-theme.vim',
   'gruvbox-community/gruvbox',
   'sainnhe/gruvbox-material',
   'phanviet/vim-monokai-pro',
-  'vim-airline/vim-airline',
-  'vim-airline/vim-airline-themes',
   'flazz/vim-colorschemes',
   'chriskempson/base16-vim',
   {'dracula/vim', ['as'] = 'dracula'},
