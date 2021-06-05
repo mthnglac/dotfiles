@@ -13,5 +13,5 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 -- Closer to the metal
-map('n', '<F12>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
-map('t', '<F12>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+map('n', '<F12>', '<Cmd>lua require("FTerm").toggle()<CR>', opts)
+map('t', '<F12>', '<C-\\><C-n><Cmd>lua require("FTerm").toggle()<CR>', opts)

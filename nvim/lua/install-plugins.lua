@@ -25,12 +25,16 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
-  -- Telescope
+  -- Telescope & extensions
   'nvim-telescope/telescope.nvim',
   'nvim-lua/plenary.nvim',
   'nvim-lua/popup.nvim',
   'nvim-telescope/telescope-fzy-native.nvim',
   'nvim-telescope/telescope-symbols.nvim',
+  'nvim-telescope/telescope-github.nvim',
+  'nvim-telescope/telescope-node-modules.nvim',
+  'fannheyward/telescope-coc.nvim',
+  -- web devicons
   'kyazdani42/nvim-web-devicons',
   -- Git - blamer
   --'ttys3/nvim-blamer.lua',
@@ -55,12 +59,11 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- manage virtualenv
   'jmcantrell/vim-virtualenv',
   -- file browser
-  'preservim/nerdtree',
-  'Xuyuanp/nerdtree-git-plugin',
+  'kyazdani42/nvim-tree.lua',
   -- .gitignore plugin
   'gisphm/vim-gitignore',
   -- for showing git sign: inserted, modified, deleted vs..
-  'airblade/vim-gitgutter',
+  'lewis6991/gitsigns.nvim',
   -- commenter
   'preservim/nerdcommenter',
   -- Insert or delete brackets, parens, quotes in pair.
