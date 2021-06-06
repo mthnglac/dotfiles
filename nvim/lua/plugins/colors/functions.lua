@@ -21,3 +21,11 @@ fun! ColorMyPencils()
 endfun
 call ColorMyPencils()
 ]], true)
+
+-- random theme pick
+vim.api.nvim_exec(
+[[
+fun! SurpriseMe()
+    colorscheme random
+endfun
+]], true)

@@ -102,5 +102,7 @@ Keybind.g({
     -- open help for selected word
     { 'n', '<Leader>ghw', '<Cmd>h <C-R>=expand("<cword>")<CR><CR>', { noremap = true } },
     -- Vim with me!! (customize theme with shortcut)
-    { 'n', '<Leader>vwm', '<Cmd>call ColorMyPencils()<CR>', { noremap = true } },
+    { 'n', '<Leader>vwm', '<Cmd>call ColorMyPencils()<CR>', { noremap = true, silent = true } },
+    -- Surprize me!! (random theme pick)
+    { 'n', '<Leader>sm', '<Cmd>call SurpriseMe()<CR>', { noremap = true, silent = true } },
 })
