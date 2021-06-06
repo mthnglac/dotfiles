@@ -98,7 +98,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- popup terminal
   'numtostr/FTerm.nvim',
   -- status bar
-  'hoob3rt/lualine.nvim',
+  'vim-airline/vim-airline',
+  'vim-airline/vim-airline-themes',
   -- colorschemes
   'colepeters/spacemacs-theme.vim',
   'gruvbox-community/gruvbox',

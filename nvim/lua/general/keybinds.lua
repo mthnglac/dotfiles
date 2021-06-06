@@ -5,7 +5,7 @@ Keybind.g({
 	#-------------------------------------------------------------------------#
 	--]]
     -- reload nvim configuration file
-    { 'n', '<Leader><CR>', ':luafile $MYVIMRC<CR>', { noremap = true, silent = true } },
+    { 'n', '<Leader><CR>', ':luafile $MYVIMRC<CR>', { noremap = true } },
 
 
 	--[[
