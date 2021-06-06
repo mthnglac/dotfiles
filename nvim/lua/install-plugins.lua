@@ -35,7 +35,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-node-modules.nvim',
   'fannheyward/telescope-coc.nvim',
   -- Git - blamer
-  --'ttys3/nvim-blamer.lua',
   'f-person/git-blame.nvim',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
@@ -110,6 +109,4 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   {'dracula/vim', ['as'] = 'dracula'},
   -- a vim game . thanks to ThePrimeagen!
   'ThePrimeagen/vim-be-good',
-  -- vim command tracking tool.
-  'ThePrimeagen/vim-apm',
 })
