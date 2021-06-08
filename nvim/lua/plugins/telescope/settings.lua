@@ -71,14 +71,21 @@ require('telescope').setup({
     buffer_previewer_maker = new_maker,
   },
   extensions = {
-    fzy_native = {
+    fzf = {
+      -- false will only do exact matching
+      fuzzy = true,
+      -- override the generic sorter
       override_generic_sorter = false,
+      -- override the file sorter
       override_file_sorter = true,
+      -- or "ignore_case" or "respect_case". the default case_mode is "smart_case"
+      case_mode = "smart_case",
     },
   },
 })
 
-require('telescope').load_extension('fzy_native')
+require('telescope').load_extension('fzf')
+--require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('gh')
 require('telescope').load_extension('coc')
 require('telescope').load_extension('node_modules')

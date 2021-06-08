@@ -29,7 +29,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope.nvim',
   'nvim-lua/plenary.nvim',
   'nvim-lua/popup.nvim',
-  'nvim-telescope/telescope-fzy-native.nvim',
+  {'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make'},
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
   'nvim-telescope/telescope-node-modules.nvim',
