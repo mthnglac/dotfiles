@@ -1,6 +1,5 @@
 -- Globals
 Option.g({
-	syntax = "on",
 	encoding = "UTF-8",
 	exrc = true,
 	guicursor = "",

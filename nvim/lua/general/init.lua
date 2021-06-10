@@ -1,6 +1,6 @@
-require('general.options')
 require('general.variables')
 require('general.functions')
 require('general.commands')
+require('general.options')
 require('general.keybinds')
 require('general.reloads')
