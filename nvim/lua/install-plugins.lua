@@ -20,6 +20,7 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  'pwntester/octo.nvim',
   -- Smooth scroll
   'psliwka/vim-smoothie',
   -- Treesitter
