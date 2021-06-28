@@ -107,7 +107,7 @@ Option.w({
 
 	-- code folding method to syntax
 	-- common methods will be used such as curly braces
-	--foldmethod = 'syntax',
+	foldmethod = 'syntax',
 
 	-- error signs and warnings will be displayed in the number line
 	-- usually it adds new column when signs, moving buffer to right side.
