@@ -1,4 +1,5 @@
 local actions = require('telescope.actions')
+
 local previewers = require('telescope.previewers')
 
 local new_maker = function(filepath, bufnr, opts)
@@ -21,6 +22,8 @@ require('telescope').setup({
       i = {
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
+        ["<C-Down>"] = require('telescope.actions').cycle_history_next,
+        ["<C-Up>"] = require('telescope.actions').cycle_history_prev,
       },
     },
     vimgrep_arguments = {
@@ -54,7 +57,9 @@ require('telescope').setup({
     file_sorter =  require('telescope.sorters').get_fzy_sorter,
     file_ignore_patterns = {},
     generic_sorter =  require('telescope.sorters').get_generic_fuzzy_sorter,
-    shorten_path = true,
+    path_display = {
+      "absolute",
+    },
     winblend = 0,
     border = {},
     borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
