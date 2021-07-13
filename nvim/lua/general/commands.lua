@@ -14,6 +14,6 @@ Augroup.cmds({
     },
     -- its PROPERTY!!!
     MTHNGLAC = {
-        {"BufWritePre", "* :call TrimWhitespace()"},
+        --{"BufWritePre", "* :call TrimWhitespace()"},
     },
 })
