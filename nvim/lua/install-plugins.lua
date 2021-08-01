@@ -44,6 +44,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'RishabhRD/nvim-cheat.sh',
   -- debugger
   'puremourning/vimspector',
+  'mfussenegger/nvim-dap',
   -- Godot vim plugin
   'habamax/vim-godot',
   -- check vim startup time
