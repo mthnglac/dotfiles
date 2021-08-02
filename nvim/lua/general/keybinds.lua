@@ -99,8 +99,6 @@ Keybind.g({
     { 'n', '<Leader>', '<Cmd>nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true } },
     -- ctrl-c
     { 'i', '<C-c>', '<esc>', { noremap = true } },
-    -- open help for selected word
-    { 'n', '<Leader>ghw', '<Cmd>h <C-R>=expand("<cword>")<CR><CR>', { noremap = true } },
     -- Vim with me!! (customize theme with shortcut)
     { 'n', '<Leader>vwm', '<Cmd>call ColorMyPencils()<CR>', { noremap = true, silent = true } },
     -- Surprize me!! (random theme pick)
