@@ -49,6 +49,9 @@ Keybind.g({
     -- yank all the content of file to global register ?? (╯°□°）╯︵ ┻━┻
     { 'n', '<Leader>Y', 'gg"+yG', { noremap = true } },
 
+    -- yank from the cursor position to the end of the line
+    { 'n', 'Y', 'y$', { noremap = true } },
+
 
 	--[[
 	#-------------------------------------------------------------------------#
