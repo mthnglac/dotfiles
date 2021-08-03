@@ -81,9 +81,9 @@ Keybind.g({
 	--]]
 
     -- move selected line to up/down
-    { 'v', 'J', '<Cmd>m \'>+1<CR>gv=gv', { noremap = true } },
-    { 'v', 'K', '<Cmd>m \'<-2<CR>gv=gv', { noremap = true } },
-    { 'n', 'J', 'mzJ`z', { noremap = true } },
+    { 'v', 'J', [[<Cmd>m '>+1<CR>gv=gv]], { noremap = true } },
+    { 'v', 'K', [[<Cmd>m '<-2<CR>gv=gv]], { noremap = true } },
+    { 'n', 'J', [[mzJ`z]], { noremap = true } },
 
 
 	--[[
