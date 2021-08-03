@@ -74,10 +74,32 @@ Keybind.g({
     -- move selected line to up/down
     { 'v', 'J', '<Cmd>m \'>+1<CR>gv=gv', { noremap = true } },
     { 'v', 'K', '<Cmd>m \'<-2<CR>gv=gv', { noremap = true } },
-})
+    { 'n', 'J', 'mzJ`z', { noremap = true } },
 
 
-Keybind.g({
+	--[[
+	#-------------------------------------------------------------------------#
+	#                                   UNDO                                  #
+	#-------------------------------------------------------------------------#
+	--]]
+
+    -- undo break points
+    { 'i', ',', ',<c-g>u', { noremap = true } },
+    { 'i', '.', '.<c-g>u', { noremap = true } },
+    { 'i', '!', '!<c-g>u', { noremap = true } },
+    { 'i', '?', '?<c-g>u', { noremap = true } },
+
+	--[[
+	#-------------------------------------------------------------------------#
+	#                                SEARCH WORD                              #
+	#-------------------------------------------------------------------------#
+	--]]
+
+    -- search with next with centralized cursor
+    { 'n', 'n', 'nzzzv', { noremap = true } },
+    { 'n', 'N', 'Nzzzv', { noremap = true } },
+
+
 	--[[
 	#-------------------------------------------------------------------------#
 	#                                 TERMINAL                                #
@@ -89,10 +111,8 @@ Keybind.g({
     { 't', '<Esc>', '<C-\\><C-n>', { noremap = true } },
     -- open neovim terminal
     { 'n', '<c-n>', '<Cmd>call OpenTerminal()<CR>', { noremap = true } },
-})
 
 
-Keybind.g({
 	--[[
 	#-------------------------------------------------------------------------#
 	#                                   OTHER                                 #
