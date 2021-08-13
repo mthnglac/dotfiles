@@ -1,5 +1,4 @@
 local actions = require('telescope.actions')
-
 local previewers = require('telescope.previewers')
 
 local new_maker = function(filepath, bufnr, opts)
