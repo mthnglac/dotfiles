@@ -46,5 +46,11 @@ require('nvim-treesitter.configs').setup({
       goto_node = '<cr>',
       show_help = '?',
     },
-  }
+  },
+  context = {
+    enable = true,
+  },
+  matchup = {
+    enable = true,
+  },
 })
