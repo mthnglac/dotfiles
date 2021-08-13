@@ -26,6 +26,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
+  'nvim-treesitter/nvim-treesitter-refactor',
+  'nvim-treesitter/playground',
   -- Telescope & extensions
   'nvim-telescope/telescope.nvim',
   'nvim-lua/plenary.nvim',
@@ -39,9 +41,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'f-person/git-blame.nvim',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
-  -- cheat.sh with popup plugin
-  'RishabhRD/popfix',
-  'RishabhRD/nvim-cheat.sh',
   -- debugger
   'puremourning/vimspector',
   'mfussenegger/nvim-dap',
@@ -52,7 +51,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- CoC
   {'neoclide/coc.nvim', ['branch'] = 'release'},
   -- displaying vertical lines
-  'Yggdroot/indentLine',
+  'lukas-reineke/indent-blankline.nvim',
   -- surroundings": parentheses, brackets, quotes vs.
   'tpope/vim-surround',
   -- file browser
