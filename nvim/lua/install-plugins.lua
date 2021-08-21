@@ -40,8 +40,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-frecency.nvim',
   -- sql using plugin
   'tami5/sql.nvim',
-  -- Git - blamer
-  'f-person/git-blame.nvim',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
   -- debugger
@@ -62,6 +60,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- .gitignore plugin
   'gisphm/vim-gitignore',
   -- for showing git sign: inserted, modified, deleted vs..
+  -- also git blamer
   'lewis6991/gitsigns.nvim',
   -- commenter
   'preservim/nerdcommenter',
