@@ -12,7 +12,7 @@ Variable.g({
         "coc-jest",
         "coc-lua",
         "coc-marketplace",
-        "coc-python",
+        "coc-jedi",
         "coc-rls",
         "coc-rust-analyzer",
         "coc-solargraph",
