@@ -36,7 +36,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   {'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make'},
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
-  'nvim-telescope/telescope-node-modules.nvim',
   'fannheyward/telescope-coc.nvim',
   -- Git - blamer
   'f-person/git-blame.nvim',

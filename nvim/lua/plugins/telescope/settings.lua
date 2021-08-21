@@ -91,7 +91,6 @@ require('telescope').load_extension('fzf')
 --require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('gh')
 require('telescope').load_extension('coc')
-require('telescope').load_extension('node_modules')
 
 local M = {}
 
