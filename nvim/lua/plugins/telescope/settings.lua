@@ -84,11 +84,22 @@ require('telescope').setup({
       -- or "ignore_case" or "respect_case". the default case_mode is "smart_case"
       case_mode = "smart_case",
     },
+    frecency = {
+      show_scores = true,
+      show_unindexed = true,
+      ignore_patterns = {"*.git/*", "*/tmp/*", "*/node_modules/*", "*/dist/*"},
+      disable_devicons = false,
+      workspaces = {
+        ["conf"]    = tostring(os.getenv("HOME")) .. "/.config",
+        ["data"]    = tostring(os.getenv("HOME")) .. "/.local/share",
+        ["Code"] = tostring(os.getenv("HOME")) .. "/Code",
+      }
+    }
   },
 })
 
+require('telescope').load_extension('frecency')
 require('telescope').load_extension('fzf')
---require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('gh')
 require('telescope').load_extension('coc')
 

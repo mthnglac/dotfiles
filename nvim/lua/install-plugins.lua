@@ -37,6 +37,9 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
   'fannheyward/telescope-coc.nvim',
+  'nvim-telescope/telescope-frecency.nvim',
+  -- sql using plugin
+  'tami5/sql.nvim',
   -- Git - blamer
   'f-person/git-blame.nvim',
   -- Git plugin for vim. Bestest of bests!!!

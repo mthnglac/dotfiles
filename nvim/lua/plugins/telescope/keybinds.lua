@@ -12,7 +12,9 @@ Keybind.g({
 	-- search by filename in all project files
 	{ 'n', '<Leader>pf', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], { noremap = true, silent = true } },
 	-- telescope through dotfiles
-	{ 'n', '<Leader>prc', [[<Cmd>lua require('plugins.telescope.settings').search_dotfiles()<CR>]], { noremap = true } },
+	{ 'n', '<Leader>prc', [[<Cmd>lua require('plugins.telescope.settings').search_dotfiles()<CR>]], { noremap = true, silent=true } },
+	-- telescope firefox frecency
+	{ 'n', '<Leader>pc', [[<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>]], { noremap = true, silent=true } },
 })
 
 
