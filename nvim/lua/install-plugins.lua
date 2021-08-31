@@ -20,7 +20,6 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
-  'pwntester/octo.nvim',
   -- Smooth scroll
   'psliwka/vim-smoothie',
   -- Treesitter
@@ -42,6 +41,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'tami5/sql.nvim',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
+  -- git diff preview
+  'pwntester/octo.nvim',
   -- debugger
   'puremourning/vimspector',
   'mfussenegger/nvim-dap',
