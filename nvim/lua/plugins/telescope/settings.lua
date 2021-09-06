@@ -1,4 +1,5 @@
 local actions = require('telescope.actions')
+local sorters = require('telescope.sorters')
 local previewers = require('telescope.previewers')
 
 local new_maker = function(filepath, bufnr, opts)
@@ -21,8 +22,8 @@ require('telescope').setup({
       i = {
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
-        ["<C-Down>"] = require('telescope.actions').cycle_history_next,
-        ["<C-Up>"] = require('telescope.actions').cycle_history_prev,
+        ["<C-Down>"] = actions.cycle_history_next,
+        ["<C-Up>"] = actions.cycle_history_prev,
       },
     },
     vimgrep_arguments = {
@@ -53,9 +54,9 @@ require('telescope').setup({
       },
     },
     layout_strategy = "horizontal",
-    file_sorter =  require('telescope.sorters').get_fzy_sorter,
+    file_sorter =  sorters.get_fzy_sorter,
     file_ignore_patterns = {},
-    generic_sorter =  require('telescope.sorters').get_generic_fuzzy_sorter,
+    generic_sorter =  sorters.get_generic_fuzzy_sorter,
     path_display = {
       "absolute",
     },
@@ -65,12 +66,12 @@ require('telescope').setup({
     color_devicons = true,
     use_less = true,
     set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
-    file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-    grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-    qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+    file_previewer = previewers.vim_buffer_cat.new,
+    grep_previewer = previewers.vim_buffer_vimgrep.new,
+    qflist_previewer = previewers.vim_buffer_qflist.new,
 
     -- Developer configurations: Not meant for general override
-    --buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+    --buffer_previewer_maker = previewers.buffer_previewer_maker
     buffer_previewer_maker = new_maker,
   },
   extensions = {
