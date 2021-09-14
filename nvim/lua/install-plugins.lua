@@ -39,6 +39,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-frecency.nvim',
   -- sql using plugin
   'tami5/sql.nvim',
+  'tpope/vim-dadbod',
+  'kristijanhusak/vim-dadbod-ui',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
   -- git diff preview
