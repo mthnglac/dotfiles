@@ -19,7 +19,6 @@ fun! ColorMyPencils()
     "highlight netrwDir guifg=#5eacd3
     "highlight qfFileName guifg=#aed75f
 endfun
-call ColorMyPencils()
 ]], true)
 
 -- random theme pick

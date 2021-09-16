@@ -10,7 +10,7 @@ Command.cmd({
 Augroup.cmds({
     -- highlight on yank!!!
     highlight_yank = {
-        {"TextYankPost", "* silent! lua require'vim.highlight'.on_yank({timeout = 400})"},
+        {"TextYankPost", "* silent! lua require('vim.highlight').on_yank({timeout = 400})"},
     },
     -- its PROPERTY!!!
     MTHNGLAC = {

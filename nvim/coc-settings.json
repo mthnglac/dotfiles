@@ -27,5 +27,7 @@
       "filetypes": ["haskell", "lhaskell"]
     }
   },
-  "Lua.diagnostics.globals": ["vim"]
+  "Lua.diagnostics.globals": [
+    "vim"
+  ]
 }

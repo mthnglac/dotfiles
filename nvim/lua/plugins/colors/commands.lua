@@ -1,0 +1,3 @@
+Command.cmd({
+    'call ColorMyPencils()',
+})
