@@ -71,8 +71,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'jiangmiao/auto-pairs',
   -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree',
-  -- A collection of language packs.
-  'sheerun/vim-polyglot',
+  -- handlebar template language pack
+  'mustache/vim-mustache-handlebars',
   -- Vlang
   'ollykel/v-vim',
   -- Simple TODO plugin
@@ -107,7 +107,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'vim-airline/vim-airline-themes',
   -- colorschemes
   'colepeters/spacemacs-theme.vim',
-  'gruvbox-community/gruvbox',
+  'morhetz/gruvbox',
   'sainnhe/gruvbox-material',
   'phanviet/vim-monokai-pro',
   'flazz/vim-colorschemes',
