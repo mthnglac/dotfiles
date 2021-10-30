@@ -9,11 +9,15 @@ require('nvim-tree').setup({
   -- open the tree when running this setup function
   open_on_setup = false,
   -- will not open on setup if the filetype is in this list
-  ignore_ft_on_setup  = {},
+  ignore_ft_on_setup  = {'startify', 'dashboard'},
   -- closes neovim automatically when the tree is the last **WINDOW** in the view
   auto_close = false,
   -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
   open_on_tab = false,
+  -- hijack the cursor in the tree to put it at the start of the filename
+  hijack_cursor = false,
+  -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
+  update_cwd = false,
   -- hijacks new directory buffers when they are opened.
   update_to_buf_dir   = {
     -- enable the feature
@@ -21,10 +25,6 @@ require('nvim-tree').setup({
     -- allow to open the tree if it was previously closed
     auto_open = true,
   },
-  -- hijack the cursor in the tree to put it at the start of the filename
-  hijack_cursor = false,
-  -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
-  update_cwd          = false,
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = false,
@@ -44,7 +44,18 @@ require('nvim-tree').setup({
     update_cwd  = true,
     -- list of buffer names / filetypes that will not update the cwd if the file isn't found under the current root directory
     -- only relevant when `update_focused_file.update_cwd` is true and `update_focused_file.enable` is true
-    ignore_list = {}
+		ignore_list = {
+			'\\.pyc$',
+			'^__pycache__$',
+			'.git$[[dir]]',
+			'.swp',
+			'dist',
+			--'tmp',
+			'node_modules',
+			'bower_components',
+			'.pnp',
+			'.cache',
+		}
   },
   -- configuration options for the system open command (`s` in the tree by default)
   system_open = {
@@ -53,7 +64,10 @@ require('nvim-tree').setup({
     -- the command arguments as a list
     args = {}
   },
-
+	filters = {
+		dotfiles = true,
+		custom = {},
+	},
   view = {
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
     width = 45,

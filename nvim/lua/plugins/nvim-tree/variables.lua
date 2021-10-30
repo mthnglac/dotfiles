@@ -1,27 +1,12 @@
 Variable.g({
-  --empty by default
-  nvim_tree_ignore = {
-		'\\.pyc$',
-		'^__pycache__$',
-		'.git$[[dir]]',
-		'.swp',
-		'dist',
-		'tmp',
-		'node_modules',
-		'bower_components',
-		'.pnp',
-    '.cache',
-  },
   --0 by default
   nvim_tree_gitignore = 1,
   --empty by default, don't auto open tree on specific filetypes.
-  nvim_tree_auto_ignore_ft = {'startify', 'dashboard'},
+  --nvim_tree_auto_ignore_ft = {'startify', 'dashboard'},
   --0 by default, closes the tree when you open a file
   nvim_tree_quit_on_open = 0,
   --0 by default, this option shows indent markers when folders are open
   nvim_tree_indent_markers = 1,
-  --0 by default, this option hides files and folders starting with a dot `.`
-  nvim_tree_hide_dotfiles = 1,
   --0 by default, will enable file highlight for git attributes (can be used without the icons).
   nvim_tree_git_hl = 1,
   --0 by default, will enable folder and file icon highlight for opened files/directories.
