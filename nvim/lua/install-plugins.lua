@@ -71,8 +71,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'jiangmiao/auto-pairs',
   -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree',
-  -- handlebar template language pack
-  'mustache/vim-mustache-handlebars',
   -- Vlang
   'ollykel/v-vim',
   -- Simple TODO plugin
