@@ -20,6 +20,10 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+	-- partial code runner
+	{'michaelb/sniprun', ['do'] = 'bash install.sh'},
+	-- nvim notifier
+	'rcarriga/nvim-notify',
 	-- test plugin
 	'vim-test/vim-test',
   -- Smooth scroll
@@ -45,8 +49,10 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'kristijanhusak/vim-dadbod-ui',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
-  -- git diff preview
+  -- git pr preview
   'pwntester/octo.nvim',
+  -- Git diff preview
+	'sindrets/diffview.nvim',
   -- debugger
   'puremourning/vimspector',
   'mfussenegger/nvim-dap',
@@ -113,6 +119,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'flazz/vim-colorschemes',
   'chriskempson/base16-vim',
   {'dracula/vim', ['as'] = 'dracula'},
+	-- for training vim moves
+	'tjdevries/train.nvim',
   -- a vim game . thanks to ThePrimeagen!
   'ThePrimeagen/vim-be-good',
 })

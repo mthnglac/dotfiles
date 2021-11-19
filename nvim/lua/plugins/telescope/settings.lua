@@ -54,9 +54,7 @@ require('telescope').setup({
       },
     },
     layout_strategy = "horizontal",
-    file_sorter =  sorters.get_fzy_sorter,
     file_ignore_patterns = {},
-    generic_sorter =  sorters.get_generic_fuzzy_sorter,
     path_display = {
       "absolute",
     },
@@ -79,7 +77,7 @@ require('telescope').setup({
       -- false will only do exact matching
       fuzzy = true,
       -- override the generic sorter
-      override_generic_sorter = false,
+      override_generic_sorter = true,
       -- override the file sorter
       override_file_sorter = true,
       -- or "ignore_case" or "respect_case". the default case_mode is "smart_case"
