@@ -1,6 +1,4 @@
 Variable.g({
-  --0 by default
-  nvim_tree_gitignore = 1,
   --empty by default, don't auto open tree on specific filetypes.
   --nvim_tree_auto_ignore_ft = {'startify', 'dashboard'},
   --0 by default, closes the tree when you open a file
