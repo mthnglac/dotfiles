@@ -1,12 +1,12 @@
 -- GoTo code navigation.
 Keybind.g({
-	{ 'n', '<Leader>gd', [[<Plug>(coc-definition)]], { noremap = false, silent = false } },
-	{ 'n', '<Leader>gy', [[<Plug>(coc-type-definition)]], { noremap = false, silent = false } },
-	{ 'n', '<Leader>gi', [[<Plug>(coc-implementation)]], { noremap = false, silent = false } },
-	{ 'n', '<Leader>gr', [[<Plug>(coc-references)]], { noremap = false, silent = false } },
+	{ 'n', '<Leader>gd', [[<Plug>(coc-definition)]], { noremap = false, silent = true } },
+	{ 'n', '<Leader>gy', [[<Plug>(coc-type-definition)]], { noremap = false, silent = true } },
+	{ 'n', '<Leader>gi', [[<Plug>(coc-implementation)]], { noremap = false, silent = true } },
+	{ 'n', '<Leader>gr', [[<Plug>(coc-references)]], { noremap = false, silent = true } },
 	{ 'n', '<Leader>rr', [[<Plug>(coc-rename)]], { noremap = false, silent = false } },
-	{ 'n', '<Leader>g[', [[<Plug>(coc-diagnostic-prev)]], { noremap = false, silent = false } },
-	{ 'n', '<Leader>g]', [[<Plug>(coc-diagnostic-next)]], { noremap = false, silent = false } },
+	{ 'n', '<Leader>g[', [[<Plug>(coc-diagnostic-prev)]], { noremap = false, silent = true } },
+	{ 'n', '<Leader>g]', [[<Plug>(coc-diagnostic-next)]], { noremap = false, silent = true } },
 	{ 'n', '<Leader>gp', [[<Plug>(coc-diagnostic-prev-error)]], { noremap = false, silent = true } },
 	{ 'n', '<Leader>gn', [[<Plug>(coc-diagnostic-next-error)]], { noremap = false, silent = true } },
 })
@@ -29,12 +29,6 @@ Keybind.g({
 
 ---- others
 Keybind.g({
-	-- for trigger snippet expand.
-	{ 'i', '<C-l>', [[<Plug>(coc-snippets-expand)]], { noremap = false, silent = false } },
-	-- for select text for visual placeholder of snippet.
-	{ 'v', '<C-j>', [[<Plug>(coc-snippets-select)]], { noremap = false, silent = false } },
-	-- for both expand and jump (make expand higher priority.)
-	{ 'i', '<C-j>', [[<Plug>(coc-snippets-expand-jump)]], { noremap = false, silent = false } },
 	-- for jump with tab
 	{ 'i', '<TAB>', [[v:lua.coc_smart_tab()]], { noremap = true, silent = true, expr = true } },
 	-- for choose with tab through autocomplete menu

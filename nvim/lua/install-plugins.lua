@@ -87,8 +87,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'tpope/vim-dispatch',
   -- icons pack
   'kyazdani42/nvim-web-devicons',
-  -- Prettier plugin
-  {'prettier/vim-prettier', ['do'] = 'yarn install'},
   -- Presentation
   'junegunn/goyo.vim',
   'junegunn/limelight.vim',
