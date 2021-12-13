@@ -20,6 +20,8 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+	-- prettier
+	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
 	-- partial code runner
 	{'michaelb/sniprun', ['do'] = 'bash install.sh'},
 	-- nvim notifier
