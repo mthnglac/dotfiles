@@ -12,11 +12,12 @@ Option.g({
 	compatible = false,
 	errorbells = false,
 
-
+	expandtab = true,
+	autoindent = true,
+	smartindent = true,
 	tabstop = 2,
 	softtabstop = 2,
 	shiftwidth = 2,
-
 
 	--[[
 	#-------------------------------------------------------------------------#
@@ -123,7 +124,5 @@ Option.w({
 })
 
 Option.b({
-	expandtab = true,
-	smartindent = true,
 	swapfile = false,
 })

@@ -1,6 +1,8 @@
 Command.cmd({
     'syntax on',
+    'filetype on',
     'filetype plugin on',
+    'filetype indent on',
     -- tab confs
     'autocmd FileType python set sw=4',
     'autocmd FileType python set ts=4',
