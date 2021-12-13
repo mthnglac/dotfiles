@@ -13,7 +13,6 @@ Variable.g({
 		"coc-java-debug",
 		"coc-jest",
 		"coc-marketplace",
-		"coc-prettier",
 		"coc-pyright",
 		"coc-rls",
 		"coc-rust-analyzer",

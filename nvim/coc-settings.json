@@ -1,10 +1,8 @@
 {
   "coc.preferences.bracketEnterImprove": true,
   "coc.preferences.": true,
-  "prettier.single_quote": true,
-  "prettier.trailing_comma": "all",
   "http.proxyStrictSSL": false,
-  "eslint.autoFixOnSave": false,
+  "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "tsserver.maxTsServerMemory": 8192,
   "tsserver.disableAutomaticTypeAcquisition": false,
