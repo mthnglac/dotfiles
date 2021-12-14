@@ -93,6 +93,12 @@ require('telescope').setup({
         ["data"]    = tostring(os.getenv("HOME")) .. "/.local/share",
         ["Code"] = tostring(os.getenv("HOME")) .. "/Code",
       }
+    },
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"png", "webp", "jpg", "jpeg", "svg"},
+      find_cmd = "rg" -- find command (defaults to `fd`)
     }
   },
 })
@@ -101,6 +107,7 @@ require('telescope').load_extension('frecency')
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('gh')
 require('telescope').load_extension('coc')
+require('telescope').load_extension('media_files')
 
 local M = {}
 

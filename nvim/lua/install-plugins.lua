@@ -45,6 +45,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-telescope/telescope-github.nvim',
   'fannheyward/telescope-coc.nvim',
   'nvim-telescope/telescope-frecency.nvim',
+  'nvim-telescope/telescope-media-files.nvim',
   -- sql using plugin
   'tami5/sql.nvim',
   'tpope/vim-dadbod',
