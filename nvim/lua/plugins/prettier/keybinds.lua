@@ -1,3 +1,3 @@
 Keybind.g({
-	{ 'n', '<Leader>py', [[<Plug>(Prettier)]], { noremap = false, silent = true } },
+	{ 'n', '<Leader>py', [[<Plug>(Prettier)]], { noremap = false, silent = false } },
 })
