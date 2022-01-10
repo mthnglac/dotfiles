@@ -20,6 +20,8 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  -- cursor animation
+  'DanilaMihailov/beacon.nvim',
 	-- prettier
 	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
 	-- partial code runner
