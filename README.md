@@ -6,7 +6,7 @@
                           \____ |\____/|__|  |__|  |__|____/\___  >____  >
                                \/                               \/     \/
 
-                    This repository contains personal dotfiles of Vinod Nimbalkar.
+                    This repository contains personal dotfiles of Metehan Gulac.
 ```
 
 # dotfiles
