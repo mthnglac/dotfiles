@@ -115,6 +115,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'vim-airline/vim-airline',
   'vim-airline/vim-airline-themes',
   -- colorschemes
+  'tiagovla/tokyodark.nvim',
   'colepeters/spacemacs-theme.vim',
   'morhetz/gruvbox',
   'sainnhe/gruvbox-material',
