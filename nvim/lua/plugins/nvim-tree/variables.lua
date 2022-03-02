@@ -1,8 +1,6 @@
 Variable.g({
   --empty by default, don't auto open tree on specific filetypes.
   --nvim_tree_auto_ignore_ft = {'startify', 'dashboard'},
-  --0 by default, closes the tree when you open a file
-  nvim_tree_quit_on_open = 0,
   --0 by default, this option shows indent markers when folders are open
   nvim_tree_indent_markers = 1,
   --0 by default, will enable file highlight for git attributes (can be used without the icons).
@@ -17,20 +15,6 @@ Variable.g({
   nvim_tree_add_trailing = 1,
   -- 0 by default, compact folders that only contain a single folder into one node in the file tree
   nvim_tree_group_empty = 1,
-  --0 by default, will disable the window picker.
-  nvim_tree_disable_window_picker = 1,
-  -- Dictionary of buffer option names mapped to a list of option values that
-  -- indicates to the window picker that the buffer's window should not be
-  -- selectable.
-  nvim_tree_window_picker_exclude = {
-    ['filetype'] = {
-      'packer',
-      'qf',
-    },
-    ['buftype'] = {
-      'terminal',
-    }
-  },
   --List of filenames that gets highlighted with NvimTreeSpecialFile
   nvim_tree_special_files = {
     'README.md',

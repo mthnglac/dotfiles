@@ -26,8 +26,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
 	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
 	-- partial code runner
 	{'michaelb/sniprun', ['do'] = 'bash install.sh'},
-	-- nvim notifier
-	'rcarriga/nvim-notify',
 	-- test plugin
 	'vim-test/vim-test',
   -- Smooth scroll
@@ -88,8 +86,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'ollykel/v-vim',
   -- Simple TODO plugin
   'vuciv/vim-bujo',
-  -- compiler plugin
-  'tpope/vim-dispatch',
   -- icons pack
   'kyazdani42/nvim-web-devicons',
   -- Presentation

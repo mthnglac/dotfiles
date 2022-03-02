@@ -4,9 +4,9 @@ Command.cmd({
     'filetype plugin on',
     'filetype indent on',
     -- tab confs
-    'autocmd FileType python set sw=4',
-    'autocmd FileType python set ts=4',
-    'autocmd FileType python set sts=4',
+    'autocmd FileType python setlocal sw=4',
+    'autocmd FileType python setlocal ts=4',
+    'autocmd FileType python setlocal sts=4',
 })
 
 Augroup.cmds({
