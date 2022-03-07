@@ -9,13 +9,14 @@ Command.cmd({
     'autocmd FileType python setlocal sts=4',
 })
 
-Augroup.cmds({
-    -- highlight on yank!!!
-    highlight_yank = {
-        {"TextYankPost", "* silent! lua require('vim.highlight').on_yank({timeout = 400})"},
-    },
-    -- its PROPERTY!!!
-    MTHNGLAC = {
-        --{"BufWritePre", "* :call TrimWhitespace()"},
-    },
+--Augroup.cmds({
+    --MTHNGLAC = {
+        ----{"BufWritePre", "* :call TrimWhitespace()"},
+    --},
+--})
+
+-- highlight on yank!!!
+vim.api.nvim_create_autocmd('TextYankPost', {
+  pattern = "*",
+  callback = function() require("vim.highlight").on_yank({ timeout = 400 }) end
 })
