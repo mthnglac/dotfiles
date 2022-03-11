@@ -110,14 +110,10 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'vim-airline/vim-airline',
   'vim-airline/vim-airline-themes',
   -- colorschemes
-  'tiagovla/tokyodark.nvim',
-  'colepeters/spacemacs-theme.vim',
   'morhetz/gruvbox',
   'sainnhe/gruvbox-material',
-  'phanviet/vim-monokai-pro',
   'flazz/vim-colorschemes',
   'chriskempson/base16-vim',
-  {'dracula/vim', ['as'] = 'dracula'},
 	-- for training vim moves
 	'tjdevries/train.nvim',
   -- a vim game . thanks to ThePrimeagen!
