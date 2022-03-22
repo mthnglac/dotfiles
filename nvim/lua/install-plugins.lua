@@ -20,12 +20,12 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  'ThePrimeagen/harpoon',
+  'ThePrimeagen/git-worktree.nvim',
   -- cursor animation
   'DanilaMihailov/beacon.nvim',
 	-- prettier
 	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
-	-- partial code runner
-	{'michaelb/sniprun', ['do'] = 'bash install.sh'},
 	-- test plugin
 	'vim-test/vim-test',
   -- Smooth scroll
@@ -43,9 +43,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   {'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make'},
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
-  'fannheyward/telescope-coc.nvim',
-  'nvim-telescope/telescope-frecency.nvim',
-  'nvim-telescope/telescope-media-files.nvim',
   -- sql using plugin
   'tami5/sql.nvim',
   'tpope/vim-dadbod',

@@ -1,5 +1,4 @@
 local actions = require('telescope.actions')
-local sorters = require('telescope.sorters')
 local previewers = require('telescope.previewers')
 
 local new_maker = function(filepath, bufnr, opts)
@@ -83,31 +82,11 @@ require('telescope').setup({
       -- or "ignore_case" or "respect_case". the default case_mode is "smart_case"
       case_mode = "smart_case",
     },
-    frecency = {
-      show_scores = true,
-      show_unindexed = true,
-      ignore_patterns = {"*.git/*", "*/tmp/*", "*/node_modules/*", "*/dist/*"},
-      disable_devicons = false,
-      workspaces = {
-        ["conf"]    = tostring(os.getenv("HOME")) .. "/.config",
-        ["data"]    = tostring(os.getenv("HOME")) .. "/.local/share",
-        ["Code"] = tostring(os.getenv("HOME")) .. "/Code",
-      }
-    },
-    media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = {"png", "webp", "jpg", "jpeg", "svg"},
-      find_cmd = "rg" -- find command (defaults to `fd`)
-    }
   },
 })
 
-require('telescope').load_extension('frecency')
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('gh')
-require('telescope').load_extension('coc')
-require('telescope').load_extension('media_files')
 
 local M = {}
 

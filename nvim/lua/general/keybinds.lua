@@ -50,7 +50,7 @@ Keybind.g({
     { 'n', '<Leader>Y', 'gg"+yG', { noremap = true } },
 
     -- yank from the cursor position to the end of the line
-    { 'n', 'Y', 'y$', { noremap = true } },
+    { 'n', 'Y', 'yg$', { noremap = true } },
 
 
 	--[[

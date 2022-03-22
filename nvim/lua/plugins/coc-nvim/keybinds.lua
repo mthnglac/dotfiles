@@ -24,7 +24,7 @@ Keybind.g({
 ---- mappins for CocList
 Keybind.g({
 	-- show all diagnostics
-	{ 'n', '<Leader>a', [[<Cmd>CocList diagnostics<CR>]], { noremap = true, silent = true, nowait = true } },
+	{ 'n', '<Leader>ca', [[<Cmd>CocList diagnostics<CR>]], { noremap = true, silent = true, nowait = true } },
 })
 
 ---- others
