@@ -29,7 +29,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
 	-- test plugin
 	'vim-test/vim-test',
   -- Smooth scroll
-  'psliwka/vim-smoothie',
+  'karb94/neoscroll.nvim',
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
