@@ -20,7 +20,11 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  -- peek lines immediately with :<line_number>
+  'nacro90/numb.nvim',
+  -- mark manager plugin
   'ThePrimeagen/harpoon',
+  -- git worktree plugin
   'ThePrimeagen/git-worktree.nvim',
   -- cursor animation
   'DanilaMihailov/beacon.nvim',
