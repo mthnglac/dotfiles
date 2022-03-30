@@ -19,7 +19,7 @@
         "request": "launch",
         "type": "python",
         "cwd": "${workspaceRoot}",
-        "program": "${workspaceRoot}/<main-file>",
+        "program": "${workspaceRoot}/main.py",
         "args": ["*${CommandLineArgs}"],
         "stopOnEntry": true,
         "console": "integratedTerminal"

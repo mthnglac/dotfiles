@@ -1,0 +1,5 @@
+--Keybind.g({
+	--{ 'n', '<Leader>vpc', [[<Plug>VimspectorContinue]], { noremap = true, silent = false } },
+	--{ 'n', '<Leader>vps', [[<Plug>VimspectorStop]], { noremap = true, silent = false } },
+	--{ 'n', '<Leader>vpt', [[<Plug>VimspectorToggleBreakpoint]], { noremap = true, silent = false } },
+--})
