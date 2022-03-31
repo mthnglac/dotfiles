@@ -32,8 +32,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
 	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
 	-- test plugin
 	'vim-test/vim-test',
-  -- Smooth scroll
-  'karb94/neoscroll.nvim',
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
