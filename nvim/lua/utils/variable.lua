@@ -12,10 +12,8 @@ local function add_variables (variable_type, variables)
     return
   end
 
-  local variable_type = vim[variable_type]
-
   for key, value in pairs(variables) do
-    variable_type[key] = value
+    vim[variable_type][key] = value
   end
 end
 

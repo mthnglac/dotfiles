@@ -30,13 +30,13 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
 	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
 	-- test plugin
 	'vim-test/vim-test',
-  -- Treesitter
+  -- treesitter & extensions
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
   'nvim-treesitter/nvim-treesitter-refactor',
   'nvim-treesitter/playground',
   'romgrk/nvim-treesitter-context',
-  -- Telescope & extensions
+  -- telescope & extensions
   'nvim-telescope/telescope.nvim',
   'nvim-lua/plenary.nvim',
   'nvim-lua/popup.nvim',
