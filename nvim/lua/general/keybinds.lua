@@ -25,6 +25,9 @@ Keybind.g({
     -- [ space + k ] move cursor to right window
     { 'n', '<Leader>l', '<Cmd>wincmd l<CR>', { noremap = true } },
 
+    -- [ space + c ] highlight cursorline
+    { 'n', '<Leader>c', [[<Cmd>set cursorline! cursorcolumn!<CR>]], { noremap = true } },
+
 
 	--[[
 	#-------------------------------------------------------------------------#

@@ -26,8 +26,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'ThePrimeagen/harpoon',
   -- git worktree plugin
   'ThePrimeagen/git-worktree.nvim',
-  -- cursor animation
-  'DanilaMihailov/beacon.nvim',
 	-- prettier
 	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
 	-- test plugin

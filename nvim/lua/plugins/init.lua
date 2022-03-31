@@ -1,5 +1,4 @@
 require('plugins.airline')
-require('plugins.beacon-nvim')
 require('plugins.bujo')
 require('plugins.close-buffers')
 require('plugins.coc-nvim')
