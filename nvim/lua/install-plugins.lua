@@ -20,8 +20,6 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
-  -- blur background except the active buffer
-  'sunjon/Shade.nvim',
   -- peek lines immediately with :<line_number>
   'nacro90/numb.nvim',
   -- mark manager plugin
