@@ -38,6 +38,17 @@ require('nvim-tree').setup({
       list = {}
     },
   },
+  --false by default, this option shows indent markers when folders are open
+  renderer = {
+    indent_markers = {
+      enable = true,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
+  },
   hijack_directories = {
     enable = true,
     auto_open = true,
@@ -95,6 +106,7 @@ require('nvim-tree').setup({
     timeout = 400,
 	},
   actions = {
+    use_system_clipboard = true,
     change_dir = {
       enable = true,
       global = false,

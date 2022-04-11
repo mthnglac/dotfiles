@@ -1,8 +1,6 @@
 Variable.g({
   --empty by default, don't auto open tree on specific filetypes.
   --nvim_tree_auto_ignore_ft = {'startify', 'dashboard'},
-  --0 by default, this option shows indent markers when folders are open
-  nvim_tree_indent_markers = 1,
   --0 by default, will enable file highlight for git attributes (can be used without the icons).
   nvim_tree_git_hl = 1,
   --0 by default, will enable folder and file icon highlight for opened files/directories.
