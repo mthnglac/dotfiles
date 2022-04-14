@@ -118,7 +118,7 @@ Option.w({
 	-- vim try to keep 100 lines below and above when scrolling
 	-- if buffer cannot display more than 200 lines, cursor will stay in center
 	-- and scroll the buffer
-	scrolloff = 8,
+	scrolloff = 0,
 	wrap = false,
 	colorcolumn = "80",
 })
