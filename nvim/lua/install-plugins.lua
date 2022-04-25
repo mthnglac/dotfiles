@@ -26,10 +26,10 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'ThePrimeagen/harpoon',
   -- git worktree plugin
   'ThePrimeagen/git-worktree.nvim',
-	-- prettier
-	{'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
-	-- test plugin
-	'vim-test/vim-test',
+  -- prettier
+  {'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
+  -- test plugin
+  'vim-test/vim-test',
   -- treesitter & extensions
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
@@ -52,7 +52,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- git pr preview
   'pwntester/octo.nvim',
   -- Git diff preview
-	'sindrets/diffview.nvim',
+  'sindrets/diffview.nvim',
   -- debugger
   'puremourning/vimspector',
   -- Godot vim plugin
