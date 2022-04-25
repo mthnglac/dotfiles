@@ -28,3 +28,9 @@ fun! SurpriseMe()
     colorscheme random
 endfun
 ]], true)
+
+--favorite list
+-- * Atelier_SeasideLight
+-- * Tomorrow-Night-Bright
+-- * Benokai
+-- * Dim

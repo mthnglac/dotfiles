@@ -112,8 +112,4 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'flazz/vim-colorschemes',
   'chriskempson/base16-vim',
   'tiagovla/tokyodark.nvim',
-	-- for training vim moves
-	'tjdevries/train.nvim',
-  -- a vim game . thanks to ThePrimeagen!
-  'ThePrimeagen/vim-be-good',
 })
