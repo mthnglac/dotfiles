@@ -3,7 +3,6 @@ require('nvim-tree').setup({
   auto_reload_on_write = true,
   -- disables netrw completely
   disable_netrw = true,
-  hide_root_folder = false,
   -- hijack the cursor in the tree to put it at the start of the filename
   hijack_cursor = false,
   -- hijack netrw window on startup
@@ -24,6 +23,7 @@ require('nvim-tree').setup({
     width = 45,
     -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
     height = 30,
+    hide_root_folder = false,
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
     side = 'left',
     preserve_window_proportions = false,
