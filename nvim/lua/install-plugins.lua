@@ -35,7 +35,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'windwp/nvim-ts-autotag',
   'nvim-treesitter/nvim-treesitter-refactor',
   'nvim-treesitter/playground',
-  'romgrk/nvim-treesitter-context',
+  'nvim-treesitter/nvim-treesitter-context',
   -- telescope & extensions
   'nvim-telescope/telescope.nvim',
   'nvim-lua/plenary.nvim',
