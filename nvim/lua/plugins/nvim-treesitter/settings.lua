@@ -21,6 +21,7 @@ require('nvim-treesitter.configs').setup({
   refactor = {
     highlight_definitions = {
       enable = true,
+      clear_on_cursor_move = true,
     },
     smart_rename = {
       enable = true,
@@ -46,9 +47,6 @@ require('nvim-treesitter.configs').setup({
       goto_node = '<cr>',
       show_help = '?',
     },
-  },
-  context = {
-    enable = true,
   },
   matchup = {
     enable = true,

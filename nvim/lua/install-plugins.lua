@@ -35,11 +35,11 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'windwp/nvim-ts-autotag',
   'nvim-treesitter/nvim-treesitter-refactor',
   'nvim-treesitter/playground',
-  'nvim-treesitter/nvim-treesitter-context',
-  -- telescope & extensions
-  'nvim-telescope/telescope.nvim',
+  -- lua utils
   'nvim-lua/plenary.nvim',
   'nvim-lua/popup.nvim',
+  -- telescope & extensions
+  'nvim-telescope/telescope.nvim',
   {'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make'},
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
