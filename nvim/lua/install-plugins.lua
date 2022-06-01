@@ -87,7 +87,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- Presentation
   'junegunn/goyo.vim',
   'junegunn/limelight.vim',
-  'vimwiki/vimwiki',
   -- firenvim
   {'glacambre/firenvim', ['do'] = function(_) vim.fn['firenvim#install'](69) end},
   -- An always-on highlight for a unique character in every word on a line to
