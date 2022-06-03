@@ -87,6 +87,7 @@ require('telescope').setup({
 
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('gh')
+require('telescope').load_extension('env')
 
 local M = {}
 

@@ -43,6 +43,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   {'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make'},
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
+  'LinArcX/telescope-env.nvim',
   -- sql using plugin
   'tami5/sql.nvim',
   'tpope/vim-dadbod',
