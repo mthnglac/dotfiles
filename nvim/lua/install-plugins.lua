@@ -56,6 +56,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'sindrets/diffview.nvim',
   -- debugger
   'puremourning/vimspector',
+  'mfussenegger/nvim-dap',
   -- Godot vim plugin
   'habamax/vim-godot',
   -- check vim startup time
