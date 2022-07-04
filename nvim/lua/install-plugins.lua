@@ -46,8 +46,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'LinArcX/telescope-env.nvim',
   -- sql using plugin
   'tami5/sql.nvim',
-  'tpope/vim-dadbod',
-  'kristijanhusak/vim-dadbod-ui',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
   -- git pr preview
@@ -55,10 +53,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- Git diff preview
   'sindrets/diffview.nvim',
   -- debugger
-  'puremourning/vimspector',
   'mfussenegger/nvim-dap',
-  -- Godot vim plugin
-  'habamax/vim-godot',
   -- check vim startup time
   'tweekmonster/startuptime.vim',
   -- CoC
@@ -80,8 +75,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'jiangmiao/auto-pairs',
   -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree',
-  -- Vlang
-  'ollykel/v-vim',
   -- Simple TODO plugin
   'vuciv/vim-bujo',
   -- icons pack
@@ -111,6 +104,4 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'morhetz/gruvbox',
   'sainnhe/gruvbox-material',
   'flazz/vim-colorschemes',
-  'chriskempson/base16-vim',
-  'tiagovla/tokyodark.nvim',
 })
