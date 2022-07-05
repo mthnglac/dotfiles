@@ -20,6 +20,8 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  -- keep my last position!
+  'ethanholz/nvim-lastplace',
   -- http request is fun!!
   'NTBBloodbath/rest.nvim',
   -- peek lines immediately with :<line_number>
@@ -83,9 +85,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'junegunn/limelight.vim',
   -- firenvim
   {'glacambre/firenvim', ['do'] = function(_) vim.fn['firenvim#install'](69) end},
-  -- An always-on highlight for a unique character in every word on a line to
-  -- help you use f, F and family.
-  'unblevable/quick-scope',
+  -- cursor navigation helper
+  'phaazon/hop.nvim',
   -- repeat key for '.' key
   'tpope/vim-repeat',
   -- better whitespace
