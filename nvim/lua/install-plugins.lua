@@ -29,7 +29,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- prettier
   {'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
   -- test plugin
-  'vim-test/vim-test',
+  'nvim-neotest/neotest',
   -- treesitter & extensions
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
@@ -67,7 +67,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- also git blamer
   'lewis6991/gitsigns.nvim',
   -- commenter
-  'preservim/nerdcommenter',
+  'tpope/vim-commentary',
   -- Insert or delete brackets, parens, quotes in pair.
   'jiangmiao/auto-pairs',
   -- crab looking tool. looking for what you do shortly before
@@ -76,8 +76,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'vuciv/vim-bujo',
   -- icons pack
   'kyazdani42/nvim-web-devicons',
-  -- Presentation
-  'junegunn/goyo.vim',
+  -- distraction-free
+  'Pocco81/TrueZen.nvim',
   'junegunn/limelight.vim',
   -- firenvim
   {'glacambre/firenvim', ['do'] = function(_) vim.fn['firenvim#install'](69) end},

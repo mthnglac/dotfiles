@@ -24,6 +24,7 @@ function _G.statusline()
     local filepath = '%f'
     local align_section = '%='
     local percentage_through_file = '%p%%'
+
     return string.format(
         '%s%s%s',
         filepath,
