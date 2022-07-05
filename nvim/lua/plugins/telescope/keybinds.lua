@@ -11,12 +11,18 @@ Keybind.g({
 	{ 'n', '<Leader>pb', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], { noremap = true, silent = true } },
 	-- search by filename in all project files
 	{ 'n', '<Leader>pf', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], { noremap = true, silent = true } },
-	-- telescope through dotfiles
-	{ 'n', '<Leader>prc', [[<Cmd>lua require('plugins.telescope.settings').search_dotfiles()<CR>]], { noremap = true, silent=true } },
 })
 
+-- Custom
 
--- GIT
+Keybind.g({
+	-- telescope through dotfiles
+	{ 'n', '<Leader>prc', [[<Cmd>lua require('plugins.telescope.settings').search_dotfiles()<CR>]], { noremap = true, silent=true } },
+	-- telescope through development/notes
+	{ 'n', '<Leader>prn', [[<Cmd>lua require('plugins.telescope.settings').search_notes()<CR>]], { noremap = true, silent=true } },
+})
+
+-- Git
 
 Keybind.g({
 	-- git branches

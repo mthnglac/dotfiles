@@ -98,4 +98,11 @@ M.search_dotfiles = function()
     })
 end
 
+M.search_notes = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< Notes >",
+        cwd = tostring(os.getenv("HOME")) .. "/Code/notes/",
+    })
+end
+
 return M

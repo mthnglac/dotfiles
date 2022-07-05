@@ -20,6 +20,8 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  -- http request is fun!!
+  'NTBBloodbath/rest.nvim',
   -- peek lines immediately with :<line_number>
   'nacro90/numb.nvim',
   -- mark manager plugin
