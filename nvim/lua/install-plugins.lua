@@ -37,15 +37,12 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'nvim-treesitter/playground',
   -- lua utils
   'nvim-lua/plenary.nvim',
-  'nvim-lua/popup.nvim',
   -- telescope & extensions
   'nvim-telescope/telescope.nvim',
   {'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make'},
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
   'LinArcX/telescope-env.nvim',
-  -- sql using plugin
-  'tami5/sql.nvim',
   -- Git plugin for vim. Bestest of bests!!!
   'tpope/vim-fugitive',
   -- git pr preview
