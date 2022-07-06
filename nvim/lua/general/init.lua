@@ -1,4 +1,4 @@
--- require('general.reloads')
+require('general.reloads')
 require('general.options')
 require('general.autocmds')
 require('general.variables')
