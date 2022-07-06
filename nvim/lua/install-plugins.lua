@@ -20,6 +20,8 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  -- speed up loading Lua modules
+  'lewis6991/impatient.nvim',
   -- keep my last position!
   'ethanholz/nvim-lastplace',
   -- http request is fun!!
