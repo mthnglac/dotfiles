@@ -6,7 +6,6 @@ Variable.g({
     "coc-prettier",
     "coc-html",
     "coc-marketplace",
-    "coc-pyright",
     "coc-sumneko-lua",
     "coc-tsserver",
   },

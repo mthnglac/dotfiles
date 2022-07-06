@@ -35,8 +35,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- treesitter & extensions
   {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
   'windwp/nvim-ts-autotag',
+  'theHamsta/nvim-treesitter-pairs',
   'nvim-treesitter/nvim-treesitter-refactor',
-  'nvim-treesitter/playground',
   -- lua utils
   'nvim-lua/plenary.nvim',
   -- telescope & extensions
@@ -60,18 +60,18 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- displaying vertical lines
   'lukas-reineke/indent-blankline.nvim',
   -- surroundings": parentheses, brackets, quotes vs.
-  'tpope/vim-surround',
+  'kylechui/nvim-surround',
   -- file browser
   'kyazdani42/nvim-tree.lua',
-  -- .gitignore plugin
-  'gisphm/vim-gitignore',
   -- for showing git sign: inserted, modified, deleted vs..
   -- also git blamer
   'lewis6991/gitsigns.nvim',
   -- commenter
-  'tpope/vim-commentary',
+  'numToStr/Comment.nvim',
+  -- todo-comment finder
+  'folke/todo-comments.nvim',
   -- Insert or delete brackets, parens, quotes in pair.
-  'jiangmiao/auto-pairs',
+  'windwp/nvim-autopairs',
   -- crab looking tool. looking for what you do shortly before
   'mbbill/undotree',
   -- Simple TODO plugin
@@ -83,14 +83,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'junegunn/limelight.vim',
   -- cursor navigation helper
   'phaazon/hop.nvim',
-  -- repeat key for '.' key
-  'tpope/vim-repeat',
-  -- better whitespace
-  'ntpeters/vim-better-whitespace',
   -- buffer closer
   'Asheq/close-buffers.vim',
-  -- matchup with closing match
-  'andymass/vim-matchup',
   -- popup terminal
   'numtostr/FTerm.nvim',
   -- tab bar

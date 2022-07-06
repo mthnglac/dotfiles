@@ -24,7 +24,7 @@ Keybind.g({
 
 -- search by selected word with CoC
 Keybind.g({
-	{ 'n', '<Leader>prw', [[<Cmd>CocSearch <C-R>=expand("<cword>")<CR><CR>]], { noremap = true, silent = false } },
+	{ 'n', '<Leader>prw', [[:CocSearch <C-R>=expand("<cword>")<CR><CR>]], { noremap = true, silent = false } },
 })
 
 ---- mappins for CocList
