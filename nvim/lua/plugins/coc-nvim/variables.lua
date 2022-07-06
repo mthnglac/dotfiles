@@ -3,14 +3,11 @@ Variable.g({
   coc_global_extensions = {
     "coc-css",
     "coc-eslint",
+    "coc-prettier",
     "coc-html",
     "coc-marketplace",
     "coc-pyright",
-    "coc-rls",
-    "coc-rust-analyzer",
-    "coc-solargraph",
     "coc-sumneko-lua",
     "coc-tsserver",
-    "coc-vimlsp",
   },
 })

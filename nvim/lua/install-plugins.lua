@@ -32,8 +32,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'ThePrimeagen/harpoon',
   -- git worktree plugin
   'ThePrimeagen/git-worktree.nvim',
-  -- prettier
-  {'prettier/vim-prettier', ['do'] = 'yarn install --frozen-lockfile --production' },
   -- test plugin
   'nvim-neotest/neotest',
   -- treesitter & extensions
@@ -85,8 +83,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- distraction-free
   'Pocco81/TrueZen.nvim',
   'junegunn/limelight.vim',
-  -- firenvim
-  {'glacambre/firenvim', ['do'] = function(_) vim.fn['firenvim#install'](69) end},
   -- cursor navigation helper
   'phaazon/hop.nvim',
   -- repeat key for '.' key
@@ -99,11 +95,10 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'andymass/vim-matchup',
   -- popup terminal
   'numtostr/FTerm.nvim',
+  -- tab bar
+  {'akinsho/bufferline.nvim', ['tag'] = 'v2.*'},
   -- status bar
-  'vim-airline/vim-airline',
-  'vim-airline/vim-airline-themes',
-  -- colorschemes
-  'morhetz/gruvbox',
-  'sainnhe/gruvbox-material',
-  'flazz/vim-colorschemes',
+  'nvim-lualine/lualine.nvim',
+  -- theme
+  'ellisonleao/gruvbox.nvim',
 })

@@ -1,2 +1,1 @@
-require('plugins.colors.functions')
-require('plugins.colors.commands')
+require('plugins.colors.gruvbox')

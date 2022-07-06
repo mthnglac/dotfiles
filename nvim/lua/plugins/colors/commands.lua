@@ -1,3 +1,0 @@
-Command.cmd({
-    'call ColorMyPencils()',
-})

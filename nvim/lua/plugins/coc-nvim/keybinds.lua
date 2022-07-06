@@ -18,6 +18,12 @@ Keybind.g({
 
 -- search by selected word with CoC
 Keybind.g({
+	{ 'n', '<Leader>py', [[<Plug>(coc-format-selected)<CR>]], { noremap = false, silent = false } },
+	{ 'v', '<Leader>py', [[<Plug>(coc-format-selected)<CR>]], { noremap = false, silent = false } },
+})
+
+-- search by selected word with CoC
+Keybind.g({
 	{ 'n', '<Leader>prw', [[<Cmd>CocSearch <C-R>=expand("<cword>")<CR><CR>]], { noremap = true, silent = false } },
 })
 
