@@ -9,7 +9,9 @@ require("gruvbox").setup({
   invert_tabline = false,
   invert_intend_guides = false,
   contrast = "", -- can be "hard" or "soft"
-  overrides = {},
+  overrides = {
+    Normal = { bg = "#000000"}
+  },
 })
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
