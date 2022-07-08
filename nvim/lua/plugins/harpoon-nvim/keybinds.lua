@@ -6,4 +6,5 @@ Keybind.g({
 	{ 'n', '<Leader>t2', [[<Cmd>lua require("harpoon.ui").nav_file(2)<CR>]], { noremap = true } },
 	{ 'n', '<Leader>t3', [[<Cmd>lua require("harpoon.ui").nav_file(3)<CR>]], { noremap = true } },
 	{ 'n', '<Leader>t4', [[<Cmd>lua require("harpoon.ui").nav_file(4)<CR>]], { noremap = true } },
+	{ 'n', '<Leader>t5', [[<Cmd>lua require("harpoon.ui").nav_file(5)<CR>]], { noremap = true } },
 })
