@@ -3,7 +3,9 @@ require('install-plugins')
 
 -- speed up loading Lua modules
 if pcall(require, 'impatient') then
-    require('impatient').enable_profile()
+  require('impatient').enable_profile()
+else
+  print("Failed to load impatient.")
 end
 
 -- generics

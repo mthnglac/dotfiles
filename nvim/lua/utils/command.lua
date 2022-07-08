@@ -1,6 +1,6 @@
 local Command = {}
 
-Command.cmd = function (commands)
+Command.cmd = function(commands)
   for _, value in ipairs(commands) do
     vim.cmd(value)
   end

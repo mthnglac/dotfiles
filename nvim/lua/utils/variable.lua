@@ -6,7 +6,7 @@ local Type = {
   VIM_VARIABLE = 'v',
 }
 
-local function add_variables (variable_type, variables)
+local function add_variables(variable_type, variables)
   if type(variables) ~= 'table' then
     error('variables should be a type of "table"')
     return
@@ -19,23 +19,23 @@ end
 
 local Variable = {}
 
-Variable.g = function (variables)
+Variable.g = function(variables)
   add_variables(Type.GLOBAL_VARIABLE, variables)
 end
 
-Variable.w = function (variables)
+Variable.w = function(variables)
   add_variables(Type.WINDOW_VARIABLE, variables)
 end
 
-Variable.b = function (variables)
+Variable.b = function(variables)
   add_variables(Type.BUFFER_VARIABLE, variables)
 end
 
-Variable.t = function (variables)
+Variable.t = function(variables)
   add_variables(Type.TAB_PAGE_VARIABLE, variables)
 end
 
-Variable.v = function (variables)
+Variable.v = function(variables)
   add_variables(Type.VIM_VARIABLE, variables)
 end
 

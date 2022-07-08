@@ -1,9 +1,9 @@
 local vim = vim
 local function plug(path, config)
-  vim.validate {
-    path = {path, 's'},
-    config = {config, vim.tbl_islist, 'an array of packages'},
-  }
+  vim.validate({
+    path = { path, 's' },
+    config = { config, vim.tbl_islist, 'an array of packages' },
+  })
   vim.fn["plug#begin"](path)
   for _, v in ipairs(config) do
     if type(v) == 'string' then
@@ -20,6 +20,19 @@ local function plug(path, config)
 end
 
 plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
+  -- formatter manager
+  'jose-elias-alvarez/null-ls.nvim',
+  -- built-in lsp manager
+  'neovim/nvim-lspconfig',
+  -- lsp status manager
+  'j-hui/fidget.nvim',
+  -- auto-completion
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/nvim-cmp',
+  -- preview code
+  'rmagatti/goto-preview',
+  -- LSP & DAP & Linter & Formatter package manager
+  { 'williamboman/mason.nvim', ['branch'] = 'alpha' },
   -- speed up loading Lua modules
   'lewis6991/impatient.nvim',
   -- keep my last position!
@@ -33,15 +46,17 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- test plugin
   'nvim-neotest/neotest',
   -- treesitter & extensions
-  {'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate'},
+  { 'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate' },
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  'nvim-treesitter/nvim-treesitter-refactor',
+  'nvim-treesitter/playground',
   'windwp/nvim-ts-autotag',
   'theHamsta/nvim-treesitter-pairs',
-  'nvim-treesitter/nvim-treesitter-refactor',
   -- lua utils
   'nvim-lua/plenary.nvim',
   -- telescope & extensions
   'nvim-telescope/telescope.nvim',
-  {'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make'},
+  { 'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make' },
   'nvim-telescope/telescope-symbols.nvim',
   'nvim-telescope/telescope-github.nvim',
   'LinArcX/telescope-env.nvim',
@@ -55,8 +70,6 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'mfussenegger/nvim-dap',
   -- check vim startup time
   'tweekmonster/startuptime.vim',
-  -- CoC
-  {'neoclide/coc.nvim', ['branch'] = 'release'},
   -- displaying vertical lines
   'lukas-reineke/indent-blankline.nvim',
   -- surroundings": parentheses, brackets, quotes vs.
@@ -68,12 +81,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'lewis6991/gitsigns.nvim',
   -- commenter
   'numToStr/Comment.nvim',
-  -- todo-comment finder
-  'folke/todo-comments.nvim',
   -- Insert or delete brackets, parens, quotes in pair.
   'windwp/nvim-autopairs',
-  -- crab looking tool. looking for what you do shortly before
-  'mbbill/undotree',
   -- Simple TODO plugin
   'vuciv/vim-bujo',
   -- icons pack
@@ -88,7 +97,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- popup terminal
   'numtostr/FTerm.nvim',
   -- tab bar
-  {'akinsho/bufferline.nvim', ['tag'] = 'v2.*'},
+  { 'akinsho/bufferline.nvim', ['tag'] = 'v2.*' },
   -- status bar
   'nvim-lualine/lualine.nvim',
   -- theme
