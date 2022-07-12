@@ -69,7 +69,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- debugger
   'mfussenegger/nvim-dap',
   -- check vim startup time
-  'tweekmonster/startuptime.vim',
+  'dstein64/vim-startuptime',
   -- displaying vertical lines
   'lukas-reineke/indent-blankline.nvim',
   -- surroundings": parentheses, brackets, quotes vs.
