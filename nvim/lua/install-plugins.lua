@@ -24,6 +24,8 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   'jose-elias-alvarez/null-ls.nvim',
   -- built-in lsp manager
   'neovim/nvim-lspconfig',
+  -- typing helper
+  'ray-x/lsp_signature.nvim',
   -- lsp status manager
   'j-hui/fidget.nvim',
   -- auto-completion
