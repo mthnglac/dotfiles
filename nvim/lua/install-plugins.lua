@@ -95,7 +95,7 @@ plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
   -- buffer closer
   'Asheq/close-buffers.vim',
   -- popup terminal
-  'numtostr/FTerm.nvim',
+  { 'akinsho/toggleterm.nvim', ['tag'] = 'v2.*' },
   -- tab bar
   { 'akinsho/bufferline.nvim', ['tag'] = 'v2.*' },
   -- status bar
