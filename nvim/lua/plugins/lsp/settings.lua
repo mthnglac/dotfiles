@@ -2,11 +2,11 @@
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
 local function goto_prev_error()
-  vim.diagnostic.goto_prev { severity = "Error" }
+  vim.diagnostic.goto_prev({ severity = "Error" })
 end
 
 local function goto_next_error()
-  vim.diagnostic.goto_next { severity = "Error" }
+  vim.diagnostic.goto_next({ severity = "Error" })
 end
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
@@ -56,20 +56,20 @@ local lsp_flags = {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require('lspconfig')['tsserver'].setup {
+require('lspconfig')['tsserver'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
-}
-require('lspconfig')['eslint'].setup {
+})
+require('lspconfig')['eslint'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
-}
-require('lspconfig')['html'].setup {
+})
+require('lspconfig')['html'].setup({
   capabilities = capabilities,
   on_attach = on_attach,
   flags = lsp_flags,
-}
-require('lspconfig')['sumneko_lua'].setup {
+})
+require('lspconfig')['sumneko_lua'].setup({
   on_attach = on_attach,
   flags = lsp_flags,
   settings = {
@@ -88,9 +88,9 @@ require('lspconfig')['sumneko_lua'].setup {
       },
     },
   },
-}
-require('lspconfig')['cssls'].setup {
+})
+require('lspconfig')['cssls'].setup({
   capabilities = capabilities,
   on_attach = on_attach,
   flags = lsp_flags,
-}
+})
