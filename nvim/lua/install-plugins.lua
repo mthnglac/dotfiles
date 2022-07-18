@@ -1,107 +1,352 @@
-local vim = vim
-local function plug(path, config)
-  vim.validate({
-    path = { path, 's' },
-    config = { config, vim.tbl_islist, 'an array of packages' },
-  })
-  vim.fn["plug#begin"](path)
-  for _, v in ipairs(config) do
-    if type(v) == 'string' then
-      vim.fn["plug#"](v)
-    elseif type(v) == 'table' then
-      local p = v[1]
-      assert(p, 'Must specify package as first index.')
-      v[1] = nil
-      vim.fn["plug#"](p, v)
-      v[1] = p
-    end
-  end
-  vim.fn["plug#end"]()
+-- Bootstrapping
+local fn = vim.fn
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+	PACKER_BOOTSTRAP =
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
 end
 
-plug(tostring(os.getenv("HOME")) .. '/.vim/plugged', {
-  -- formatter manager
-  'jose-elias-alvarez/null-ls.nvim',
-  -- built-in lsp manager
-  'neovim/nvim-lspconfig',
-  -- typing helper
-  'ray-x/lsp_signature.nvim',
-  -- lsp status manager
-  'j-hui/fidget.nvim',
-  -- auto-completion
-  'hrsh7th/cmp-nvim-lsp',
-  'hrsh7th/nvim-cmp',
-  -- preview code
-  'rmagatti/goto-preview',
-  -- LSP & DAP & Linter & Formatter package manager
-  { 'williamboman/mason.nvim', ['branch'] = 'alpha' },
-  -- speed up loading Lua modules
-  'lewis6991/impatient.nvim',
-  -- keep my last position!
-  'ethanholz/nvim-lastplace',
-  -- peek lines immediately with :<line_number>
-  'nacro90/numb.nvim',
-  -- mark manager plugin
-  'ThePrimeagen/harpoon',
-  -- git worktree plugin
-  'ThePrimeagen/git-worktree.nvim',
-  -- test plugin
-  'nvim-neotest/neotest',
-  -- treesitter & extensions
-  { 'nvim-treesitter/nvim-treesitter', ['do'] = ':TSUpdate' },
-  'nvim-treesitter/nvim-treesitter-textobjects',
-  'nvim-treesitter/nvim-treesitter-refactor',
-  'nvim-treesitter/playground',
-  'windwp/nvim-ts-autotag',
-  'theHamsta/nvim-treesitter-pairs',
-  -- lua utils
-  'nvim-lua/plenary.nvim',
-  -- telescope & extensions
-  'nvim-telescope/telescope.nvim',
-  { 'nvim-telescope/telescope-fzf-native.nvim', ['do'] = 'make' },
-  'nvim-telescope/telescope-symbols.nvim',
-  'nvim-telescope/telescope-github.nvim',
-  'LinArcX/telescope-env.nvim',
-  -- Git plugin for vim. Bestest of bests!!!
-  'tpope/vim-fugitive',
-  -- git pr preview
-  'pwntester/octo.nvim',
-  -- Git diff preview
-  'sindrets/diffview.nvim',
-  -- debugger
-  'mfussenegger/nvim-dap',
-  -- check vim startup time
-  'dstein64/vim-startuptime',
-  -- displaying vertical lines
-  'lukas-reineke/indent-blankline.nvim',
-  -- surroundings": parentheses, brackets, quotes vs.
-  'kylechui/nvim-surround',
-  -- file browser
-  'kyazdani42/nvim-tree.lua',
-  -- for showing git sign: inserted, modified, deleted vs..
-  -- also git blamer
-  'lewis6991/gitsigns.nvim',
-  -- commenter
-  'numToStr/Comment.nvim',
-  -- Insert or delete brackets, parens, quotes in pair.
-  'windwp/nvim-autopairs',
-  -- Simple TODO plugin
-  'vuciv/vim-bujo',
-  -- icons pack
-  'kyazdani42/nvim-web-devicons',
-  -- distraction-free
-  'Pocco81/TrueZen.nvim',
-  'junegunn/limelight.vim',
-  -- cursor navigation helper
-  'phaazon/hop.nvim',
-  -- buffer closer
-  'Asheq/close-buffers.vim',
-  -- popup terminal
-  { 'akinsho/toggleterm.nvim', ['tag'] = 'v2.*' },
-  -- tab bar
-  { 'akinsho/bufferline.nvim', ['tag'] = 'v2.*' },
-  -- status bar
-  'nvim-lualine/lualine.nvim',
-  -- theme
-  'ellisonleao/gruvbox.nvim',
+-- Only required if you have packer configured as `opt`
+vim.api.nvim_command([[packadd packer.nvim]])
+
+local packer = require("packer")
+local packer_util = require("packer.util")
+
+packer.init({
+	opt_default = false, -- Default to using opt (as opposed to start) plugins
+	display = {
+		open_fn = packer_util.float, -- An optional function to open a window for packer's display
+		working_sym = "🛠", -- The symbol for a plugin being installed/updated
+		error_sym = "🧨", -- The symbol for a plugin with an error in installation/updating
+		done_sym = "🎉", -- The symbol for a plugin which has completed installation/updating
+		removed_sym = "🔥", -- The symbol for an unused plugin which was removed
+		moved_sym = "🚀", -- The symbol for a plugin which was moved (e.g. from opt to start)
+		header_sym = "━", -- The symbol for the header line in packer's display
+		show_all_info = true, -- Should packer show all update details automatically?
+		prompt_border = "double", -- Border style of prompt popups.
+	},
 })
+
+local use = packer.use
+packer.reset()
+
+packer.startup(function()
+	-- formatter manager
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		config = function()
+			require("plugins.null-ls-nvim")
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+	-- built-in lsp manager
+	use({
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("plugins.lsp")
+		end,
+	})
+	-- typing helper
+	use({ "ray-x/lsp_signature.nvim" })
+	-- lsp status manager
+	use({
+		"j-hui/fidget.nvim",
+		config = function()
+			require("plugins.fidget-nvim")
+		end,
+	})
+	-- auto-completion
+	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({
+		"hrsh7th/nvim-cmp",
+		config = function()
+			require("plugins.nvim-cmp")
+		end,
+	})
+	-- preview code
+	use({
+		"rmagatti/goto-preview",
+		config = function()
+			require("plugins.goto-preview-nvim")
+		end,
+	})
+	-- LSP & DAP & Linter & Formatter package manager
+	use({
+		"williamboman/mason.nvim",
+		branch = "alpha",
+		config = function()
+			require("plugins.mason-nvim")
+		end,
+	})
+	-- speed up loading Lua modules
+	use({ "lewis6991/impatient.nvim" })
+	-- keep my last position!
+	use({
+		"ethanholz/nvim-lastplace",
+		config = function()
+			require("plugins.lastplace-nvim")
+		end,
+	})
+	-- peek lines immediately with :<line_number>
+	use({
+		"nacro90/numb.nvim",
+		config = function()
+			require("plugins.numb-nvim")
+		end,
+	})
+	-- mark manager plugin
+	use({
+		"ThePrimeagen/harpoon",
+		config = function()
+			require("plugins.harpoon-nvim")
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+	-- git worktree plugin
+	use({
+		"ThePrimeagen/git-worktree.nvim",
+		config = function()
+			require("plugins.git-worktree-nvim")
+		end,
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
+	-- test plugin
+	use({
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim",
+		},
+	})
+	-- treesitter & extensions
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+		config = function()
+			require("plugins.nvim-treesitter")
+		end,
+	})
+	use({
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+	use({
+		"nvim-treesitter/nvim-treesitter-refactor",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+	use({
+		"nvim-treesitter/playground",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+	use({
+		"windwp/nvim-ts-autotag",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+	use({
+		"theHamsta/nvim-treesitter-pairs",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
+	-- lua utils
+	use({ "nvim-lua/plenary.nvim" })
+	-- telescope & extensions
+	use({
+		"nvim-telescope/telescope.nvim",
+		config = function()
+			require("plugins.telescope")
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "make",
+		requires = {
+			"nvim-telescope/telescope.nvim",
+		},
+	})
+	use({
+		"nvim-telescope/telescope-symbols.nvim",
+		requires = {
+			"nvim-telescope/telescope.nvim",
+		},
+	})
+	use({
+		"nvim-telescope/telescope-github.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
+	use({
+		"LinArcX/telescope-env.nvim",
+		requires = {
+			"nvim-telescope/telescope.nvim",
+		},
+	})
+	-- Git plugin for vim. Bestest of bests!!!
+	use({
+		"tpope/vim-fugitive",
+		config = function()
+			require("plugins.fugitive")
+		end,
+	})
+	-- git pr preview
+	use({
+		"pwntester/octo.nvim",
+		config = function()
+			require("plugins.octo-nvim")
+		end,
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"kyazdani42/nvim-web-devicons",
+		},
+	})
+	-- Git diff preview
+	use({
+		"sindrets/diffview.nvim",
+		config = function()
+			require("plugins.diffview-nvim")
+		end,
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
+	-- debugger
+	use({
+		"mfussenegger/nvim-dap",
+		config = function()
+			require("plugins.nvim-dap")
+		end,
+	})
+	-- check vim startup time
+	use({ "dstein64/vim-startuptime" })
+	-- displaying vertical lines
+	use({
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("plugins.indent-blankline-nvim")
+		end,
+	})
+	-- surroundings": parentheses, brackets, quotes vs.
+	use({
+		"kylechui/nvim-surround",
+		config = function()
+			require("plugins.surround-nvim")
+		end,
+	})
+	-- file browser
+	use({
+		"kyazdani42/nvim-tree.lua",
+		config = function()
+			require("plugins.nvim-tree")
+		end,
+		requires = {
+			"kyazdani42/nvim-web-devicons", -- optional, for file icons
+		},
+	})
+	-- for showing git sign: inserted, modified, deleted vs..
+	-- also git blamer
+	use({
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("plugins.git-signs-nvim")
+		end,
+	})
+	-- commenter
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("plugins.comment-nvim")
+		end,
+	})
+	-- Insert or delete brackets, parens, quotes in pair.
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("plugins.autopairs-nvim")
+		end,
+	})
+	-- Simple TODO plugin
+	use({
+		"vuciv/vim-bujo",
+		config = function()
+			require("plugins.bujo")
+		end,
+	})
+	-- icons pack
+	use({ "kyazdani42/nvim-web-devicons" })
+	-- distraction-free
+	use({
+		"Pocco81/TrueZen.nvim",
+		config = function()
+			require("plugins.truezen-nvim")
+		end,
+	})
+	use({ "junegunn/limelight.vim" })
+	-- cursor navigation helper
+	use({
+		"phaazon/hop.nvim",
+		config = function()
+			require("plugins.hop-nvim")
+		end,
+	})
+	-- buffer closer
+	use({
+		"Asheq/close-buffers.vim",
+		config = function()
+			require("plugins.close-buffers")
+		end,
+	})
+	-- popup terminal
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "v2.*",
+		config = function()
+			require("plugins.toggleterm-nvim")
+		end,
+	})
+	-- tab bar
+	use({
+		"akinsho/bufferline.nvim",
+		tag = "v2.*",
+		config = function()
+			require("plugins.bufferline-nvim")
+		end,
+		requires = {
+			"kyazdani42/nvim-web-devicons",
+		},
+	})
+	-- status bar
+	use({
+		"nvim-lualine/lualine.nvim",
+		opt = true,
+		config = function()
+			require("plugins.lualine-nvim")
+		end,
+	})
+	-- theme
+	use({
+		"ellisonleao/gruvbox.nvim",
+		config = function()
+			require("plugins.colors")
+		end,
+	})
+
+	if PACKER_BOOTSTRAP then
+		packer.sync()
+	end
+end)

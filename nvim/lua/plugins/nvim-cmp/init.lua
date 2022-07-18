@@ -1,1 +1,1 @@
-require('plugins.nvim-cmp.settings')
+require("plugins.nvim-cmp.settings")

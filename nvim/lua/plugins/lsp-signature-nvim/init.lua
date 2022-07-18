@@ -1,1 +1,1 @@
-require('plugins.lsp-signature-nvim.settings')
+require("plugins.lsp-signature-nvim.settings")

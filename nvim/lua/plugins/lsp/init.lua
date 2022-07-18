@@ -1,1 +1,1 @@
-require('plugins.lsp.settings')
+require("plugins.lsp.settings")

@@ -1,1 +1,1 @@
-require('plugins.lualine-nvim.settings')
+require("plugins.lualine-nvim.settings")

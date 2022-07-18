@@ -1,1 +1,1 @@
-require('plugins.comment-nvim.settings')
+require("plugins.comment-nvim.settings")

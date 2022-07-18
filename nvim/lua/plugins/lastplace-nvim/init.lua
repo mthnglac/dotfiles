@@ -1,1 +1,1 @@
-require('plugins.lastplace-nvim.settings')
+require("plugins.lastplace-nvim.settings")

@@ -1,1 +1,1 @@
-require('plugins.mason-nvim.settings')
+require("plugins.mason-nvim.settings")

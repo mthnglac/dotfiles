@@ -1,2 +1,2 @@
-require('plugins.telescope.settings')
-require('plugins.telescope.keybinds')
+require("plugins.telescope.settings")
+require("plugins.telescope.keybinds")

@@ -1,1 +1,1 @@
-require('plugins.nvim-treesitter.settings')
+require("plugins.nvim-treesitter.settings")

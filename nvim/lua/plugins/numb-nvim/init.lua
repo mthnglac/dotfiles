@@ -1,1 +1,1 @@
-require('plugins.numb-nvim.settings')
+require("plugins.numb-nvim.settings")

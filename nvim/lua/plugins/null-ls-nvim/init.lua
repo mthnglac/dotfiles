@@ -1,1 +1,1 @@
-require('plugins.null-ls-nvim.settings')
+require("plugins.null-ls-nvim.settings")

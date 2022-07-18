@@ -1,1 +1,1 @@
-require('plugins.indent-blankline-nvim.settings')
+require("plugins.indent-blankline-nvim.settings")

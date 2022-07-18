@@ -1,7 +1,7 @@
 local Worktree = require("git-worktree")
 
 Worktree.setup({
-  update_on_change_command = ""
+	update_on_change_command = "",
 })
 
 -- op = Operations.Switch, Operations.Create, Operations.Delete
@@ -17,7 +17,7 @@ Worktree.setup({
 --          path = path where worktree deleted
 
 Worktree.on_tree_change(function(op, metadata)
-  if op == Worktree.Operations.Switch then
-    print("Switched from " .. metadata.prev_path .. " to " .. metadata.path)
-  end
+	if op == Worktree.Operations.Switch then
+		print("Switched from " .. metadata.prev_path .. " to " .. metadata.path)
+	end
 end)

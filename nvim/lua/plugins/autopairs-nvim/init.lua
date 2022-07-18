@@ -1,1 +1,1 @@
-require('plugins.autopairs-nvim.settings')
+require("plugins.autopairs-nvim.settings")

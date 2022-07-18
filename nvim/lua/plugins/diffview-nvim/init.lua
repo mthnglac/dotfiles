@@ -1,1 +1,1 @@
-require('plugins.diffview-nvim.settings')
+require("plugins.diffview-nvim.settings")

@@ -41,17 +41,16 @@ Option.g({
 	backup = false,
 	writebackup = true,
 
-    -- write changes to swap file after "n" ms
+	-- write changes to swap file after "n" ms
 	updatetime = 50,
 
 	-- controls how short messages are displayed in status bar section
-	shortmess = vim.o.shortmess .. 'c',
+	shortmess = vim.o.shortmess .. "c",
 
-    -- open completion menu even for single item
+	-- open completion menu even for single item
 	-- do not auto insert items from completion menu
 	-- @warning - preview is removed. when it's on, default lsp opens a vertical tab
 	--completeopt = 'menuone,noinsert,noselect',
-
 
 	--[[
 	#-------------------------------------------------------------------------#
@@ -92,7 +91,6 @@ Option.g({
 	--clipboard='unnamedplus',
 })
 
-
 Option.w({
 	--[[
 	#-------------------------------------------------------------------------#
@@ -113,7 +111,7 @@ Option.w({
 	-- error signs and warnings will be displayed in the number line
 	-- usually it adds new column when signs, moving buffer to right side.
 	-- adding a column create weird effect that's little bit hard for the eye
-	signcolumn = 'yes',
+	signcolumn = "yes",
 
 	-- vim try to keep 100 lines below and above when scrolling
 	-- if buffer cannot display more than 200 lines, cursor will stay in center

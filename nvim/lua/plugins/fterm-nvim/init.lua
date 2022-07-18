@@ -1,1 +1,1 @@
-require('plugins.fterm-nvim.settings')
+require("plugins.fterm-nvim.settings")

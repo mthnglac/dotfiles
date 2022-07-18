@@ -1,1 +1,1 @@
-require('plugins.close-buffers.keybinds')
+require("plugins.close-buffers.keybinds")

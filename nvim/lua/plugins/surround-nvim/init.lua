@@ -1,1 +1,1 @@
-require('plugins.surround-nvim.settings')
+require("plugins.surround-nvim.settings")

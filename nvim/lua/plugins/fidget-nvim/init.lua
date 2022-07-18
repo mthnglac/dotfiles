@@ -1,1 +1,1 @@
-require('plugins.fidget-nvim.settings')
+require("plugins.fidget-nvim.settings")

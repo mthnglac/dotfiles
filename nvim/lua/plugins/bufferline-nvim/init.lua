@@ -1,1 +1,1 @@
-require('plugins.bufferline-nvim.settings')
+require("plugins.bufferline-nvim.settings")
