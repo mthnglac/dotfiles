@@ -254,6 +254,7 @@ packer.startup(function()
 		config = function()
 			require("plugins.nvim-tree")
 		end,
+		tag = "nightly",
 		requires = {
 			"kyazdani42/nvim-web-devicons", -- optional, for file icons
 		},
