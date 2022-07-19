@@ -333,7 +333,6 @@ packer.startup(function()
 	-- status bar
 	use({
 		"nvim-lualine/lualine.nvim",
-		opt = true,
 		config = function()
 			require("plugins.lualine-nvim")
 		end,
