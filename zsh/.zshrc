@@ -11,9 +11,13 @@ CASE_SENSITIVE="true"
 plugins=(
   asdf
   git
-  git-flow
+  zsh-autosuggestions
   zsh-syntax-highlighting
   yarn
+  web-search
+  copypath
+  copybuffer
+  dirhistory
 )
 
 source $ZSH/oh-my-zsh.sh
