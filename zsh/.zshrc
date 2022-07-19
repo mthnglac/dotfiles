@@ -32,6 +32,7 @@ alias bashconfig="nvim ~/.bashrc"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.tmux.conf.local"
+alias checkmyports="netstat -tulpn | grep LISTEN"
 
 # Cheat Sheet ----------------------------------------------------------------
 cht() {
