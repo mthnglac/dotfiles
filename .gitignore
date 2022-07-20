@@ -3,7 +3,7 @@
 .vim/plugged
 *.swp
 nvim/.netrwhist
-# nvim/plugin/packer_compiled.lua
+nvim/plugin/packer_compiled.lua
 
 # DB stuff
 .DS_Store
