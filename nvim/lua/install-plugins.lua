@@ -9,6 +9,15 @@ end
 -- Only required if you have packer configured as `opt`
 vim.api.nvim_command([[packadd packer.nvim]])
 
+local PackerHooks = vim.api.nvim_create_augroup('PackerHooks', {})
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'PackerCompileDone',
+  callback = function()
+    vim.notify('Compile Done!', vim.log.levels.INFO, { title = 'Packer' })
+  end,
+  group = PackerHooks,
+})
+
 local packer = require("packer")
 local packer_util = require("packer.util")
 
