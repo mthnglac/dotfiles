@@ -18,6 +18,7 @@ plugins=(
   copypath
   copybuffer
   dirhistory
+  jsontools
 )
 
 source $ZSH/oh-my-zsh.sh
