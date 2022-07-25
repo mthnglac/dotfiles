@@ -82,7 +82,6 @@ packer.startup(function()
 	-- LSP & DAP & Linter & Formatter package manager
 	use({
 		"williamboman/mason.nvim",
-		branch = "alpha",
 		config = function()
 			require("plugins.mason-nvim")
 		end,
