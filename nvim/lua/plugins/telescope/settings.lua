@@ -27,8 +27,11 @@ require("telescope").setup({
 				["<C-Up>"] = actions.cycle_history_prev,
 			},
 		},
+    dynamic_preview_title = true,
 		vimgrep_arguments = {
 			"rg",
+      "--ignore",
+      "--hidden",
 			"--color=never",
 			"--no-heading",
 			"--with-filename",
@@ -73,6 +76,24 @@ require("telescope").setup({
 		--buffer_previewer_maker = previewers.buffer_previewer_maker
 		buffer_previewer_maker = new_maker,
 	},
+  pickers = {
+    buffers = {
+      prompt_title = '✨ Search Buffers ✨',
+      sort_mru = true,
+      preview_title = false,
+    },
+    find_files = {
+      prompt_title = '✨ Search Project ✨',
+      hidden = true,
+    },
+    git_files = {
+      prompt_title = '✨ Search Git Project ✨',
+      hidden = true,
+    },
+    live_grep = {
+      prompt_title = '✨ Live Grep ✨',
+    },
+  },
 	extensions = {
 		fzf = {
 			-- false will only do exact matching
