@@ -50,11 +50,39 @@ Keybind.g({
 -- Git
 
 Keybind.g({
+	-- git status
+	{
+		"n",
+		"<Leader>gstt",
+		[[<Cmd>lua require('telescope.builtin').git_status()<CR>]],
+		{ noremap = true, silent = true },
+	},
 	-- git branches
 	{
 		"n",
-		"<Leader>gc",
+		"<Leader>gb",
 		[[<Cmd>lua require('telescope.builtin').git_branches()<CR>]],
+		{ noremap = true, silent = true },
+	},
+	-- git stashes
+	{
+		"n",
+		"<Leader>gsth",
+		[[<Cmd>lua require('telescope.builtin').git_stash()<CR>]],
+		{ noremap = true, silent = true },
+	},
+	-- git commits
+	{
+		"n",
+		"<Leader>gc",
+		[[<Cmd>lua require('telescope.builtin').git_commits()<CR>]],
+		{ noremap = true, silent = true },
+	},
+	-- git branches
+	{
+		"n",
+		"<Leader>glc",
+		[[<Cmd>lua require('telescope.builtin').git_bcommits()<CR>]],
 		{ noremap = true, silent = true },
 	},
 })

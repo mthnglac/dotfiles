@@ -1,6 +1,6 @@
 Keybind.g({
-	{ "n", "<Leader>gs", [[<Cmd>G<CR>]], { noremap = false, silent = true } },
-	{ "n", "<Leader>ga", [[<Cmd>Git fetch --all<CR>]], { noremap = true, silent = true } },
+	{ "n", "<Leader>gx", [[<Cmd>G<CR>]], { noremap = false, silent = true } },
+	{ "n", "<Leader>gfa", [[<Cmd>Git fetch --all<CR>]], { noremap = true, silent = true } },
 	{ "n", "<Leader>grum", [[<Cmd>Git rebase upstream/master<CR>]], { noremap = true, silent = true } },
 	{ "n", "<Leader>grom", [[<Cmd>Git rebase origin/master<CR>]], { noremap = true, silent = true } },
 })
