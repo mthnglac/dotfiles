@@ -19,3 +19,8 @@ Variable.g({
 	vim_apm_lig = 1,
 	python3_host_prog = tostring(os.getenv("HOME")) .. "/.asdf/shims/python",
 })
+
+Variable.g({
+  loaded_netrw = 1,
+  loaded_netrwPlugin = 1,
+})
