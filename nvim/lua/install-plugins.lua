@@ -300,7 +300,7 @@ packer.startup(function()
 	use({ "kyazdani42/nvim-web-devicons" })
 	-- distraction-free
 	use({
-		"Pocco81/TrueZen.nvim",
+		"Pocco81/true-zen.nvim",
 		config = function()
 			require("plugins.truezen-nvim")
 		end,
