@@ -4,9 +4,6 @@ Option.g({
 	exrc = true,
 	guicursor = "",
 	nu = true,
-	undodir = tostring(os.getenv("HOME")) .. "/.vim/undodir",
-	undofile = true,
-	incsearch = true,
 	showmode = false,
 	cmdheight = 2,
 	compatible = false,
@@ -26,6 +23,7 @@ Option.g({
 	--]]
 	-- remove highlighting after search is done
 	hlsearch = true,
+	incsearch = true,
 
 	-- auto code folding when openeing new file at level 1
 	foldlevelstart = 1,
@@ -39,7 +37,10 @@ Option.g({
 	-- on	     off	delete old backup, backup current file
 	-- on	     on		delete old backup, backup current file
 	backup = false,
-	writebackup = true,
+	writebackup = false,
+	swapfile = false,
+	undodir = tostring(os.getenv("HOME")) .. "/.vim/undodir",
+	undofile = true,
 
 	-- write changes to swap file after "n" ms
 	updatetime = 50,
@@ -119,8 +120,4 @@ Option.w({
 	scrolloff = 0,
 	wrap = false,
 	colorcolumn = "80",
-})
-
-Option.b({
-	swapfile = false,
 })
