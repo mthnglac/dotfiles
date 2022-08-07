@@ -255,12 +255,7 @@ packer.startup(function()
 		end,
 	})
 	-- surroundings": parentheses, brackets, quotes vs.
-	use({
-		"kylechui/nvim-surround",
-		config = function()
-			require("plugins.surround-nvim")
-		end,
-	})
+	use({ "kylechui/nvim-surround" })
 	-- file browser
 	use({
 		"kyazdani42/nvim-tree.lua",
