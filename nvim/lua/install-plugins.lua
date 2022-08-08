@@ -255,7 +255,12 @@ packer.startup(function()
 		end,
 	})
 	-- surroundings": parentheses, brackets, quotes vs.
-	use({ "kylechui/nvim-surround" })
+	use({
+    "kylechui/nvim-surround",
+		config = function()
+			require("plugins.surround-nvim")
+		end,
+    })
 	-- file browser
 	use({
 		"kyazdani42/nvim-tree.lua",
@@ -330,6 +335,19 @@ packer.startup(function()
 		requires = {
 			"kyazdani42/nvim-web-devicons",
 		},
+	})
+  -- distraction free mode
+	use({
+		"Pocco81/true-zen.nvim",
+		config = function()
+			require("plugins.true-zen-nvim")
+		end,
+	})
+	use({
+		"folke/twilight.nvim",
+		config = function()
+			require("plugins.twilight-nvim")
+		end,
 	})
 	-- status bar
 	use({
