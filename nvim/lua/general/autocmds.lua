@@ -7,6 +7,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- console.log current word in JS, JSX, TS, TSX
+-- Ex: console.log('foo', foo)
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "javascript, javascriptreact, typescript, typescriptreact",
   callback = function()
