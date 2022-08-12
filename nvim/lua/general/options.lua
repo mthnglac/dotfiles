@@ -30,6 +30,7 @@ Option.g({
 
 	-- enable mouse in vim. 'a' for all modes (normal, visual, insert & command)
 	--mouse = 'a',
+  mouse = false,
 
 	-- 'backup' 'writebackup'	action	~
 	-- off	     off	no backup made

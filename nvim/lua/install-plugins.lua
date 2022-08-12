@@ -42,6 +42,14 @@ packer.reset()
 packer.startup(function()
 	-- packer itself
 	use({ "wbthomason/packer.nvim" })
+	-- api tool
+	use({
+		"NTBBloodbath/rest.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("plugins.rest-nvim")
+		end,
+	})
 	-- formatter manager
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
@@ -256,11 +264,11 @@ packer.startup(function()
 	})
 	-- surroundings": parentheses, brackets, quotes vs.
 	use({
-    "kylechui/nvim-surround",
+		"kylechui/nvim-surround",
 		config = function()
 			require("plugins.surround-nvim")
 		end,
-    })
+	})
 	-- file browser
 	use({
 		"kyazdani42/nvim-tree.lua",
@@ -336,7 +344,7 @@ packer.startup(function()
 			"kyazdani42/nvim-web-devicons",
 		},
 	})
-  -- distraction free mode
+	-- distraction free mode
 	use({
 		"Pocco81/true-zen.nvim",
 		config = function()

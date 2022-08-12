@@ -6,6 +6,13 @@ Keybind.g({
     [[<Cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>]],
     { noremap = true, silent = true },
   },
+  -- search under buffers path
+  {
+    "n",
+    "<Leader>pcb",
+    [[<Cmd>lua require('telescope.builtin').find_files({cwd=require("telescope.utils").buffer_dir()})<CR>]],
+    { noremap = true, silent = true },
+  },
   -- search by selected word
   {
     "n",
@@ -81,7 +88,7 @@ Keybind.g({
     [[<Cmd>lua require('telescope.builtin').git_commits()<CR>]],
     { noremap = true, silent = true },
   },
-  -- git branches
+  -- git buffer commits
   {
     "n",
     "<Leader>glc",
