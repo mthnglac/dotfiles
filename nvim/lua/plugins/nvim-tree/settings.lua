@@ -1,6 +1,7 @@
 -- following options are the default
 require("nvim-tree").setup({
 	auto_reload_on_write = true,
+  create_in_closed_folder = false,
 	-- disables netrw completely
 	disable_netrw = true,
 	-- hijack the cursor in the tree to put it at the start of the filename
@@ -13,16 +14,23 @@ require("nvim-tree").setup({
 	ignore_buffer_on_setup = false,
 	-- open the tree when running this setup function
 	open_on_setup = false,
+  open_on_setup_file = false,
 	-- opens the tree when changing/opening a new tab if the tree wasn't previously opened
 	open_on_tab = false,
 	sort_by = "name",
+  root_dirs = {},
+  prefer_startup_root = false,
 	-- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
-	update_cwd = false,
+  sync_root_with_cwd = false,
+  reload_on_bufenter = false,
+  respect_buf_cwd = false,
+  on_attach = "disable",
+  remove_keymaps = false,
+  select_prompts = false,
 	view = {
-		-- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
-		width = 60,
-		-- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
-		height = 30,
+    adaptive_size = false,
+    centralize_selection = false,
+    width = 30,
 		hide_root_folder = false,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
 		side = "left",
@@ -37,6 +45,20 @@ require("nvim-tree").setup({
 			-- list of mappings to set on the tree manually
 			list = {},
 		},
+    float = {
+      enable = false,
+      quit_on_focus_loss = true,
+      open_win_config = {
+        relative = "editor",
+        border = "rounded",
+        -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
+        width = 60,
+        -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
+        height = 30,
+        row = 1,
+        col = 1,
+      },
+    },
 	},
 	--false by default, this option shows indent markers when folders are open
 	renderer = {
@@ -50,6 +72,7 @@ require("nvim-tree").setup({
 		highlight_opened_files = "none",
 		--This is the default. See :help filename-modifiers for more options
 		root_folder_modifier = ":~",
+    indent_width = 2,
 		indent_markers = {
 			enable = true,
 			icons = {
@@ -98,6 +121,7 @@ require("nvim-tree").setup({
 		},
 		--List of filenames that gets highlighted with NvimTreeSpecialFile
 		special_files = {
+      "Cargo.toml",
 			"README.md",
 			"Makefile",
 			"MAKEFILE",
@@ -142,6 +166,7 @@ require("nvim-tree").setup({
 	diagnostics = {
 		enable = false,
 		show_on_dirs = false,
+    debounce_delay = 50,
 		icons = {
 			hint = "",
 			info = "",
@@ -154,9 +179,15 @@ require("nvim-tree").setup({
 		custom = {},
 		exclude = {},
 	},
+  filesystem_watchers = {
+    enable = true,
+    debounce_delay = 50,
+    ignore_dirs = {},
+  },
 	git = {
 		enable = true,
 		ignore = true,
+    show_on_dirs = true,
 		timeout = 400,
 	},
 	actions = {
@@ -164,7 +195,21 @@ require("nvim-tree").setup({
 		change_dir = {
 			enable = true,
 			global = false,
+      restrict_above_cwd = false,
 		},
+    expand_all = {
+      max_folder_discovery = 300,
+      exclude = {},
+    },
+    file_popup = {
+      open_win_config = {
+        col = 1,
+        row = 1,
+        relative = "cursor",
+        border = "shadow",
+        style = "minimal",
+      },
+    },
 		open_file = {
 			quit_on_open = false,
 			resize_window = false,
@@ -177,11 +222,18 @@ require("nvim-tree").setup({
 				},
 			},
 		},
+    remove_file = {
+      close_window = true,
+    },
 	},
 	trash = {
-		cmd = "trash",
+		cmd = "gio trash",
 		require_confirm = true,
 	},
+  live_filter = {
+    prefix = "[FILTER]: ",
+    always_show_folders = true,
+  },
 	log = {
 		enable = false,
 		truncate = false,
@@ -189,8 +241,14 @@ require("nvim-tree").setup({
 			all = false,
 			config = false,
 			copy_paste = false,
+      dev = false,
+      diagnostics = false,
 			git = false,
 			profile = false,
+      watcher = false,
 		},
 	},
+  notify = {
+    threshold = vim.log.levels.INFO,
+  },
 })
