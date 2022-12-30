@@ -1,0 +1,56 @@
+{
+  "keyboard.dispatch": "keyCode",
+  "vim.leader": "<space>",
+  "vim.surround": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "h"],
+      "commands": [
+        "workbench.action.navigateLeft",
+      ],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": [
+        "workbench.action.navigateDown",
+      ],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": [
+        "workbench.action.navigateUp",
+      ],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": [
+        "workbench.action.navigateRight",
+      ],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "r", "l"],
+      "commands": [
+        "everest.reloadMetadata",
+      ],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "p", "v"],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+      ],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": [
+        "workbench.action.focusSideBar",
+      ],
+      "silent": true
+    }
+  ]}
+}
