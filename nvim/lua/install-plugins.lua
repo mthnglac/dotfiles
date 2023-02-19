@@ -99,6 +99,16 @@ packer.startup(function()
 			require("plugins.mason-nvim")
 		end,
 	})
+	use({
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("plugins.mason-lspconfig-nvim")
+		end,
+		requires = {
+			"williamboman/mason.nvim",
+			"neovim/nvim-lspconfig",
+		},
+	})
 	-- speed up loading Lua modules
 	use({ "lewis6991/impatient.nvim" })
 	-- keep my last position!
