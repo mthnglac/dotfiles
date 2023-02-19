@@ -1,8 +1,49 @@
 {
+  "window.zoomLevel": 2,
+  "workbench.colorTheme": "Gruvbox Black",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
   "keyboard.dispatch": "keyCode",
   "vim.leader": "<space>",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 400,
   "vim.surround": true,
   "vim.normalModeKeyBindings": [
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z", "z", "v"],
+      "silent": true
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z", "z", "v"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "Y"],
+      "after": ["g", "g", "\"", "+", "y", "G"],
+      "silent": true
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "g", "$"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "g", "d"],
+      "after": ["g", "d"],
+      "silent": true
+    },
     {
       "before": ["<leader>", "h"],
       "commands": [
@@ -52,5 +93,24 @@
       ],
       "silent": true
     }
-  ]}
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "_", "d", "P"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"],
+      "silent": true
+    },
+  ]
 }
+
+
