@@ -105,8 +105,8 @@ packer.startup(function()
 			require("plugins.mason-lspconfig-nvim")
 		end,
 		requires = {
-			"williamboman/mason.nvim",
 			"neovim/nvim-lspconfig",
+			"williamboman/mason.nvim",
 		},
 	})
 	-- speed up loading Lua modules
