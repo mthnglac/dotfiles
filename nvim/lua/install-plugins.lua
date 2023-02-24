@@ -356,9 +356,9 @@ packer.startup(function()
 	})
 	-- distraction free mode
 	use({
-		"Pocco81/true-zen.nvim",
+		"folke/zen-mode.nvim",
 		config = function()
-			require("plugins.true-zen-nvim")
+			require("plugins.zen-mode-nvim")
 		end,
 	})
 	use({
