@@ -53,6 +53,9 @@ Keybind.g({
 	-- yank from the cursor position to the end of the line
 	{ "n", "Y", "yg$", { noremap = true } },
 
+	-- reselect last pasted text
+	{ "n", "gp", "`[v`]", { noremap = true } },
+
 	--[[
 	#-------------------------------------------------------------------------#
 	#                                RESIZE WINDOW                            #
