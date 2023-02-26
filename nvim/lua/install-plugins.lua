@@ -312,6 +312,13 @@ packer.startup(function()
 			require("plugins.autopairs-nvim")
 		end,
 	})
+	-- undotree
+	use({
+		"mbbill/undotree",
+		config = function()
+			require("plugins.undotree-vim")
+		end,
+	})
 	-- Simple TODO plugin
 	use({
 		"vuciv/vim-bujo",
