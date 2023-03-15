@@ -42,6 +42,13 @@ packer.reset()
 packer.startup(function()
 	-- packer itself
 	use({ "wbthomason/packer.nvim" })
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 	-- api tool
 	use({
 		"NTBBloodbath/rest.nvim",
