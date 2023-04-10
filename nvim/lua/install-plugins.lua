@@ -398,7 +398,19 @@ packer.startup(function()
   use({
     "ellisonleao/gruvbox.nvim",
     config = function()
-      require("plugins.colors")
+      require("plugins.colors.gruvbox")
+    end,
+  })
+  use({
+    "navarasu/onedark.nvim",
+    config = function()
+      require("plugins.colors.onedark")
+    end,
+  })
+  use({
+    "folke/tokyonight.nvim",
+    config = function()
+      require("plugins.colors.tokyonight")
     end,
   })
 
