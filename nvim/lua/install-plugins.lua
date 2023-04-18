@@ -366,7 +366,7 @@ packer.startup(function()
   -- tab bar
   use({
     "akinsho/bufferline.nvim",
-    tag = "v2.*",
+    tag = "v3.*",
     config = function()
       require("plugins.bufferline-nvim")
     end,
@@ -411,6 +411,12 @@ packer.startup(function()
     "folke/tokyonight.nvim",
     config = function()
       require("plugins.colors.tokyonight")
+    end,
+  })
+  use({
+    "Mofiqul/dracula.nvim",
+    config = function()
+      require("plugins.colors.dracula")
     end,
   })
 
