@@ -65,6 +65,19 @@ packer.startup(function()
     end,
     requires = { "nvim-lua/plenary.nvim" },
   })
+  -- LSP & DAP & Linter & Formatter package manager
+  use({
+    "williamboman/mason.nvim",
+    config = function()
+      require("plugins.mason-nvim")
+    end,
+  })
+  use({
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("plugins.mason-lspconfig-nvim")
+    end,
+  })
   -- built-in lsp manager
   use({
     "neovim/nvim-lspconfig",
@@ -98,23 +111,6 @@ packer.startup(function()
     config = function()
       require("plugins.goto-preview-nvim")
     end,
-  })
-  -- LSP & DAP & Linter & Formatter package manager
-  use({
-    "williamboman/mason.nvim",
-    config = function()
-      require("plugins.mason-nvim")
-    end,
-  })
-  use({
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("plugins.mason-lspconfig-nvim")
-    end,
-    requires = {
-      "neovim/nvim-lspconfig",
-      "williamboman/mason.nvim",
-    },
   })
   -- speed up loading Lua modules
   use({ "lewis6991/impatient.nvim" })
