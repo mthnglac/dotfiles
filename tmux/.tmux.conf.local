@@ -15,6 +15,15 @@
 #set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
 
 
+# -- plugins --------------------------------------------------------------------
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+set -g @continuum-boot 'on'
+set -g @continuum-save-interval '15'
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'
+
 # -- colors --------------------------------------------------------------------
 set -ga terminal-overrides ",xterm-256color*:Tc"
 
@@ -367,3 +376,4 @@ set -g mode-keys vi
 #
 # "$@"
 # # /!\ do not remove the previous line
+
