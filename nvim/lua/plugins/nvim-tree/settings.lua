@@ -12,9 +12,6 @@ require("nvim-tree").setup({
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,
 	ignore_buffer_on_setup = false,
-	-- open the tree when running this setup function
-	open_on_setup = false,
-  open_on_setup_file = false,
 	-- opens the tree when changing/opening a new tab if the tree wasn't previously opened
 	open_on_tab = false,
 	sort_by = "name",
@@ -153,8 +150,6 @@ require("nvim-tree").setup({
 			".cache",
 		},
 	},
-	-- will not open on setup if the filetype is in this list
-	ignore_ft_on_setup = { "startify", "dashboard" },
 	-- configuration options for the system open command (`s` in the tree by default)
 	system_open = {
 		-- the command to run this, leaving nil should work in most cases
