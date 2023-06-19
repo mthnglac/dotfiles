@@ -26,7 +26,7 @@ Option.g({
 	foldlevelstart = 99,
 	-- enable mouse in vim. 'a' for all modes (normal, visual, insert & command)
 	--mouse = 'a',
-	mouse = false,
+	--mouse = false,
 	-- 'backup' 'writebackup'	action	~
 	-- off	     off	no backup made
 	-- off	     on		backup current file, deleted afterwards (default)

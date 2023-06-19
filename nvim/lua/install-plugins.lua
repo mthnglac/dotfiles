@@ -40,6 +40,8 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+  -- tmux resurrect
+  use({ "tpope/vim-obsession" })
   -- packer itself
   use({ "wbthomason/packer.nvim" })
   -- markdown preview
@@ -91,6 +93,7 @@ packer.startup(function()
     config = function()
       require("plugins.fidget-nvim")
     end,
+    tag = "legacy",
   })
   -- auto-completion
   use({
