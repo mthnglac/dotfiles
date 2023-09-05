@@ -7,6 +7,5 @@ null_ls.setup({
     -- Formatter
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.black,
-		null_ls.builtins.formatting.rustfmt,
 	},
 })

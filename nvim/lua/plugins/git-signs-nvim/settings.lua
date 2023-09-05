@@ -10,7 +10,7 @@ require("gitsigns").setup({
 	numhl = false,
 	linehl = false,
 	word_diff = false,
-	keymaps = {},
+	-- keymaps = {},
 	watch_gitdir = {
 		interval = 1000,
 		follow_files = true,
