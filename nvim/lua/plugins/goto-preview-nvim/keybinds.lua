@@ -7,8 +7,20 @@ Keybind.g({
 	},
 	{
 		"n",
+		"<Leader>gpt",
+		[[<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>]],
+		{ noremap = true, silent = true },
+	},
+	{
+		"n",
 		"<Leader>gpi",
 		[[<cmd>lua require('goto-preview').goto_preview_implementation()<CR>]],
+		{ noremap = true, silent = true },
+	},
+	{
+		"n",
+		"<Leader>gpD",
+		[[<cmd>lua require('goto-preview').goto_preview_declaration()<CR>]],
 		{ noremap = true, silent = true },
 	},
 	{
