@@ -51,14 +51,6 @@ packer.startup(function()
       vim.fn["mkdp#util#install"]()
     end,
   })
-  -- api tool
-  use({
-    "NTBBloodbath/rest.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("plugins.rest-nvim")
-    end,
-  })
   -- formatter manager
   use({
     "jose-elias-alvarez/null-ls.nvim",

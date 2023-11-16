@@ -21,15 +21,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# My confs $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-#set -x # for testing delay of terminal opening
+##############################################################################
+# My confs ###################################################################
+##############################################################################
 
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Aliases --------------------------------------------------------------------
-# Access configs
 alias bashconfig="nvim ~/.bashrc"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
@@ -42,10 +42,6 @@ cht() {
   curl cht.sh/$1/$2
 }
 
-# Deno confs -----------------------------------------------------------------
-export DENO_INSTALL="${HOME}/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
 # Java confs -----------------------------------------------------------------
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 export PATH=$PATH:$JAVA_HOME
@@ -56,13 +52,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Flutter confs --------------------------------------------------------------
-export FLUTTER_HOME=$HOME/Flutter
-export PATH=$PATH:$FLUTTER_HOME/bin
-
-# Dart confs -----------------------------------------------------------------
-export PATH="$PATH:/usr/lib/dart/bin"
 
 # oh-my-zsh ------------------------------------------------------------------
 # Use vim keys in tab complete menu:
@@ -80,18 +69,15 @@ bindkey '^e' edit-command-line
 # default editor
 export EDITOR='nvim'
 
-# added by travis gem --------------------------------------------------------
-[ ! -s $HOME/.travis/travis.sh ] || source $HOME/.travis/travis.sh
 
-#set +x
-
+# others ---------------------------------------------------------------------
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 export PATH="/home/linuxbrew/.linuxbrew/opt/node@18/bin:$PATH"
-source $HOME/everest/everdocs/scripts/tools.sh
+# source $HOME/everest/everdocs/scripts/tools.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
