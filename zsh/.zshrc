@@ -9,7 +9,6 @@ ZSH_THEME="sonicradish"
 CASE_SENSITIVE="true"
 
 plugins=(
-  asdf
   git
   yarn
   web-search
@@ -68,23 +67,3 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 # default editor
 export EDITOR='nvim'
-
-
-# others ---------------------------------------------------------------------
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-export PATH="/home/linuxbrew/.linuxbrew/opt/node@18/bin:$PATH"
-# source $HOME/everest/everdocs/scripts/tools.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export GOPRIVATE=github.com/everestsystems
-export GHCR_USER=mthnglac
-export GHCR_PAT=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
-export NODE_AUTH_TOKEN=${GHCR_PAT}
-export GITHUB_TOKEN=${GHCR_PAT}
-

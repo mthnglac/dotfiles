@@ -149,59 +149,59 @@ install_mpv_config() {
     ensure_mpv_config_installed
 }
 
-install_tmux_config() {
-    ensure_tmux_installed() {
-        # Brewfile içinde tmux var mı kontrol et
-        if brew list | grep -q '^tmux$'; then
-            echo "tmux is already installed."
-        else
-            echo "Installing tmux..."
-            if brew install tmux; then
-                echo "tmux installation successful."
-            else
-                echo "Error: tmux installation failed."
-                exit 1
-            fi
-        fi
-    }
-
-    ensure_oh_my_tmux_installed() {
-        OH_MY_TMUX_DIR="$HOME/.tmux"
-
-        # oh-my-tmux dizini var mı kontrol et
-        if [ -d "$OH_MY_TMUX_DIR" ]; then
-            echo "oh-my-tmux is already installed."
-        else
-            echo "Installing oh-my-tmux..."
-            git clone https://github.com/gpakosz/.tmux.git "$OH_MY_TMUX_DIR"
-            ln -s -f "$OH_MY_TMUX_DIR/.tmux.conf" "$HOME/.tmux.conf"
-            cp "$OH_MY_TMUX_DIR/.tmux.conf.local" "$HOME/"
-            echo "oh-my-tmux installation successful."
-        fi
-    }
-
-    ensure_tmux_config_installed() {
-        TMUX_CONFIG_FILE="$DOTFILES_DIR/tmux/.tmux.conf.local"
-        TARGET_FILE="$HOME/.tmux.conf.local"
-
-        # ~/.tmux.conf.local dosyası ya da sembolik linki var mı kontrol et
-        if [ -L "$TARGET_FILE" ] || [ -e "$TARGET_FILE" ]; then
-            echo "tmux configuration link is already installed. Skipping..."
-        else
-            # tmux konfigürasyon dosyasını ~/.tmux.conf.local altına sembolik bağ olarak ekle
-            ln -s "$TMUX_CONFIG_FILE" "$TARGET_FILE"
-            echo "tmux configuration installed."
-        fi
-
-        echo "tmux configuration installation complete."
-    }
-
-    ensure_tmux_installed
-    ensure_oh_my_tmux_installed
-    ensure_tmux_config_installed
-
-    echo "tmux configuration installation complete."
-}
+# install_tmux_config() {
+#     ensure_tmux_installed() {
+#         # Brewfile içinde tmux var mı kontrol et
+#         if brew list | grep -q '^tmux$'; then
+#             echo "tmux is already installed."
+#         else
+#             echo "Installing tmux..."
+#             if brew install tmux; then
+#                 echo "tmux installation successful."
+#             else
+#                 echo "Error: tmux installation failed."
+#                 exit 1
+#             fi
+#         fi
+#     }
+#
+#     ensure_oh_my_tmux_installed() {
+#         OH_MY_TMUX_DIR="$HOME/.tmux"
+#
+#         # oh-my-tmux dizini var mı kontrol et
+#         if [ -d "$OH_MY_TMUX_DIR" ]; then
+#             echo "oh-my-tmux is already installed."
+#         else
+#             echo "Installing oh-my-tmux..."
+#             git clone https://github.com/gpakosz/.tmux.git "$OH_MY_TMUX_DIR"
+#             ln -s -f "$OH_MY_TMUX_DIR/.tmux.conf" "$HOME/.tmux.conf"
+#             cp "$OH_MY_TMUX_DIR/.tmux.conf.local" "$HOME/"
+#             echo "oh-my-tmux installation successful."
+#         fi
+#     }
+#
+#     ensure_tmux_config_installed() {
+#         TMUX_CONFIG_FILE="$DOTFILES_DIR/tmux/.tmux.conf.local"
+#         TARGET_FILE="$HOME/.tmux.conf.local"
+#
+#         # ~/.tmux.conf.local dosyası ya da sembolik linki var mı kontrol et
+#         if [ -L "$TARGET_FILE" ] || [ -e "$TARGET_FILE" ]; then
+#             echo "tmux configuration link is already installed. Skipping..."
+#         else
+#             # tmux konfigürasyon dosyasını ~/.tmux.conf.local altına sembolik bağ olarak ekle
+#             ln -s "$TMUX_CONFIG_FILE" "$TARGET_FILE"
+#             echo "tmux configuration installed."
+#         fi
+#
+#         echo "tmux configuration installation complete."
+#     }
+#
+#     ensure_tmux_installed
+#     ensure_oh_my_tmux_installed
+#     ensure_tmux_config_installed
+#
+#     echo "tmux configuration installation complete."
+# }
 
 install_nvim_config() {
     ensure_nvim_installed() {
@@ -209,7 +209,7 @@ install_nvim_config() {
             echo "neovim is already installed."
         else
             echo "Installing neovim..."
-            if brew install neovim; then
+            if brew install neovim --HEAD; then
                 echo "neovim installation successful."
             else
                 echo "Error: neovim installation failed."
@@ -245,7 +245,7 @@ main() {
     install_zsh_config
     install_fonts
     install_mpv_config
-    install_tmux_config
+    # install_tmux_config
     install_nvim_config
 
     echo "Dotfiles installation complete."
