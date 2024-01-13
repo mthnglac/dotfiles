@@ -48,6 +48,11 @@ local lsp_flags = {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+require("lspconfig")["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+})
 require("lspconfig")["tsserver"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,

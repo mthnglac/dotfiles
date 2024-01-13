@@ -349,7 +349,7 @@ packer.startup(function()
   -- popup terminal
   use({
     "akinsho/toggleterm.nvim",
-    tag = "v2.*",
+    tag = "*",
     config = function()
       require("plugins.toggleterm-nvim")
     end,
