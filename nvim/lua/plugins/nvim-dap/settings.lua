@@ -1,14 +1,25 @@
 local dap = require("dap")
 
+--[[
+#-------------------------------------------------------------------------#
+#                                    ADAPTERS                             #
+#-------------------------------------------------------------------------#
+--]]
+-- node-debug2
 dap.adapters.node2 = {
 	type = "executable",
 	command = "node",
 	args = { vim.fn.stdpath("data") .. "/mason/packages/node-debug2-adapter/out/src/nodeDebug.js" },
 }
 
+--[[
+#-------------------------------------------------------------------------#
+#                                    CONFS                                #
+#-------------------------------------------------------------------------#
+--]]
 dap.configurations.javascript = {
 	{
-		name = "Launch",
+		name = "JS Debugger",
 		type = "node2",
 		request = "launch",
 		program = "${file}",
@@ -16,12 +27,5 @@ dap.configurations.javascript = {
 		sourceMaps = true,
 		protocol = "inspector",
 		console = "integratedTerminal",
-	},
-	{
-		-- For this to work you need to make sure the node process is started with the `--inspect` flag.
-		name = "Attach to process",
-		type = "node2",
-		request = "attach",
-		processId = require("dap.utils").pick_process,
 	},
 }
