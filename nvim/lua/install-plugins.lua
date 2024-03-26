@@ -40,6 +40,13 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+  -- developer assister
+  use({
+    "folke/neodev.nvim",
+    config = function()
+      require("plugins.neodev-nvim")
+    end,
+  })
   -- tmux resurrect
   use({ "tpope/vim-obsession" })
   -- packer itself
@@ -264,6 +271,7 @@ packer.startup(function()
     "rcarriga/nvim-dap-ui",
     requires = {
       "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
     },
   })
   -- check vim startup time
