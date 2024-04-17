@@ -14,6 +14,9 @@ require("octo").setup({
 	ui = {
 		use_signcolumn = true, -- show "modified" marks on the sign column
 	},
+  suppress_missing_scope = {
+    projects_v2 = true,
+  },
 	issues = {
 		order_by = {
 			-- criteria to sort results of `Octo issue list`
