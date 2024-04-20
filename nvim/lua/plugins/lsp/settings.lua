@@ -41,7 +41,12 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<space>f", async_buf_formatting, { noremap = true, silent = false, buffer = bufnr })
 end
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = vim.tbl_deep_extend(
+  "force",
+  vim.lsp.protocol.make_client_capabilities(),
+  require("cmp_nvim_lsp").default_capabilities()
+)
 lsp.tsserver.setup({
   on_attach = on_attach,
   capabilities = capabilities,
