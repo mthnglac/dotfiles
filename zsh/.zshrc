@@ -52,6 +52,10 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# GO confs --------------------------------------------------------------
+export GOPATH="$HOME/go"
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
+
 # oh-my-zsh ------------------------------------------------------------------
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
