@@ -55,6 +55,10 @@ lsp.html.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
+lsp.jsonls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
 lsp.gopls.setup({
   on_attach = on_attach,
   capabilities = capabilities,

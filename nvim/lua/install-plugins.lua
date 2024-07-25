@@ -267,10 +267,9 @@ packer.startup(function()
 		config = function()
 			require("plugins.nvim-dap")
 		end,
-	})
-	use({
-		"rcarriga/nvim-dap-ui",
 		requires = {
+      -- ui-related
+      "rcarriga/nvim-dap-ui",
 			"mfussenegger/nvim-dap",
 			"nvim-neotest/nvim-nio",
 		},
