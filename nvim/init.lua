@@ -5,11 +5,11 @@ else
 	print("Failed to load impatient.")
 end
 
--- packer settings & plugins
-require("install-plugins")
-
 -- generics
 require("utils")
+
+-- packer settings & plugins
+require("install-plugins")
 
 -- vim core settings
 require("general")
