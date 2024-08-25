@@ -289,7 +289,6 @@ packer.startup(function()
     config = function()
       require("plugins.nvim-tree")
     end,
-    tag = "nightly",
     requires = {
       "kyazdani42/nvim-web-devicons", -- optional, for file icons
     },
@@ -391,20 +390,6 @@ packer.startup(function()
     config = function()
       require("plugins.maximizer")
     end,
-  })
-  -- AI
-  use({
-    "yetone/avante.nvim",
-    config = function()
-      require("plugins.maximizer")
-    end,
-    requires = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
-    },
   })
   -- theme
   use({
