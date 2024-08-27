@@ -86,6 +86,11 @@ packer.startup(function()
       require("plugins.fidget-nvim")
     end,
   })
+  -- Snippets
+  use({
+    "L3MON4D3/LuaSnip",
+    run = "make install_jsregexp",
+  })
   -- auto-completion
   use({
     "hrsh7th/nvim-cmp",
@@ -356,7 +361,7 @@ packer.startup(function()
   -- tab bar
   use({
     "akinsho/bufferline.nvim",
-    tag = "v3.*",
+    tag = "*",
     config = function()
       require("plugins.bufferline-nvim")
     end,
