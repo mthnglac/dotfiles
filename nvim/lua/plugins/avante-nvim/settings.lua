@@ -1,12 +1,15 @@
 require("avante").setup({
 	---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
 	provider = "copilot",
-	claude = {
-		endpoint = "https://api.anthropic.com",
-		model = "claude-3-5-sonnet-20240620",
-		temperature = 0,
-		max_tokens = 4096,
-	},
+  copilot = {
+    endpoint = "https://api.githubcopilot.com",
+    model = "gpt-4o-2024-05-13",
+    proxy = nil, -- [protocol://]host[:port] Use this proxy
+    allow_insecure = false, -- Allow insecure server connections
+    timeout = 30000, -- Timeout in milliseconds
+    temperature = 0,
+    max_tokens = 4096,
+  },
 	mappings = {
 		--- @class AvanteConflictMappings
 		diff = {
