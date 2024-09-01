@@ -32,5 +32,5 @@ require("lualine").setup({
 		lualine_y = {},
 		lualine_z = { "tabs" },
 	},
-	extensions = { "nvim-tree", "fugitive" },
+	extensions = { "nvim-tree", "fugitive", "trouble" },
 })
