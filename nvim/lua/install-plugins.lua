@@ -12,25 +12,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Load plugins from lua/plugins directory
-local plugins = {}
-
-local plugin_dir = vim.fn.stdpath("config") .. "/lua/plugins/"
-for _, file in ipairs(vim.fn.glob(plugin_dir .. "*", true, true)) do
-	if vim.fn.isdirectory(file) == 1 then
-		table.insert(plugins, {
-			dir = file,
-			config = function()
-				local plugin_name = vim.fn.fnamemodify(file, ":t")
-				local status_ok, plugin = pcall(require, "plugins." .. plugin_name)
-				if status_ok then
-					plugin.setup()
-				end
-			end,
-		})
-	end
-end
-
 -- Configuration using Lazy.nvim
 require("lazy").setup({
 	-- developer assister
