@@ -7,7 +7,7 @@ require("gruvbox").setup({
 		operators = true,
 		comments = true,
 	},
-	inverse = true, -- invert background for search, diffs, statuslines and errors
+	inverse = false, -- invert background for search, diffs, statuslines and errors
 	invert_selection = false,
 	invert_signs = false,
 	invert_tabline = false,
