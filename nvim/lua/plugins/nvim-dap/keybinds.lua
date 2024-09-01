@@ -21,7 +21,7 @@ Keybind.g({
 Keybind.g({
 	{
 		"n",
-		"<Leader>vq",
+		"<Space>vq",
 		[[
       <Cmd>lua require('dapui').close()<CR>
       <Cmd>lua require('dap').terminate()<CR>
@@ -34,7 +34,7 @@ Keybind.g({
 Keybind.g({
 	{
 		"n",
-		"<Leader>vb",
+		"<Space>vb",
 		[[<Cmd>lua require('dap').toggle_breakpoint()<CR>]],
 		{ noremap = true, silent = true },
 	},
@@ -44,7 +44,7 @@ Keybind.g({
 Keybind.g({
 	{
 		"n",
-		"<Leader>vc",
+		"<Space>vc",
 		[[<Cmd>lua require('dap').continue()<CR>]],
 		{ noremap = true, silent = false },
 	},
@@ -52,7 +52,7 @@ Keybind.g({
 Keybind.g({
 	{
 		"n",
-		"<Leader>vss",
+		"<Space>vss",
 		[[<Cmd>lua require('dap').step_over()<CR>]],
 		{ noremap = true, silent = true },
 	},
@@ -60,7 +60,7 @@ Keybind.g({
 Keybind.g({
 	{
 		"n",
-		"<Leader>vsi",
+		"<Space>vsi",
 		[[<Cmd>lua require('dap').step_into()<CR>]],
 		{ noremap = true, silent = true },
 	},
@@ -68,7 +68,7 @@ Keybind.g({
 Keybind.g({
 	{
 		"n",
-		"<Leader>vso",
+		"<Space>vso",
 		[[<Cmd>lua require('dap').step_out()<CR>]],
 		{ noremap = true, silent = true },
 	},

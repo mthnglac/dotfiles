@@ -5,7 +5,7 @@ Keybind.g({
 	#-------------------------------------------------------------------------#
 	--]]
 	-- reload nvim configuration file
-	{ "n", "<Leader><CR>", ":luafile $MYVIMRC<CR>", { noremap = true } },
+	{ "n", "<Space><CR>", ":luafile $MYVIMRC<CR>", { noremap = true } },
 
 	--[[
 	#-------------------------------------------------------------------------#
@@ -13,19 +13,19 @@ Keybind.g({
 	#-------------------------------------------------------------------------#
 	--]]
 	-- [ space + h ] move cursor to left window
-	{ "n", "<Leader>h", "<Cmd>wincmd h<CR>", { noremap = true } },
+	{ "n", "<Space>h", "<Cmd>wincmd h<CR>", { noremap = true } },
 
 	-- [ space + l ] move cursor to bottom window
-	{ "n", "<Leader>j", "<Cmd>wincmd j<CR>", { noremap = true } },
+	{ "n", "<Space>j", "<Cmd>wincmd j<CR>", { noremap = true } },
 
 	-- [ space + j ] move cursor to top window
-	{ "n", "<Leader>k", "<Cmd>wincmd k<CR>", { noremap = true } },
+	{ "n", "<Space>k", "<Cmd>wincmd k<CR>", { noremap = true } },
 
 	-- [ space + k ] move cursor to right window
-	{ "n", "<Leader>l", "<Cmd>wincmd l<CR>", { noremap = true } },
+	{ "n", "<Space>l", "<Cmd>wincmd l<CR>", { noremap = true } },
 
 	-- [ space + c ] highlight cursorline
-	{ "n", "<Leader>z", [[<Cmd>set cursorline! cursorcolumn!<CR>]], { noremap = true } },
+	{ "n", "<Space>z", [[<Cmd>set cursorline! cursorcolumn!<CR>]], { noremap = true } },
 
 	--[[
 	#-------------------------------------------------------------------------#
@@ -37,18 +37,18 @@ Keybind.g({
 	{ "v", "X", '"_d', { noremap = true } },
 
 	-- delete&local-paste without registering
-	{ "v", "<Leader>p", '"_dP', { noremap = true } },
+	{ "v", "<Space>p", '"_dP', { noremap = true } },
 
 	-- yank it to global register
-	{ "n", "<Leader>y", '"+y', { noremap = true } },
-	{ "v", "<Leader>y", '"+y', { noremap = true } },
+	{ "n", "<Space>y", '"+y', { noremap = true } },
+	{ "v", "<Space>y", '"+y', { noremap = true } },
 
 	-- ????????
-	{ "n", "<Leader>d", '"_d', { noremap = true } },
-	{ "v", "<Leader>d", '"_d', { noremap = true } },
+	{ "n", "<Space>d", '"_d', { noremap = true } },
+	{ "v", "<Space>d", '"_d', { noremap = true } },
 
 	-- yank all the content of file to global register ?? (╯°□°）╯︵ ┻━┻
-	{ "n", "<Leader>Y", 'gg"+yG', { noremap = true } },
+	{ "n", "<Space>Y", 'gg"+yG', { noremap = true } },
 
 	-- yank from the cursor position to the end of the line
 	{ "n", "Y", "yg$", { noremap = true } },
@@ -63,9 +63,9 @@ Keybind.g({
 	--]]
 
 	-- resize window
-	{ "n", "<Leader>+", "<Cmd>vertical resize +5<CR>", { noremap = true } },
-	{ "n", "<Leader>-", "<Cmd>vertical resize -5<CR>", { noremap = true } },
-	{ "n", "<Leader>rp", "<Cmd>resize 100<CR>", { noremap = true } },
+	{ "n", "<Space>+", "<Cmd>vertical resize +5<CR>", { noremap = true } },
+	{ "n", "<Space>-", "<Cmd>vertical resize -5<CR>", { noremap = true } },
+	{ "n", "<Space>rp", "<Cmd>resize 100<CR>", { noremap = true } },
 
 	--[[
 	#-------------------------------------------------------------------------#
@@ -115,7 +115,7 @@ Keybind.g({
 	#-------------------------------------------------------------------------#
 	--]]
 	-- open terminal
-	{ "n", "<Leader>\\t", "<Cmd>terminal<CR>", { noremap = true } },
+	{ "n", "<Space>\\t", "<Cmd>terminal<CR>", { noremap = true } },
 	-- turn terminal to normal mode with escape
 	{ "t", "<Esc>", "<C-\\><C-n>", { noremap = true } },
 	-- open neovim terminal
@@ -127,7 +127,7 @@ Keybind.g({
 	#-------------------------------------------------------------------------#
 	--]]
 	-- hit twice the spacebar if you want highlight to gone!
-	{ "n", "<Leader>", "<Cmd>nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true } },
+	{ "n", "<Space>", "<Cmd>nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true } },
 	-- ctrl-c
 	{ "i", "<C-c>", "<esc>", { noremap = true } },
 })

@@ -1,38 +1,38 @@
 Keybind.g({
 	{
 		"n",
-		"<Leader>gpd",
+		"<Space>gpd",
 		[[<cmd>lua require('goto-preview').goto_preview_definition()<CR>]],
 		{ noremap = true, silent = true },
 	},
 	{
 		"n",
-		"<Leader>gpt",
+		"<Space>gpt",
 		[[<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>]],
 		{ noremap = true, silent = true },
 	},
 	{
 		"n",
-		"<Leader>gpi",
+		"<Space>gpi",
 		[[<cmd>lua require('goto-preview').goto_preview_implementation()<CR>]],
 		{ noremap = true, silent = true },
 	},
 	{
 		"n",
-		"<Leader>gpD",
+		"<Space>gpD",
 		[[<cmd>lua require('goto-preview').goto_preview_declaration()<CR>]],
 		{ noremap = true, silent = true },
 	},
 	{
 		"n",
-		"<Leader>gP",
+		"<Space>gP",
 		[[<cmd>lua require('goto-preview').close_all_win()<CR>]],
 		{ noremap = true, silent = true },
 	},
 	-- if telescope installed
 	{
 		"n",
-		"<Leader>gpr",
+		"<Space>gpr",
 		[[<cmd>lua require('goto-preview').goto_preview_references()<CR>]],
 		{ noremap = true, silent = true },
 	},

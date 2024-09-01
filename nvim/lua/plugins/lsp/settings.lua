@@ -11,13 +11,13 @@ local function goto_next_error()
   vim.diagnostic.goto_next({ severity = "Error" })
 end
 
-vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
-vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
+vim.keymap.set("n", "<Space>e", vim.diagnostic.open_float, opts)
+vim.keymap.set("n", "<Space>q", vim.diagnostic.setloclist, opts)
 
-vim.keymap.set("n", "<space>g[", vim.diagnostic.goto_prev, opts)
-vim.keymap.set("n", "<space>g]", vim.diagnostic.goto_next, opts)
-vim.keymap.set("n", "<space>gp", goto_prev_error, opts)
-vim.keymap.set("n", "<space>gn", goto_next_error, opts)
+vim.keymap.set("n", "<Space>g[", vim.diagnostic.goto_prev, opts)
+vim.keymap.set("n", "<Space>g]", vim.diagnostic.goto_next, opts)
+vim.keymap.set("n", "<Space>gp", goto_prev_error, opts)
+vim.keymap.set("n", "<Space>gn", goto_next_error, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -32,13 +32,13 @@ local on_attach = function(client, bufnr)
     vim.lsp.buf.format({ async = true })
   end
 
-  vim.keymap.set("n", "<space>gd", vim.lsp.buf.definition, bufopts)
-  vim.keymap.set("n", "<space>gy", vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set("n", "<space>gD", vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set("n", "<space>gi", vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set("n", "<space>gr", vim.lsp.buf.references, bufopts)
-  vim.keymap.set("n", "<space>rr", vim.lsp.buf.rename, bufopts)
-  vim.keymap.set("n", "<space>f", async_buf_formatting, { noremap = true, silent = false, buffer = bufnr })
+  vim.keymap.set("n", "<Space>gd", vim.lsp.buf.definition, bufopts)
+  vim.keymap.set("n", "<Space>gy", vim.lsp.buf.type_definition, bufopts)
+  vim.keymap.set("n", "<Space>gD", vim.lsp.buf.declaration, bufopts)
+  vim.keymap.set("n", "<Space>gi", vim.lsp.buf.implementation, bufopts)
+  vim.keymap.set("n", "<Space>gr", vim.lsp.buf.references, bufopts)
+  vim.keymap.set("n", "<Space>rr", vim.lsp.buf.rename, bufopts)
+  vim.keymap.set("n", "<Space>f", async_buf_formatting, { noremap = true, silent = false, buffer = bufnr })
 end
 
 -- local capabilities = require("cmp_nvim_lsp").default_capabilities()

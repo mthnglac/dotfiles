@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup({
-	ensure_installed = "all",
+	ensure_installed = { "go", "html", "json", "typescript", "lua" },
 	highlight = {
 		enable = true,
 	},
@@ -67,4 +67,4 @@ require("nvim-treesitter.configs").setup({
 	},
 })
 
-vim.treesitter.language.register('markdown', 'octo')
+vim.treesitter.language.register("markdown", "octo")

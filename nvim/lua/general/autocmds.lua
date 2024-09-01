@@ -12,8 +12,8 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "javascript, javascriptreact, typescript, typescriptreact",
   callback = function()
     Keybind.g({
-      { "n", "<Leader>cl", [["ayiwoconsole.log('<C-R>a:', <C-R>a);<Esc>]], { noremap = true, silent = true } },
-      { "x", "<Leader>cl", [["ayoconsole.log('<C-R>a:', <C-R>a);<Esc>]], { noremap = true, silent = true } },
+      { "n", "<Space>cl", [["ayiwoconsole.log('<C-R>a:', <C-R>a);<Esc>]], { noremap = true, silent = true } },
+      { "x", "<Space>cl", [["ayoconsole.log('<C-R>a:', <C-R>a);<Esc>]], { noremap = true, silent = true } },
     })
   end,
 })

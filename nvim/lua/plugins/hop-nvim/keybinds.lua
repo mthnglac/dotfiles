@@ -24,6 +24,6 @@ Keybind.g({
 		{ noremap = false, silent = true },
 	},
 
-	{ "n", "<Leader>phc", [[<cmd>lua require('hop').hint_words()<cr>]], { noremap = true, silent = true } },
-	{ "n", "<Leader>phw", [[<cmd>lua require('hop').hint_words({ multi_windows = true })<cr>]], { noremap = true, silent = true } },
+	{ "n", "<Space>phc", [[<cmd>lua require('hop').hint_words()<cr>]], { noremap = true, silent = true } },
+	{ "n", "<Space>phw", [[<cmd>lua require('hop').hint_words({ multi_windows = true })<cr>]], { noremap = true, silent = true } },
 })

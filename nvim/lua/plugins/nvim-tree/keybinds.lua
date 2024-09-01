@@ -1,4 +1,4 @@
 -- open file manager
 Keybind.g({
-	{ "n", "<Leader>pv", [[<Cmd>NvimTreeToggle<CR>]], { noremap = true, silent = true } },
+	{ "n", "<Space>pv", [[<Cmd>NvimTreeToggle<CR>]], { noremap = true, silent = true } },
 })
