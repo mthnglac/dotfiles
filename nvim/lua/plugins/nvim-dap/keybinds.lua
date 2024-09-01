@@ -3,10 +3,7 @@ Keybind.g({
 	{
 		"n",
 		"<F4>",
-		[[
-      <Cmd>lua require('dapui').setup()<CR>
-      <Cmd>lua require('dapui').open()<CR>
-    ]],
+		"<Cmd>lua require('dapui').setup()<CR><Cmd>lua require('dapui').open()<CR>",
 		{ noremap = true, silent = false },
 	},
 })
@@ -23,8 +20,7 @@ Keybind.g({
 		"n",
 		"<Space>vq",
 		[[
-      <Cmd>lua require('dapui').close()<CR>
-      <Cmd>lua require('dap').terminate()<CR>
+      <Cmd>lua require('dapui').close()<CR><Cmd>lua require('dap').terminate()<CR>
     ]],
 		{ noremap = true, silent = false },
 	},

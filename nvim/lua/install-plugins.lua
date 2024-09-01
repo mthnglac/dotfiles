@@ -18,7 +18,7 @@ require("lazy").setup({
 	{
 		"folke/trouble.nvim",
 		cmd = "Trouble",
-    lazy = false,
+		lazy = false,
 		config = function()
 			require("plugins.trouble-nvim")
 		end,
@@ -274,6 +274,7 @@ require("lazy").setup({
 		end,
 		dependencies = {
 			"rcarriga/nvim-dap-ui",
+			"nvim-neotest/nvim-nio",
 			"nvim-neotest/neotest",
 		},
 	},
