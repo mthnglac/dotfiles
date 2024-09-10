@@ -47,7 +47,7 @@ local capabilities = vim.tbl_deep_extend(
   vim.lsp.protocol.make_client_capabilities(),
   require("cmp_nvim_lsp").default_capabilities()
 )
-lsp.tsserver.setup({
+lsp.ts_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
@@ -60,6 +60,10 @@ lsp.jsonls.setup({
   capabilities = capabilities,
 })
 lsp.gopls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+lsp.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
