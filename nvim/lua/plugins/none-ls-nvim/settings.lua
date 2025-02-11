@@ -8,5 +8,6 @@ null_ls.setup({
     -- Formatter
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.stylua,
+    null_ls.builtins.formatting.prettierd,
   },
 })
