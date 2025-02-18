@@ -59,6 +59,16 @@ require("lazy").setup({
     end,
   },
   {
+    "jay-babu/mason-nvim-dap.nvim",
+    config = function()
+      require("plugins.mason-dap-nvim")
+    end,
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap",
+    }
+  },
+  {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("plugins.mason-lspconfig-nvim")
@@ -75,9 +85,6 @@ require("lazy").setup({
   -- built-in lsp manager
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      require("plugins.lsp")
-    end,
   },
   -- lsp status manager
   {
@@ -249,6 +256,7 @@ require("lazy").setup({
       "rcarriga/nvim-dap-ui",
       "nvim-neotest/nvim-nio",
       "nvim-neotest/neotest",
+      -- "microsoft/vscode-js-debug"
     },
   },
   -- check vim startup time

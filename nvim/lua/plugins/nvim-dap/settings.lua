@@ -5,19 +5,14 @@ local dap = require("dap")
 #                                    ADAPTERS                             #
 #-------------------------------------------------------------------------#
 --]]
--- node-debug2
-dap.adapters.node2 = {
-  type = "executable",
-  command = "node",
-  args = { vim.fn.stdpath("data") .. "/mason/packages/node-debug2-adapter/out/src/nodeDebug.js" },
-}
-dap.adapters.delve = {
+dap.adapters["pwa-node"] = {
   type = "server",
+  host = "127.0.0.1",
   port = "${port}",
   executable = {
-    command = "dlv",
-    args = { "dap", "-l", "127.0.0.1:${port}" },
-  },
+    command = "node",
+    args = { vim.fn.stdpath("data") .. "/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js", '${port}' },
+  }
 }
 
 --[[
@@ -27,37 +22,19 @@ dap.adapters.delve = {
 --]]
 dap.configurations.javascript = {
   {
-    name = "JS Debugger",
-    type = "node2",
+    type = "pwa-node",
     request = "launch",
+    name = "Launch file",
     program = "${file}",
-    cwd = vim.fn.getcwd(),
-    sourceMaps = true,
-    protocol = "inspector",
-    console = "integratedTerminal",
+    cwd = "${workspaceFolder}",
   },
 }
-dap.configurations.go = {
+dap.configurations.typescript = {
   {
-    type = "delve",
-    name = "Debug",
+    type = "pwa-node",
     request = "launch",
+    name = "Launch file",
     program = "${file}",
-  },
-  {
-    type = "delve",
-    name = "Debug test", -- configuration for debugging test files
-    request = "launch",
-    mode = "test",
-    program = "${file}",
-  },
-  -- works with go.mod packages and sub packages
-  {
-    type = "delve",
-    name = "Debug test (go.mod)",
-    request = "launch",
-    mode = "test",
-    program = "./${relativeFileDirname}",
+    cwd = "${workspaceFolder}",
   },
 }
-
