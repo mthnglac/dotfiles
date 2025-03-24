@@ -23,18 +23,6 @@ require("lazy").setup({
       require("plugins.trouble-nvim")
     end,
   },
-  -- AI
-  {
-    "olimorris/codecompanion.nvim",
-    config = function()
-      require("plugins.codecompanion-nvim")
-    end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "github/copilot.vim"
-    },
-  },
   -- developer assister
   {
     "folke/neodev.nvim",
@@ -67,20 +55,12 @@ require("lazy").setup({
     dependencies = {
       "williamboman/mason.nvim",
       "mfussenegger/nvim-dap",
-    }
+    },
   },
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("plugins.mason-lspconfig-nvim")
-    end,
-  },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "VeryLazy",
-    opts = {},
-    config = function()
-      require("plugins.lsp-signature-nvim")
     end,
   },
   -- built-in lsp manager
@@ -119,6 +99,10 @@ require("lazy").setup({
     config = function()
       require("plugins.goto-preview-nvim")
     end,
+    dependencies = {
+      "rmagatti/logger.nvim",
+    },
+    event = "BufEnter",
   },
   -- keep my last position!
   {
@@ -289,13 +273,6 @@ require("lazy").setup({
     "lewis6991/gitsigns.nvim",
     config = function()
       require("plugins.git-signs-nvim")
-    end,
-  },
-  -- commenter
-  {
-    "numToStr/Comment.nvim",
-    config = function()
-      require("plugins.comment-nvim")
     end,
   },
   -- Insert or delete brackets, parens, quotes in pairs
