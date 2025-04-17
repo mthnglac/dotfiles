@@ -2,17 +2,12 @@ local lsp = require("lspconfig")
 local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
 
--- Initialize mason
 mason.setup({})
-
--- Initialize mason-lspconfig
 mason_lspconfig.setup({
   ensure_installed = { "ts_ls", "html", "jsonls", "gopls", "pyright", "lua_ls", "cssls" },
   automatic_installation = true,
 })
 
--- Mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
 local function goto_prev_error()
   vim.diagnostic.goto_prev({ severity = "Error" })
@@ -33,8 +28,6 @@ vim.keymap.set("n", "<Space>ih", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, opts)
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -59,7 +52,7 @@ end
 -- LSP Server setup using mason-lspconfig
 local servers = { "ts_ls", "html", "jsonls", "gopls", "pyright", "lua_ls", "cssls" } -- Corrected server names for mason
 
-for _, server in ipairs(servers) do
+local handler_setup = function(server_name)
   local config = {
     on_attach = on_attach,
     capabilities = vim.tbl_deep_extend(
@@ -69,7 +62,7 @@ for _, server in ipairs(servers) do
     ),
   }
 
-  if server == "ts_ls" then
+  if server_name == "ts_ls" then
     config.settings = {
       typescript = {
         inlayHints = {
@@ -80,7 +73,7 @@ for _, server in ipairs(servers) do
           includeInlayParameterNameHintsWhenArgumentMatchesName = true,
           includeInlayPropertyDeclarationTypeHints = true,
           includeInlayVariableTypeHints = true,
-        }
+        },
       },
       javascript = {
         inlayHints = {
@@ -91,12 +84,12 @@ for _, server in ipairs(servers) do
           includeInlayParameterNameHintsWhenArgumentMatchesName = true,
           includeInlayPropertyDeclarationTypeHints = true,
           includeInlayVariableTypeHints = true,
-        }
+        },
       },
     }
   end
 
-  if server == "lua_ls" then
+  if server_name == "lua_ls" then
     config.settings = {
       Lua = {
         runtime = { version = "LuaJIT" },
@@ -106,13 +99,11 @@ for _, server in ipairs(servers) do
     }
   end
 
-  -- Use mason_lspconfig.setup_handlers to configure each server
-  mason_lspconfig.setup_handlers({
-    function(server_name)
-      lsp[server_name].setup(config)
-    end,
-  })
-
   -- Call setup for the current server
-  lsp[server].setup(config)
+  lsp[server_name].setup(config)
 end
+
+-- Use mason_lspconfig.setup_handlers to configure each server
+mason_lspconfig.setup_handlers({
+  handler_setup
+})

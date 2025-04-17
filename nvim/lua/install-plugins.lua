@@ -6,14 +6,52 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Configuration using Lazy.nvim
 require("lazy").setup({
+  -- AI
+  {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    version = false,
+    build = "make",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "zbirenbaum/copilot.lua",
+      {
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {
+          default = {
+            embed_image_as_base64 = false,
+            prompt_for_file_name = false,
+            drag_and_drop = {
+              insert_mode = true,
+            },
+          },
+        },
+      },
+      {
+        "MeanderingProgrammer/render-markdown.nvim",
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+      },
+    },
+    config = function()
+      require("plugins.avante-nvim")
+    end,
+  },
   -- Diagnostics
   {
     "folke/trouble.nvim",
@@ -356,7 +394,14 @@ require("lazy").setup({
       require("plugins.maximizer")
     end,
   },
-  -- themes
+  -- UI
+  {
+    'karb94/neoscroll.nvim',
+    config = function()
+      require("plugins.neoscroll-nvim")
+    end
+  },
+  -- -- themes
   {
     "ellisonleao/gruvbox.nvim",
     config = function()

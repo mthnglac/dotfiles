@@ -2,7 +2,6 @@
 Option.g({
 	encoding = "UTF-8",
 	exrc = true,
-	guicursor = "",
 	nu = true,
 	showmode = false,
 	cmdheight = 2,
@@ -71,6 +70,7 @@ Option.g({
 	#-------------------------------------------------------------------------#
 	--]]
 	termguicolors = true,
+  background = "dark",
 	--[[
 	#-------------------------------------------------------------------------#
 	#                                     OTHER                               #
@@ -80,6 +80,7 @@ Option.g({
 	-- anything in the clipboard can be pasted directly
 	-- any yanked text will be copied to clipboard
 	--clipboard='unnamedplus',
+  laststatus = 3
 })
 
 Option.w({

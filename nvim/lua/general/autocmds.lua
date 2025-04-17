@@ -2,7 +2,7 @@
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
   callback = function()
-    require("vim.hl").on_yank({ higroup="Visual", timeout = 400 })
+    require("vim.hl").on_yank({ higroup = "Visual", timeout = 400 })
   end,
 })
 
@@ -13,29 +13,26 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     Keybind.g({
       { "n", "<Space>cl", [["ayiwoconsole.log('<C-R>a:', <C-R>a);<Esc>]], { noremap = true, silent = true } },
-      { "x", "<Space>cl", [["ayoconsole.log('<C-R>a:', <C-R>a);<Esc>]], { noremap = true, silent = true } },
+      { "x", "<Space>cl", [["ayoconsole.log('<C-R>a:', <C-R>a);<Esc>]],   { noremap = true, silent = true } },
     })
   end,
 })
 
---local groupCursorEffect = vim.api.nvim_create_augroup("HighlighMyCursor", { clear = true })
---vim.api.nvim_create_autocmd({'WinEnter,BufWinEnter,VimEnter'},
---{
---pattern = "*",
---callback = function()
---vim.wo.cursorline = true
---vim.wo.cursorcolumn = true
---end,
---group = groupCursorEffect
---}
---)
---vim.api.nvim_create_autocmd('WinLeave',
---{
---pattern = "*",
---callback = function()
---vim.wo.cursorline = false
---vim.wo.cursorcolumn = false
---end,
---group = groupCursorEffect
---}
---)
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   group = vim.api.nvim_create_augroup("DiffColors", { clear = true }),
+--   callback = function()
+--     local is_dark = vim.o.background == "dark"
+--
+--     if is_dark then
+--       vim.api.nvim_set_hl(0, "DiffAdd", { fg = "none", bg = "#2e4b2e", bold = true })
+--       vim.api.nvim_set_hl(0, "DiffDelete", { fg = "none", bg = "#4c1e15", bold = true })
+--       vim.api.nvim_set_hl(0, "DiffChange", { fg = "none", bg = "#45565c", bold = true })
+--       vim.api.nvim_set_hl(0, "DiffText", { fg = "none", bg = "#996d74", bold = true })
+--     else
+--       vim.api.nvim_set_hl(0, "DiffAdd", { fg = "none", bg = "palegreen", bold = true })
+--       vim.api.nvim_set_hl(0, "DiffDelete", { fg = "none", bg = "tomato", bold = true })
+--       vim.api.nvim_set_hl(0, "DiffChange", { fg = "none", bg = "lightblue", bold = true })
+--       vim.api.nvim_set_hl(0, "DiffText", { fg = "none", bg = "lightpink", bold = true })
+--     end
+--   end,
+-- })

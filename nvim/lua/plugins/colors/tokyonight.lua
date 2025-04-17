@@ -31,3 +31,4 @@ require("tokyonight").setup({
 	---@param colors ColorScheme
 	on_highlights = function(highlights, colors) end,
 })
+-- vim.api.nvim_command([[colorscheme tokyonight]])

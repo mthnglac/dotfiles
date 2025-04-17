@@ -2,19 +2,21 @@ require("gruvbox").setup({
 	undercurl = true,
 	underline = true,
 	bold = true,
-	italic = {
-		strings = true,
-		operators = true,
-		comments = true,
-	},
+  italic = {
+    strings = true,
+    emphasis = true,
+    comments = true,
+    operators = true,
+    folds = true,
+  },
 	inverse = false, -- invert background for search, diffs, statuslines and errors
 	invert_selection = false,
 	invert_signs = false,
 	invert_tabline = false,
 	invert_intend_guides = false,
 	contrast = "hard", -- can be "hard" or "soft"
-	overrides = {
-		Normal = { bg = "#000000" },
-	},
+	-- overrides = {
+	-- 	Normal = { bg = "#000000" },
+	-- },
 })
-vim.api.nvim_command([[colorscheme gruvbox]])
+-- vim.api.nvim_command([[colorscheme gruvbox]])
