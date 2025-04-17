@@ -80,6 +80,7 @@ Option.g({
 	-- anything in the clipboard can be pasted directly
 	-- any yanked text will be copied to clipboard
 	--clipboard='unnamedplus',
+  laststatus = 3
 })
 
 Option.w({
