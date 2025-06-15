@@ -54,6 +54,12 @@ Keybind.g({
     [[<Cmd>lua require('plugins.telescope.settings').search_notes()<CR>]],
     { noremap = true, silent = true },
   },
+  {
+    "n",
+    "<Space>prp",
+    [[<Cmd>lua require('plugins.telescope.settings').search_plugins()<CR>]],
+    { noremap = true, silent = true },
+  },
 })
 
 -- Git

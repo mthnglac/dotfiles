@@ -131,4 +131,11 @@ M.search_notes = function()
   })
 end
 
+M.search_plugins = function()
+  require("telescope.builtin").live_grep({
+    prompt_title = "< Plugins >",
+    cwd = tostring(os.getenv("HOME")) .. "/.local/share/nvim/lazy/",
+  })
+end
+
 return M
