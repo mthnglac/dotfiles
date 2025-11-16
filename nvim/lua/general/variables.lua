@@ -17,7 +17,8 @@ Variable.g({
 Variable.g({
 	vim_be_good_log_file = 1,
 	vim_apm_lig = 1,
-	python3_host_prog = tostring(os.getenv("HOME")) .. "/.asdf/shims/python",
+	-- python3_host_prog = tostring(os.getenv("HOME")) .. "/.asdf/shims/python",
+	python3_host_prog = "/opt/homebrew/bin/python3"
 })
 
 Variable.g({

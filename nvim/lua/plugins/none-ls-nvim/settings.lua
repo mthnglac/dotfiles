@@ -6,9 +6,9 @@ null_ls.setup({
     -- ...
 
     -- Formatter
-    null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.formatting.rubyfmt,
+    null_ls.builtins.formatting.rubocop,
+    null_ls.builtins.formatting.sql_formatter,
   },
 })
