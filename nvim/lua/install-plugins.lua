@@ -98,7 +98,7 @@ require("lazy").setup({
 			require("plugins.nvim-cmp")
 		end,
 		dependencies = {
-      'neovim/nvim-lspconfig',
+			"neovim/nvim-lspconfig",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
@@ -114,13 +114,6 @@ require("lazy").setup({
 			"rmagatti/logger.nvim",
 		},
 		event = "BufEnter",
-	},
-	-- keep my last position!
-	{
-		"ethanholz/nvim-lastplace",
-		config = function()
-			require("plugins.lastplace-nvim")
-		end,
 	},
 	-- peek lines immediately with :<line_number>
 	{
@@ -218,10 +211,6 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
 		},
-	},
-	{
-		"LinArcX/telescope-env.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim" },
 	},
 	-- Git plugin for vim. Bestest of bests!!!
 	{
