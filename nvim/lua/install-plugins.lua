@@ -77,15 +77,12 @@ require("lazy").setup({
 			require("plugins.mason-nvim")
 		end,
 	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("plugins.mason-lspconfig-nvim")
-		end,
-	},
 	-- built-in lsp manager
 	{
 		"neovim/nvim-lspconfig",
+		config = function()
+			require("plugins.lspconfig-nvim")
+		end,
 	},
 	-- lsp status manager
 	{
@@ -94,11 +91,6 @@ require("lazy").setup({
 			require("plugins.fidget-nvim")
 		end,
 	},
-	-- Snippets
-	{
-		"L3MON4D3/LuaSnip",
-		build = "make install_jsregexp",
-	},
 	-- auto-completion
 	{
 		"hrsh7th/nvim-cmp",
@@ -106,11 +98,10 @@ require("lazy").setup({
 			require("plugins.nvim-cmp")
 		end,
 		dependencies = {
+      'neovim/nvim-lspconfig',
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-			"L3MON4D3/LuaSnip",
-			"saadparwaiz1/cmp_luasnip",
 		},
 	},
 	-- preview code
@@ -269,7 +260,6 @@ require("lazy").setup({
 			"rcarriga/nvim-dap-ui",
 			"nvim-neotest/nvim-nio",
 			"nvim-neotest/neotest",
-      -- "suketa/nvim-dap-ruby",
 		},
 	},
 	-- displaying vertical lines

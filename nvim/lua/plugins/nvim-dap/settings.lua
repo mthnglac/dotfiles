@@ -22,6 +22,7 @@ dap.configurations.javascript = {
 		request = "launch",
 		program = "${file}",
 		cwd = "${workspaceFolder}",
+		console = "integratedTerminal",
 	},
 	-- {
 	-- 	-- For this to work you need to make sure the node process is started with the `--inspect` flag.
@@ -61,6 +62,7 @@ dap.configurations.ruby = {
 		localfs = true,
 		command = "ruby",
 		script = "${file}",
+		console = "integratedTerminal",
 	},
 	{
 		type = "ruby",
@@ -69,6 +71,7 @@ dap.configurations.ruby = {
 		localfs = true,
 		command = "rspec",
 		script = "${file}",
+		console = "integratedTerminal",
 	},
 	{
 		type = "ruby",
@@ -78,6 +81,7 @@ dap.configurations.ruby = {
 		command = "bin/rails",
 		args = { "s" },
 		cwd = "${workspaceFolder}",
+		console = "integratedTerminal",
 	},
 }
 

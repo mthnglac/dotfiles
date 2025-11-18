@@ -4,6 +4,8 @@
 *.swp
 nvim/.netrwhist
 nvim/plugin/packer_compiled.lua
+# Lazy.nvim
+nvim/lazy-lock.json
 
 # DB stuff
 .DS_Store
