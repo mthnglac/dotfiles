@@ -35,13 +35,6 @@ require("lazy").setup({
 	--   end,
 	--   dependencies = {
 	--     "nvim-lua/plenary.nvim",
-	--     {
-	--       "MeanderingProgrammer/render-markdown.nvim",
-	--       opts = {
-	--         anti_conceal = { enabled = false },
-	--         latex = { enabled = false },
-	--       },
-	--     }
 	--   },
 	-- },
 	-- Diagnostics
@@ -55,10 +48,15 @@ require("lazy").setup({
 	},
 	-- developer assister
 	{
-		"folke/neodev.nvim",
-		config = function()
-			require("plugins.neodev-nvim")
-		end,
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+		opts = {
+			library = {
+				-- See the configuration section for more details
+				-- Load luvit types when the `vim.uv` word is found
+				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+			},
+		},
 	},
 	-- tmux resurrect
 	{ "tpope/vim-obsession" },
@@ -143,6 +141,11 @@ require("lazy").setup({
 	},
 	-- test plugin
 	{
+		"Fildo7525/pretty_hover",
+		event = "LspAttach",
+		opts = {},
+	},
+	{
 		"nvim-neotest/neotest",
 		dependencies = {
 			"nvim-neotest/nvim-nio",
@@ -175,20 +178,17 @@ require("lazy").setup({
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 	{
-		"nvim-treesitter/playground",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
-	{
-		"windwp/nvim-ts-autotag",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
-	{
 		"theHamsta/nvim-treesitter-pairs",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 	-- lua utils
 	{ "nvim-lua/plenary.nvim", branch = "master" },
-	-- telescope & extensions
+	-- markdown preview
+	{
+		"OXY2DEV/markview.nvim",
+		lazy = false,
+	},
+	-- Telescope & extensions
 	{
 		"nvim-telescope/telescope.nvim",
 		config = function()
@@ -209,6 +209,31 @@ require("lazy").setup({
 		"nvim-telescope/telescope-github.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	},
+	{
+		"nvim-telescope/telescope-dap.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-telescope/telescope-dap.nvim",
+		},
+	},
+	{
+		"ryanmsnyder/toggleterm-manager.nvim",
+		config = function()
+			require("plugins.toggleterm-manager-nvim")
+		end,
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"akinsho/toggleterm.nvim",
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
+		"tsakirist/telescope-lazy.nvim",
+		dependencies = {
 			"nvim-telescope/telescope.nvim",
 		},
 	},
@@ -243,13 +268,19 @@ require("lazy").setup({
 	{
 		"mfussenegger/nvim-dap",
 		config = function()
-			require("plugins.nvim-dap")
+			require("plugins.dap-nvim")
 		end,
 		dependencies = {
 			"rcarriga/nvim-dap-ui",
 			"nvim-neotest/nvim-nio",
 			"nvim-neotest/neotest",
 		},
+	},
+	{
+		"theHamsta/nvim-dap-virtual-text",
+		config = function()
+			require("plugins.dap-virtual-text-nvim")
+		end,
 	},
 	-- displaying vertical lines
 	{

@@ -1,5 +1,7 @@
+local telescope = require("telescope")
 local actions = require("telescope.actions")
 local previewers = require("telescope.previewers")
+local telescope_builtin = require("telescope.builtin")
 
 local new_maker = function(filepath, bufnr, opts)
   opts = opts or {}
@@ -17,7 +19,7 @@ local new_maker = function(filepath, bufnr, opts)
   end)
 end
 
-require("telescope").setup({
+telescope.setup({
   defaults = {
     mappings = {
       i = {
@@ -52,6 +54,7 @@ require("telescope").setup({
       preview_cutoff = 120,
       horizontal = {
         mirror = false,
+        preview_width = 0.5,
       },
       vertical = {
         mirror = false,
@@ -111,27 +114,30 @@ require("telescope").setup({
   },
 })
 
-require("telescope").load_extension("fzf")
-require("telescope").load_extension("gh")
+telescope.load_extension("fzf")
+telescope.load_extension("gh")
+telescope.load_extension("fidget")
+telescope.load_extension("dap")
+telescope.load_extension("lazy")
 
 local M = {}
 
 M.search_dotfiles = function()
-  require("telescope.builtin").find_files({
+  telescope_builtin.find_files({
     prompt_title = "< VimRC >",
     cwd = tostring(os.getenv("HOME")) .. "/Code/development/dotfiles/",
   })
 end
 
 M.search_notes = function()
-  require("telescope.builtin").find_files({
+  telescope_builtin.find_files({
     prompt_title = "< Notes >",
     cwd = tostring(os.getenv("HOME")) .. "/Code/notes/",
   })
 end
 
 M.search_plugins = function()
-  require("telescope.builtin").live_grep({
+  telescope_builtin.live_grep({
     prompt_title = "< Plugins >",
     cwd = tostring(os.getenv("HOME")) .. "/.local/share/nvim/lazy/",
   })

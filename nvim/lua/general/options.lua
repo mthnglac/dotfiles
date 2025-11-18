@@ -70,7 +70,8 @@ Option.g({
 	#-------------------------------------------------------------------------#
 	--]]
 	termguicolors = true,
-  background = "dark",
+	background = "dark",
+	winborder = "rounded",
 	--[[
 	#-------------------------------------------------------------------------#
 	#                                     OTHER                               #
@@ -80,7 +81,7 @@ Option.g({
 	-- anything in the clipboard can be pasted directly
 	-- any yanked text will be copied to clipboard
 	--clipboard='unnamedplus',
-  laststatus = 3
+	laststatus = 3,
 })
 
 Option.w({
@@ -99,7 +100,7 @@ Option.w({
 	foldcolumn = "1",
 	foldenable = true,
 	-- foldmethod = 'expr',
-	-- foldexpr = "nvim_treesitter#foldexpr()",
+	-- foldexpr = "v:lua.vim.treesitter.foldexpr()",
 
 	-- error signs and warnings will be displayed in the number line
 	-- usually it adds new column when signs, moving buffer to right side.

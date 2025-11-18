@@ -20,28 +20,13 @@ require("nvim-treesitter.configs").setup({
 			},
 		},
 	},
-	playground = {
-		enable = true,
-		disable = {},
-		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-		persist_queries = false, -- Whether the query persists across vim sessions
-	},
 	refactor = {
 		highlight_definitions = {
 			enable = true,
 			clear_on_cursor_move = true,
 		},
-		smart_rename = {
-			enable = true,
-			keymaps = {
-				smart_rename = "grr",
-			},
-		},
 	},
 	indent = {
-		enable = true,
-	},
-	autotag = {
 		enable = true,
 	},
 	context_commentstring = {

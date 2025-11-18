@@ -36,6 +36,13 @@ Keybind.g({
     [[<Cmd>lua require('telescope.builtin').find_files()<CR>]],
     { noremap = true, silent = true },
   },
+  -- Resume from the previous picker
+  {
+    "n",
+    "<Space>prs",
+    [[<Cmd>lua require('telescope.builtin').resume()<CR>]],
+    { noremap = true, silent = true },
+  },
 })
 
 -- Custom paths
