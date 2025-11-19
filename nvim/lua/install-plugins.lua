@@ -343,10 +343,8 @@ require("lazy").setup({
 	},
 	-- buffer closer
 	{
-		"Asheq/close-buffers.vim",
-		config = function()
-			require("plugins.close-buffers")
-		end,
+		"mthnglac/bufferinator.nvim",
+		config = true,
 	},
 	-- popup terminal
 	{
