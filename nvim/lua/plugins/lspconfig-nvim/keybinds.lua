@@ -39,9 +39,7 @@ function M.on_attach(client, bufnr)
 	vim.keymap.set("n", "<Space>gy", telescope_builtin.lsp_type_definitions, bufopts)
 	vim.keymap.set("n", "<Space>gi", telescope_builtin.lsp_implementations, bufopts)
 	vim.keymap.set("n", "<Space>gr", telescope_builtin.lsp_references, bufopts)
-	vim.keymap.set("n", "<Space>rr", vim.lsp.buf.rename, bufopts)
 	vim.keymap.set("n", "<Space>f", async_buf_formatting, { noremap = true, silent = false, buffer = bufnr })
-	vim.keymap.set("n", "<Space>ai", vim.lsp.buf.code_action, bufopts)
 end
 
 return M

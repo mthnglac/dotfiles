@@ -244,6 +244,10 @@ require("lazy").setup({
 			require("plugins.fugitive")
 		end,
 	},
+	{
+		"tpope/vim-rhubarb",
+		dependencies = { "tpope/vim-rhubarb" },
+	},
 	-- git pr preview
 	{
 		"pwntester/octo.nvim",
