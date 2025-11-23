@@ -13,6 +13,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- LeetCode tool
+	{
+		"kawre/leetcode.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		opts = {
+			provider = "telescope",
+		},
+	},
 	-- AI
 	-- {
 	--   "olimorris/codecompanion.nvim",
@@ -156,6 +167,7 @@ require("lazy").setup({
 			"nvim-neotest/neotest-jest",
 			"nvim-neotest/neotest-plenary",
 			"nvim-neotest/neotest-vim-test",
+			"volodya-lombrozo/neotest-ruby-minitest",
 		},
 		config = function()
 			require("plugins.neotest-nvim")
