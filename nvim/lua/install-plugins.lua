@@ -26,28 +26,19 @@ require("lazy").setup({
   },
   -- AI
   -- {
-  --   "olimorris/codecompanion.nvim",
-  --   config = function()
-  --     require("plugins.codecompanion-nvim")
-  --   end,
-  --   dependencies = {
-  --     "ravitemer/codecompanion-history.nvim",
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-treesitter/nvim-treesitter",
-  --   },
+  -- 	"olimorris/codecompanion.nvim",
+  -- 	config = function()
+  -- 		require("plugins.codecompanion-nvim")
+  -- 	end,
+  -- 	dependencies = {
+  -- 		"ravitemer/codecompanion-history.nvim",
+  -- 		"nvim-lua/plenary.nvim",
+  -- 		"nvim-treesitter/nvim-treesitter",
+  -- 	},
   -- },
   {
     "github/copilot.vim",
   },
-  -- {
-  --   "azorng/goose.nvim",
-  --   config = function()
-  --     require("plugins.goose-nvim")
-  --   end,
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --   },
-  -- },
   -- Diagnostics
   {
     "folke/trouble.nvim",
@@ -199,6 +190,12 @@ require("lazy").setup({
   {
     "OXY2DEV/markview.nvim",
     lazy = false,
+    opts = {
+      preview = {
+        filetypes = { "markdown", "codecompanion" },
+        ignore_buftypes = {},
+      },
+    },
   },
   -- Telescope & extensions
   {
@@ -258,7 +255,7 @@ require("lazy").setup({
   },
   {
     "tpope/vim-rhubarb",
-    dependencies = { "tpope/vim-rhubarb" },
+    dependencies = { "tpope/vim-fugitive" },
   },
   -- git pr preview
   {
@@ -401,10 +398,8 @@ require("lazy").setup({
   },
   -- window manager
   {
-    "szw/vim-maximizer",
-    config = function()
-      require("plugins.maximizer")
-    end,
+    "mthnglac/maximizer.nvim",
+    config = true,
   },
   -- UI
   {

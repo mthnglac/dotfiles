@@ -1,7 +1,25 @@
-require("codecompanion").setup({
+local codecompanion = require("codecompanion")
+local codecompanion_adapters = require("codecompanion.adapters")
+
+codecompanion.setup({
+  strategies = {
+    chat = { adapter = "gemini_cli" },
+    inline = { adapter = "gemini_cli" },
+  },
   adapters = {
-    opts = {
-      show_model_choices = true,
+    acp = {
+      gemini_cli = function()
+        return codecompanion_adapters.extend("gemini_cli", {
+          defaults = {
+            auth_method = "oauth-personal",
+          },
+        })
+      end,
+    },
+  },
+  display = {
+    inline = {
+      win = { layout = "float" },
     },
   },
   extensions = {
