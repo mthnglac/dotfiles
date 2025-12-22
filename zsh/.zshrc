@@ -24,9 +24,27 @@ source $ZSH/oh-my-zsh.sh
 # My confs ###################################################################
 ##############################################################################
 
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+### brew
+# linux
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# mac 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Languages --------------------------------------------------------------------
+# Java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# Rust
+. "$HOME/.cargo/env"
+# Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-readline-dir=$(brew --prefix readline)"
+export LDFLAGS=""
+export CPPFLAGS=""
+# export PATH="$(gem environment gemdir)/bin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
 # Aliases --------------------------------------------------------------------
 alias bashconfig="nvim ~/.bashrc"
@@ -35,26 +53,6 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.tmux.conf.local"
 alias checkmyports="netstat -tulpn | grep LISTEN"
 alias v="nvim"
-
-# Cheat Sheet ----------------------------------------------------------------
-cht() {
-  curl cht.sh/$1/$2
-}
-
-# Java confs -----------------------------------------------------------------
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
-export PATH=$PATH:$JAVA_HOME
-
-# Android confs --------------------------------------------------------------
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# GO confs --------------------------------------------------------------
-export GOPATH="$HOME/go"
-export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 
 # oh-my-zsh ------------------------------------------------------------------
 # Use vim keys in tab complete menu:
@@ -71,3 +69,18 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 # default editor
 export EDITOR='nvim'
+
+PATH="/Users/metehan/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/metehan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/metehan/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/metehan/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/metehan/perl5"; export PERL_MM_OPT;
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+    [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
+    [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion

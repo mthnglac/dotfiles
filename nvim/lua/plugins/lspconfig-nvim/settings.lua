@@ -2,7 +2,6 @@ local keybinds = require("plugins.lspconfig-nvim.keybinds")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local servers = {
 	"angularls",
-	"copilot",
 	"cssls",
 	"ember",
 	"html",
@@ -11,6 +10,9 @@ local servers = {
 	"ruby_lsp",
 	"sqlls",
 	"ts_ls",
+	"yamlls",
+	"bashls",
+	"zls",
 }
 
 vim.diagnostic.config({

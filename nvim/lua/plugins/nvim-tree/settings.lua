@@ -98,19 +98,19 @@ require("nvim-tree").setup({
 	},
 
 	update_focused_file = {
-		enable = true,
-		update_cwd = true,
-		ignore_list = {
-			"\\.pyc$",
-			"^__pycache__$",
-			".git$[[dir]]",
-			".swp",
-			"dist",
-			"node_modules",
-			"bower_components",
-			".pnp",
-			".cache",
-		},
+		enable = false,
+		-- update_cwd = true,
+		-- ignore_list = {
+		-- 	"\\.pyc$",
+		-- 	"^__pycache__$",
+		-- 	".git$[[dir]]",
+		-- 	".swp",
+		-- 	"dist",
+		-- 	"node_modules",
+		-- 	"bower_components",
+		-- 	".pnp",
+		-- 	".cache",
+		-- },
 	},
 
 	system_open = {

@@ -13,7 +13,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "folke/sidekick.nvim" },
 	-- Fun
 	{
 		"saxon1964/neovim-tips",
@@ -45,21 +44,6 @@ require("lazy").setup({
 		opts = {
 			provider = "telescope",
 		},
-	},
-	-- AI
-	-- {
-	-- 	"olimorris/codecompanion.nvim",
-	-- 	config = function()
-	-- 		require("plugins.codecompanion-nvim")
-	-- 	end,
-	-- 	dependencies = {
-	-- 		"ravitemer/codecompanion-history.nvim",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 	},
-	-- },
-	{
-		"github/copilot.vim",
 	},
 	-- Diagnostics
 	{
