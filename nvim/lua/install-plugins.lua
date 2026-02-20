@@ -174,20 +174,13 @@ require("lazy").setup({
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+    lazy = false,
 		config = function()
 			require("plugins.nvim-treesitter")
 		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
-	{
-		"nvim-treesitter/nvim-treesitter-refactor",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
-	{
-		"theHamsta/nvim-treesitter-pairs",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 	-- test utility
